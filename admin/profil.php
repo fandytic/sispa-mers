@@ -162,20 +162,12 @@
         <div class="page-breadcrumb">
             <div class="row align-items-center">
                 <div class="col-5">
-                    <h4 class="page-title">Profile Page</h4>
+                    <h4 class="page-title">Halaman Profil</h4>
                     <div class="d-flex align-items-center">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Library</li>
-                            </ol>
-                        </nav>
+                        
                     </div>
                 </div>
                 <div class="col-7">
-                    <div class="text-right upgrade-btn">
-                        <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-danger text-white" target="_blank">Upgrade to Pro</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -225,7 +217,7 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material">
                                     <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
+                                        <label class="col-md-12">Nama</label>
                                         <div class="col-md-12">
                                             <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
                                         </div>
@@ -243,26 +235,17 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Phone No</label>
+                                        <label class="col-md-12">No Hp</label>
                                         <div class="col-md-12">
                                             <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Message</label>
-                                        <div class="col-md-12">
-                                            <textarea rows="5" class="form-control form-control-line"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Select Country</label>
+                                        <label class="col-sm-12">Posisi / Jabatan</label>
                                         <div class="col-sm-12">
                                             <select class="form-control form-control-line">
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
+                                                <option>Admin</option>
+                                                <option>Dokter Pakar</option>
                                             </select>
                                         </div>
                                     </div>
