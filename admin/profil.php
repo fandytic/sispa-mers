@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assetsA/assets/images/favicon.png">
-    <title>Admin - Sistem Pakar</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assetsA/assets/images/Logo-SP.png">
+    <title>Admin - Profil Sistem Pakar</title>
     <!-- Custom CSS -->
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -58,17 +58,17 @@
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assetsA/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../assetsA/assets/images/Logo-SP.png" width="45px" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="../assetsA/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="../assetsA/assets/images/Logo-SP-light.png" width="45px" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                          <!-- dark Logo text -->
-                         <img src="../assetsA/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
-                         <img src="../assetsA/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                         <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
                      </span>
                  </a>
                  <!-- ============================================================== -->
