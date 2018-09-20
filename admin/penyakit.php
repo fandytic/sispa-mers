@@ -97,8 +97,9 @@
                     <!-- User profile and search -->
                     <!-- ============================================================== -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assetsA/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assetsA/assets/images/users/images.png" alt="user" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
                             <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-logout-variant"></i> Logout</a>
                         </div>
                     </li>
@@ -125,7 +126,7 @@
                     <li>
                         <!-- User Profile-->
                         <div class="user-profile d-flex no-block dropdown m-t-20">
-                            <div class="user-pic"><img src="../assetsA/assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
+                            <div class="user-pic"><img src="../assetsA/assets/images/users/images.png" alt="users" class="rounded-circle" width="40" /></div>
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <h5 class="m-b-0 user-name font-medium">Steave Jobs</h5>
