@@ -13,6 +13,7 @@
     <title>Admin - Penyakit Sistem Pakar</title>
     <!-- Custom CSS -->
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assetsA/assets/libs/datatable/dataTables.bootstrap.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -165,10 +166,13 @@
                 <div class="col-5">
                     <h4 class="page-title">Manajemen Penyakit</h4>
                     <div class="d-flex align-items-center">
-                        
+
                     </div>
                 </div>
                 <div class="col-7">
+                    <div class="text-right upgrade-btn">
+                        <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-danger text-white" target="_blank">Tambah Data</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,98 +182,101 @@
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
-         <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Default Table</h4>
-                                <h6 class="card-subtitle">Using the most basic table markup, here’s how <code>.table</code>-based tables look in Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested tables will be styled in the same manner as the parent.</h6>
-                                <h6 class="card-title m-t-40"><i class="m-r-5 font-18 mdi mdi-numeric-1-box-multiple-outline"></i> Table With Outside Padding</h6>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>$170,750</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center">
-                All Rights Reserved by Xtreme Admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
-    <!-- End Wrapper -->
+    <!-- End PAge Content -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
-    <!-- All Jquery -->
+    <!-- Right sidebar -->
     <!-- ============================================================== -->
-    <script src="../assetsA/assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assetsA/assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assetsA/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../assetsA/dist/js/app-style-switcher.js"></script>
-    <!--Wave Effects -->
-    <script src="../assetsA/dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="../assetsA/dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="../assetsA/dist/js/custom.js"></script>
+    <!-- .right-sidebar -->
+    <!-- ============================================================== -->
+    <!-- End Right sidebar -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+<footer class="footer text-center">
+    All Rights Reserved by Xtreme Admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+</footer>
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="../assetsA/assets/libs/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="../assetsA/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="../assetsA/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assetsA/dist/js/app-style-switcher.js"></script>
+<!--Wave Effects -->
+<script src="../assetsA/dist/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="../assetsA/dist/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="../assetsA/dist/js/custom.js"></script>
+
+<script src="../assetsA/assets/libs/data-table/datatables.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/dataTables.bootstrap.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/dataTables.buttons.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/buttons.bootstrap.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/jszip.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/pdfmake.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/vfs_fonts.js"></script>
+<script src="../assetsA/assets/libs/data-table/buttons.html5.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/buttons.print.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/buttons.colVis.min.js"></script>
+<script src="../assetsA/assets/libs/data-table/datatables-init.js"></script>
 </body>
 
 </html>
