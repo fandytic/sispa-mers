@@ -218,6 +218,12 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material">
                                     <div class="form-group">
+                                        <label class="col-md-12">Username</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label class="col-md-12">Nama</label>
                                         <div class="col-md-12">
                                             <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
