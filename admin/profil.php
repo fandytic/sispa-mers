@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assetsA/assets/images/Logo-SP.png">
-    <title>Admin - Profil Sistem Pakar</title>
+    <title>Admin - Profil | Sistem Pakar</title>
     <!-- Custom CSS -->
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

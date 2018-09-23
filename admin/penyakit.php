@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assetsA/assets/images/Logo-SP.png">
-    <title>Admin - Penyakit Sistem Pakar</title>
+    <title>Admin - Penyakit | Sistem Pakar</title>
     <!-- Custom CSS -->
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assetsA/assets/libs/datatable/dataTables.bootstrap.min.css">
@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-7">
                     <div class="text-right upgrade-btn">
-                        <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-danger text-white" target="_blank">Tambah Data</a>
+                        <a href="tpenyakit.php" class="btn btn-danger text-white">Tambah Data</a>
                     </div>
                 </div>
             </div>
