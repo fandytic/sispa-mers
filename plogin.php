@@ -3,23 +3,23 @@
 include "koneksi.php";
 
 //membuat variable dengan nilai dari form
-$user = $_POST['username'];
-$pass = $_POST['password']; 
+$username = $_POST['username'];
+$password = $_POST['password']; 
 //proses login
 
 //menyesuaikan dengan data di database
-$hasil = mysqli_query($con, "select * from admin");
+$hasil = mysqli_query($con, "select*from admin");
 $row = mysqli_fetch_array($hasil);
-	if($row['username'] == $user AND $row['password'] == $pass) {
+	if($row['username'] == $username && $row['password'] == $password) {
 		session_start(); //memulai fungsi session
-		$_SESSION['username'] = $user;
-		header('location:admin/profil.php'); //jika berhasil login, maka masuk ke file beranda.php
+		$_SESSION['username'] = $username;
+		//header('location:login.php'); //jika berhasil login, maka masuk ke file loginadmin1.php
 		}
 		else{
 			?>
  				<script language="JavaScript">
-					alert('Name or Password is invalid');
-					document.location='login.php'</script>
+					alert('Username or Password is invalid');
+					document.location='loginadmin.php'</script>
 	  			<?php
 			}
 	?>
