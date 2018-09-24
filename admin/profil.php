@@ -65,22 +65,22 @@
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
-                         <!-- dark Logo text -->
-                         <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
-                         <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
-                     </span>
-                 </a>
-                 <!-- ============================================================== -->
-                 <!-- End Logo -->
-                 <!-- ============================================================== -->
-                 <!-- This is for the sidebar toggle which is visible on mobile only -->
-                 <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-             </div>
-             <!-- ============================================================== -->
-             <!-- End Logo -->
-             <!-- ============================================================== -->
-             <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                           <!-- dark Logo text -->
+                           <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
+                           <!-- Light Logo text -->    
+                           <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
+                       </span>
+                   </a>
+                   <!-- ============================================================== -->
+                   <!-- End Logo -->
+                   <!-- ============================================================== -->
+                   <!-- This is for the sidebar toggle which is visible on mobile only -->
+                   <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+               </div>
+               <!-- ============================================================== -->
+               <!-- End Logo -->
+               <!-- ============================================================== -->
+               <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
                 <!-- ============================================================== -->
                 <!-- toggle and nav items -->
                 <!-- ============================================================== -->
@@ -100,7 +100,7 @@
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assetsA/assets/images/users/images.png" alt="user" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
                             <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-logout-variant"></i> Logout</a>
+                            <a class="dropdown-item" href="../login.php"><i class="mdi mdi-logout-variant"></i> Logout</a>
                         </div>
                     </li>
                     <!-- ============================================================== -->
@@ -129,8 +129,8 @@
                             <div class="user-pic"><img src="../assetsA/assets/images/users/images.png" alt="users" class="rounded-circle" width="40" /></div>
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <h5 class="m-b-0 user-name font-medium">Steave Jobs</h5>
-                                    <span class="op-5 user-email">varun@gmail.com</span>
+                                    <h5 class="m-b-0 user-name font-medium">Fandy Hidayat</h5>
+                                    <span class="op-5 user-email">fandy@gmail.com</span>
                                 </a>
                             </div>
                         </div>
@@ -165,7 +165,12 @@
                 <div class="col-5">
                     <h4 class="page-title">Halaman Profil</h4>
                     <div class="d-flex align-items-center">
-                        
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Profil</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
                 <div class="col-7">

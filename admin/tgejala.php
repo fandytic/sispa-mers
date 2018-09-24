@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="../assetsA/assets/images/Logo-SP.png">
-	<title>Admin - Penyakit | Sistem Pakar</title>
+	<title>Admin - Gejala | Sistem Pakar</title>
 	<!-- Custom CSS -->
 	<link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../assetsA/assets/libs/datatable/dataTables.bootstrap.min.css">
@@ -168,8 +168,8 @@
 						<div class="d-flex align-items-center">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item" aria-current="page"><a href="penyakit.php">Penyakit</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Tambah Penyakit</li>
+								<li class="breadcrumb-item" aria-current="page"><a href="gejala.php">Gejala</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Tambah Gejala</li>
 							</ol>
 						</div>
 					</div>
@@ -192,21 +192,15 @@
 							<div class="card-body">
 								<form class="form-horizontal form-material">
 									<div class="form-group">
-										<label class="col-md-12">Kode Penyakit</label>
+										<label class="col-md-12">Kode Gejala</label>
 										<div class="col-md-12">
 											<input type="text" placeholder="P2" class="form-control form-control-line">
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-md-12">Nama Penyakit</label>
+										<label class="col-md-12">Nama Gejala</label>
 										<div class="col-md-12">
 											<input type="text" class="form-control form-control-line">
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="example-email" class="col-md-12">Keterangan Penyakit</label>
-										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line" name="example-email" id="example-email">
 										</div>
 									</div>
 
