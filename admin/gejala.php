@@ -20,6 +20,11 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style type="text/css">
+    .hide {
+            display: none;
+        }
+</style>
 <script type="text/javascript">        
     function tampilkanwaktu(){         //fungsi ini akan dipanggil di bodyOnLoad dieksekusi tiap 1000ms = 1detik    
     var waktu = new Date();            //membuat object date berdasarkan waktu saat 
@@ -32,6 +37,10 @@
 </head>
 
 <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
+    <?php 
+    include "../controller/c_Gejala.php";
+    $gjl = new Gejala;
+    ?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -66,22 +75,22 @@
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
-                         <!-- dark Logo text -->
-                         <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
-                         <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
-                     </span>
-                 </a>
-                 <!-- ============================================================== -->
-                 <!-- End Logo -->
-                 <!-- ============================================================== -->
-                 <!-- This is for the sidebar toggle which is visible on mobile only -->
-                 <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-             </div>
-             <!-- ============================================================== -->
-             <!-- End Logo -->
-             <!-- ============================================================== -->
-             <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                           <!-- dark Logo text -->
+                           <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
+                           <!-- Light Logo text -->    
+                           <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
+                       </span>
+                   </a>
+                   <!-- ============================================================== -->
+                   <!-- End Logo -->
+                   <!-- ============================================================== -->
+                   <!-- This is for the sidebar toggle which is visible on mobile only -->
+                   <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+               </div>
+               <!-- ============================================================== -->
+               <!-- End Logo -->
+               <!-- ============================================================== -->
+               <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
                 <!-- ============================================================== -->
                 <!-- toggle and nav items -->
                 <!-- ============================================================== -->
@@ -197,56 +206,50 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                       <tr>
+                                        <th class="hide">No</th>
                                         <th width="12%">Kode Gejala</th>
                                         <th>Nama Gejala</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td>G1</td>
-                                    <td>System Architect</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>G2</td>
-                                    <td>Accountant</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    <?php
+                                    $data = $gjl->TampilSemua();
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
         </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+            All Rights Reserved by Xtreme Admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
-    <!-- End PAge Content -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Right sidebar -->
-    <!-- ============================================================== -->
-    <!-- .right-sidebar -->
-    <!-- ============================================================== -->
-    <!-- End Right sidebar -->
-    <!-- ============================================================== -->
-</div>
-<!-- ============================================================== -->
-<!-- End Container fluid  -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- footer -->
-<!-- ============================================================== -->
-<footer class="footer text-center">
-    All Rights Reserved by Xtreme Admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
-</footer>
-<!-- ============================================================== -->
-<!-- End footer -->
-<!-- ============================================================== -->
-</div>
-<!-- ============================================================== -->
-<!-- End Page wrapper  -->
-<!-- ============================================================== -->
 </div>
 <!-- ============================================================== -->
 <!-- End Wrapper -->
