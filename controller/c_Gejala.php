@@ -13,7 +13,6 @@ class Gejala
 		{
 			$i++;
 			echo "<tr>
-					<td class='hide'>".$i."</td>
 					<td>".$d['kode']."</td>
                     <td>".$d['nama']."</td>
                     <td></td>
