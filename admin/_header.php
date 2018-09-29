@@ -33,10 +33,6 @@
 </head>
 
 <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
-    <?php 
-    include "../controller/c_Gejala.php";
-    $gjl = new Gejala;
-    ?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
