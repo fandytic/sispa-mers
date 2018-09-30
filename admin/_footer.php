@@ -30,6 +30,7 @@
 <!--Custom JavaScript -->
 <script src="../assetsA/dist/js/custom.js"></script>
 
+
 <script src="../assetsA/assets/libs/data-table/datatables.min.js"></script>
 <script src="../assetsA/assets/libs/data-table/dataTables.bootstrap.min.js"></script>
 <script src="../assetsA/assets/libs/data-table/dataTables.buttons.min.js"></script>

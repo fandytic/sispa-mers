@@ -43,12 +43,12 @@ $gjl = new Gejala;
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                                <thead>
+                            <table id="bootstrap-data-table" class="table table-hover table-bordered">
+                                <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th width="12%">Kode Gejala</th>
-                                    <th>Nama Gejala</th>
-                                    <th>Aksi</th>
+                                    <th style="color: white;">Kode Gejala</th>
+                                    <th style="color: white;">Nama Gejala</th>
+                                    <th style="color: white;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,7 +59,9 @@ $gjl = new Gejala;
                                     <tr>
                                         <td><?php print $d['kode']; ?></td>
                                         <td><?php print $d['nama']; ?></td>
-                                        <td></td>
+                                        <td>
+
+                                        </td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

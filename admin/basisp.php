@@ -1,4 +1,8 @@
-<?php include '_header.php'; ?>
+<?php include '_header.php'; 
+
+include "../controller/c_BasisP.php";
+$bsp = new BasisP;
+?>
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
@@ -49,18 +53,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                $data = $bsp->TampilSemua();
+                                foreach($data as $d){
+                                    ?>
                                   <tr>
-                                    <td>Trauma</td>
-                                    <td>System Architect</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Tidur</td>
-                                    <td>Accountant</td>
-                                    <td></td>
+                                    <td><?php print $d['nama_penyakit']; ?></td>
+                                    <td><?php print $d['nama_gejala']; ?></td>
+                                    <td><?php print $d['ds']; ?></td>
                                     <td></td>
                                 </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

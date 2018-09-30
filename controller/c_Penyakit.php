@@ -20,5 +20,11 @@ class Penyakit
 		}
 		return $data;
 	}
+
+	function InsertPenyakit($kode, $nama, $kett){
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "insert into ds_penyakit (kode, nama, kett)
+			values('$kode', '$nama', '$kett')");
+	}
 }
 ?>

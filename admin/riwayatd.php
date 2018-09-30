@@ -13,7 +13,7 @@
                     <div class="d-flex align-items-center">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Riwayat</li>
+                            <li class="breadcrumb-item active" aria-current="page">Riwayat Diagnosa</li>
                         </ol>
                     </div>
                 </div>

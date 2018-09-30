@@ -14,6 +14,8 @@
     <!-- Custom CSS -->
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assetsA/assets/libs/datatable/dataTables.bootstrap.min.css">
+
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

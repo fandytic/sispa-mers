@@ -35,29 +35,29 @@
 					<div class="col-lg-8 col-xlg-9 col-md-7">
 						<div class="card">
 							<div class="card-body">
-								<form class="form-horizontal form-material">
+								<form method="post" class="form-horizontal form-material" action="../ProsesA/t_penyakit.php">
 									<div class="form-group">
 										<label class="col-md-12">Kode Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" placeholder="P2" class="form-control form-control-line">
+											<input type="text" placeholder="" class="form-control form-control-line" name="kode">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-md-12">Nama Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line">
+											<input type="text" class="form-control form-control-line" name="nama">
 										</div>
 									</div>
 									<div class="form-group">
 										<label for="example-email" class="col-md-12">Keterangan Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line" name="example-email" id="example-email">
+											<input type="text" class="form-control form-control-line" name="kett">
 										</div>
 									</div>
 
 									<div class="form-group">
 										<div class="col-sm-12">
-											<button class="btn btn-success">Tambah Data</button>
+											<button class="btn btn-success" type="submit">Tambah Data</button>
 										</div>
 									</div>
 								</form>

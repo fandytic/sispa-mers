@@ -43,16 +43,15 @@ $pt = new Penyakit;
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                                <thead>
+                            <table id="bootstrap-data-table" class="table table-hover table-bordered">
+                                <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th>Kode Penyakit</th>
-                                    <th>Nama Penyakit</th>
-                                    <th>Keterangan Penyakit</th>
-                                    <th>Aksi</th>
+                                    <th style="color: white;">Kode Penyakit</th>
+                                    <th style="color: white;">Nama Penyakit</th>
+                                    <th style="color: white;">Keterangan Penyakit</th>
+                                    <th style="color: white;">Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody>
                               <tbody>
                                 <?php
                                 $data = $pt->TampilSemua();
