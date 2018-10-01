@@ -46,7 +46,7 @@ $gjl = new Gejala;
                             <table id="bootstrap-data-table" class="table table-hover table-bordered">
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th style="color: white;">Kode Gejala</th>
+                                    <th style="color: white;" width="11%">Kode Gejala</th>
                                     <th style="color: white;">Nama Gejala</th>
                                     <th style="color: white;">Aksi</th>
                                 </tr>

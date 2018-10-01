@@ -1,8 +1,4 @@
-<?php include '_header.php'; 
-
-include "../controller/c_BasisP.php";
-$bsp = new BasisP;
-?>
+<?php include '_header.php'; ?>
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
@@ -13,17 +9,16 @@ $bsp = new BasisP;
         <div class="page-breadcrumb">
             <div class="row align-items-center">
                 <div class="col-5">
-                    <h4 class="page-title">Manajemen Basis Pengetahuan</h4>
+                    <h4 class="page-title">Riwayat Rekam Medis</h4>
                     <div class="d-flex align-items-center">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Basis Pengetahuan</li>
+                            <li class="breadcrumb-item active" aria-current="page">Riwayat Rekam Medis</li>
                         </ol>
                     </div>
                 </div>
                 <div class="col-7">
                     <div class="text-right upgrade-btn">
-                        <a href="tbasisp.php" class="btn btn-danger text-white">Tambah Data</a>
                     </div>
                 </div>
             </div>
@@ -43,27 +38,31 @@ $bsp = new BasisP;
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="bootstrap-data-table" class="table table-hover table-bordered">
-                                    <thead style="background-color: #7f8c8d; color: white;">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                    <thead>
                                       <tr>
-                                        <th style="color: white;">Nama Penyakit</th>
-                                        <th style="color: white;">Nama Gejala</th>
-                                        <th style="color: white;" width="15%">Nilai Kepercayaan</th>
+                                        <th>Nama Pasien</th>
+                                        <th>Umur</th>
+                                        <th>Gejala yang dipilih</th>
+                                        <th>Hasil Diagnosa</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                $data = $bsp->TampilSemua();
-                                foreach($data as $d){
-                                    ?>
                                   <tr>
-                                    <td><?php print $d['nama_penyakit']; ?></td>
-                                    <td><?php print $d['nama_gejala']; ?></td>
-                                    <td><?php print $d['ds']; ?></td>
+                                    <td>G1</td>
+                                    <td>System Architect</td>
+                                    <td></td>
+                                    <td></td>
                                     <td></td>
                                 </tr>
-                                <?php } ?>
+                                <tr>
+                                    <td>G2</td>
+                                    <td>Accountant</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
