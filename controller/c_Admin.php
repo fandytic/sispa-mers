@@ -4,10 +4,10 @@
  */
 class Admin
 {
-	
+
 	function TampilDataAdmin($id_admin)
 	{
-		include '../koneksi.koneksi.php';
+		include '../koneksi/koneksi.php';
 		$query = mysqli_query($con, "SELECT * FROM admin where id_admin = 
 			'$id_admin'");
 		$p = mysqli_fetch_object($query);
@@ -18,6 +18,12 @@ class Admin
 		$password = $p->password;
 		$nohp = $p->nohp;
 		$posisi = $p->posisi;
+	}
+
+	function Login($username, $password)
+	{
+		include '../koneksi/koneksi.php';
+		$query = mysqli_query($con, "SELECT * FROM admin where username='$username' AND password='$password'");		
 	}
 }
  ?>
