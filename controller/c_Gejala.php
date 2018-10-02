@@ -25,5 +25,11 @@ class Gejala
 		mysqli_query($con, "insert into ds_gejala (kode, nama)
 			values('$kode', '$nama')");
 	}
+
+	function HapusGejala($id)
+	{
+		include "../koneksi/koneksi.php";
+		mysqli_query($con, "DELETE FROM ds_gejala WHERE id = '$id'");
+	}
 }
 ?>

@@ -26,5 +26,11 @@ class Penyakit
 		$query = mysqli_query($con, "insert into ds_penyakit (kode, nama, kett)
 			values('$kode', '$nama', '$kett')");
 	}
+
+	function HapusPenyakit($id)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "DELETE FROM ds_penyakit WHERE id = '$id'");
+	}
 }
 ?>

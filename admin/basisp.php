@@ -23,7 +23,7 @@ $bsp = new BasisP;
                 </div>
                 <div class="col-7">
                     <div class="text-right upgrade-btn">
-                        <a href="tbasisp.php" class="btn btn-danger text-white">Tambah Data</a>
+                        <a href="tbasisp.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Data</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,9 @@ $bsp = new BasisP;
                                     <td><?php print $d['nama_penyakit']; ?></td>
                                     <td><?php print $d['nama_gejala']; ?></td>
                                     <td><?php print $d['ds']; ?></td>
-                                    <td></td>
+                                    <td>
+                                        <a href="../ProsesA/d_basisp.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
+                                    </td>
                                 </tr>
                                 <?php } ?>
                             </tbody>

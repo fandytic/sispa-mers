@@ -23,7 +23,7 @@ $gjl = new Gejala;
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="tgejala.php" class="btn btn-danger text-white">Tambah Data</a>
+                    <a href="tgejala.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Data</a>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@ $gjl = new Gejala;
                                         <td><?php print $d['kode']; ?></td>
                                         <td><?php print $d['nama']; ?></td>
                                         <td>
-
+                                            <a href="../ProsesA/d_gejala.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Gejala"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>

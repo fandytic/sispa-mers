@@ -15,6 +15,7 @@ class BasisP
 		$i = 0;
 		while($d = mysqli_fetch_array($query))
 		{
+			$data[$i]['id'] = $d['id'];
 			$data[$i]['id_penyakit'] = $d['id_penyakit'];
 			$data[$i]['id_gejala'] = $d['id_gejala'];
 			$data[$i]['ds'] = $d['ds'];
@@ -23,6 +24,12 @@ class BasisP
 			$i++;
 		}
 		return $data;
+	}
+
+	function HapusBasis($id)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "DELETE FROM ds_aturan WHERE id = '$id'");
 	}
 }
 ?>
