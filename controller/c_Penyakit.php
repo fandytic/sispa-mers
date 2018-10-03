@@ -32,5 +32,21 @@ class Penyakit
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "DELETE FROM ds_penyakit WHERE id = '$id'");
 	}
+
+	function EditPenyakit($id,$kode,$nama,$kett)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "UPDATE ds_penyakit set kode='$kode',nama='$nama',kett='$kett' WHERE id='$id'");
+	}
+
+	function TampilSatuData($id)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "SELECT * FROM ds_penyakit WHERE id = '$id'");
+		$p = mysqli_fetch_object($query);
+		$this->kode = $p->kode;
+		$this->nama = $p->nama;
+		$this->kett = $p->kett;
+	}
 }
 ?>

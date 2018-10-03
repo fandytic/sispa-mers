@@ -62,7 +62,7 @@ $pt = new Penyakit;
                                         <td><?php print $d['nama']; ?></td>
                                         <td><?php print $d['kett']; ?></td>
                                         <td>
-                                            <a href="tpenyakit.php" class="btn btn-info btn-simple btn-xs text-white" title="Edit Penyakit"><i class="mdi mdi-lead-pencil"></i></a>
+                                            <a href="epenyakit.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Penyakit"><i class="mdi mdi-lead-pencil"></i></a>
 
                                             <a href="../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
                                         </td>
