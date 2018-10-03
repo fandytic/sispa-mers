@@ -22,7 +22,7 @@ class Gejala
 
 	function InsertGejala($kode, $nama){
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "insert into ds_gejala (kode, nama)
+		$query = mysqli_query($con, "INSERT INTO ds_gejala (kode, nama)
 			values('$kode', '$nama')");
 	}
 
