@@ -60,6 +60,8 @@ $gjl = new Gejala;
                                         <td><?php print $d['kode']; ?></td>
                                         <td><?php print $d['nama']; ?></td>
                                         <td>
+                                            <a href="egejala.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Penyakit"><i class="mdi mdi-lead-pencil"></i></a>
+
                                             <a href="../ProsesA/d_gejala.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Gejala"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
