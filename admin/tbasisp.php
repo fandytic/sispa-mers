@@ -44,14 +44,14 @@ $data2 = $tt->TampilSemua();
 			<div class="col-lg-8 col-xlg-9 col-md-7">
 				<div class="card">
 					<div class="card-body">
-						<form class="form-horizontal form-material">
+						<form method="post" class="form-horizontal form-material" action="../ProsesA/t_basisp.php">
 							<div class="form-group">
 								<label class="col-md-12">Nama Penyakit</label>
 								<div class="col-md-12">
-										<select class="form-control form-control-line">
+										<select class="form-control form-control-line" name="penyakit">
 											<?php foreach($data as $d){
 												?>
-											<option><?php print $d['nama']; ?></option>
+											<option value="<?php print $d['id']; ?>"><?php print $d['nama']; ?></option>
 										<?php } ?>
 										</select>
 									</div>
@@ -59,25 +59,25 @@ $data2 = $tt->TampilSemua();
 								<div class="form-group">
 									<label class="col-md-12">Nama Gejala</label>
 									<div class="col-md-12">
-										<select class="form-control form-control-line">
+										<select class="form-control form-control-line" name="gejala">
 											<?php foreach($data2 as $dd){
 												?>
-											<option><?php print $dd['nama']; ?></option>
+											<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>
 										<?php } ?>
 										</select>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label class="col-md-12">Nialai Kepercayaan</label>
+									<label class="col-md-12">Nilai Kepercayaan</label>
 									<div class="col-md-12">
-										<input type="text" class="form-control form-control-line">
+										<input type="text" class="form-control form-control-line" name="ds">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<div class="col-sm-12">
-										<button class="btn btn-success">Tambah Data</button>
+										<button class="btn btn-success" type="submit">Tambah Data</button>
 									</div>
 								</div>
 							</form>

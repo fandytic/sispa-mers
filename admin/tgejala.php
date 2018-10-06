@@ -1,4 +1,8 @@
 <?php include '_header.php';
+
+include "../controller/c_Gejala.php";
+$tt = new Gejala;
+$data2 = $tt->TampilSemua();
 ?>		
 		<!-- ============================================================== -->
 		<!-- Page wrapper  -->
@@ -40,7 +44,7 @@
 									<div class="form-group">
 										<label class="col-md-12">Kode Gejala</label>
 										<div class="col-md-12">
-											<input type="text" placeholder="" class="form-control form-control-line" name="kode">
+											<input type="text" value="P<?php print $d['id']; ?> class="form-control form-control-line" name="kode">
 										</div>
 									</div>
 									<div class="form-group">
