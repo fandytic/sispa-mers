@@ -7,6 +7,10 @@ $data = $t->TampilSemua();
 include "../controller/c_Gejala.php";
 $tt = new Gejala;
 $data2 = $tt->TampilSemua();
+
+include "../controller/c_BasisP.php";
+$ttt = new BasisP;
+$ttt->TampilSatuData($_GET['id']);
 ?>
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
@@ -44,10 +48,11 @@ $data2 = $tt->TampilSemua();
 			<div class="col-lg-8 col-xlg-9 col-md-7">
 				<div class="card">
 					<div class="card-body">
-						<form method="post" class="form-horizontal form-material" action="../ProsesA/t_basisp.php">
+						<form method="post" class="form-horizontal form-material" action="../ProsesA/e_basisp.php">
 							<div class="form-group">
 								<label class="col-md-12">Nama Penyakit</label>
 								<div class="col-md-12">
+									<input type="hidden" value="<?php print $_GET['id']; ?>" name="id">
 										<select class="form-control form-control-line" name="id_penyakit">
 											<?php foreach($data as $d){
 												?>
@@ -71,13 +76,13 @@ $data2 = $tt->TampilSemua();
 								<div class="form-group">
 									<label class="col-md-12">Nilai Kepercayaan</label>
 									<div class="col-md-12">
-										<input type="text" class="form-control form-control-line" name="ds">
+										<input type="text" value="<?php print $ttt->ds; ?>" class="form-control form-control-line" name="ds">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<div class="col-sm-12">
-										<button class="btn btn-success" type="submit">Tambah Data</button>
+										<button class="btn btn-success" type="submit">Ubah Data</button>
 									</div>
 								</div>
 							</form>

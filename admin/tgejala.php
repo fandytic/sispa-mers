@@ -2,7 +2,7 @@
 
 include "../controller/c_Gejala.php";
 $tt = new Gejala;
-$data2 = $tt->TampilSemua();
+$tt->TampilAngka();
 ?>		
 		<!-- ============================================================== -->
 		<!-- Page wrapper  -->
@@ -14,7 +14,7 @@ $data2 = $tt->TampilSemua();
 			<div class="page-breadcrumb">
 				<div class="row align-items-center">
 					<div class="col-5">
-						<h4 class="page-title">Manajemen Tambah Penyakit</h4>
+						<h4 class="page-title">Manajemen Tambah Gejala</h4>
 						<div class="d-flex align-items-center">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -44,7 +44,7 @@ $data2 = $tt->TampilSemua();
 									<div class="form-group">
 										<label class="col-md-12">Kode Gejala</label>
 										<div class="col-md-12">
-											<input type="text" value="P<?php print $d['id']; ?> class="form-control form-control-line" name="kode">
+											<input type="text" value="P<?php print $tt->nilai+1; ?>" class="form-control form-control-line" name="kode" readonly="true">
 										</div>
 									</div>
 									<div class="form-group">

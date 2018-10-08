@@ -48,5 +48,14 @@ class Penyakit
 		$this->nama = $p->nama;
 		$this->kett = $p->kett;
 	}
+
+	function TampilAngka()
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "SELECT max(id) as nilai FROM ds_penyakit");
+		$g = mysqli_fetch_object($query);
+		$this->nilai = $g->nilai;
+	}
+
 }
 ?>

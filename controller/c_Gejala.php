@@ -46,5 +46,13 @@ class Gejala
 		$this->kode = $g->kode;
 		$this->nama = $g->nama;
 	}
+
+	function TampilAngka()
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "SELECT max(id) as nilai FROM ds_gejala");
+		$g = mysqli_fetch_object($query);
+		$this->nilai = $g->nilai;
+	}
 }
 ?>

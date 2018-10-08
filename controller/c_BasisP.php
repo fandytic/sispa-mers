@@ -26,6 +26,18 @@ class BasisP
 		return $data;
 	}
 
+	function TampilSatuData($id)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "SELECT a.*, g.nama as nama_gejala,p.nama as nama_penyakit from ds_aturan a,ds_gejala g, ds_penyakit p where a.id_penyakit=p.id and a.id_gejala = g.id and a.id = '$id' ");
+		$g = mysqli_fetch_object($query);
+		$this->id_penyakit = $g->id_penyakit;
+		$this->id_gejala = $g->id_gejala;
+		$this->ds = $g->ds;
+		$this->nama_penyakit = $g->nama_penyakit;
+		$this->nama_gejala = $g->nama_gejala;
+	}
+
 	function HapusBasis($id)
 	{
 		include "../koneksi/koneksi.php";
@@ -36,6 +48,12 @@ class BasisP
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "INSERT INTO ds_aturan (id_penyakit, id_gejala,ds)
 			values('$id_penyakit', '$id_gejala', '$ds')");
+	}
+
+	function EditBasis($id,$id_penyakit,$id_gejala,$ds)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "UPDATE ds_aturan SET id_penyakit='$id_penyakit', id_gejala='$id_gejala', ds='$ds' WHERE id = '$id'");
 	}
 }
 ?>

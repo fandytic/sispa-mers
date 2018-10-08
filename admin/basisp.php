@@ -62,6 +62,8 @@ $bsp = new BasisP;
                                     <td><?php print $d['nama_gejala']; ?></td>
                                     <td><?php print $d['ds']; ?></td>
                                     <td>
+                                        <a href="ebasisp.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Penyakit"><i class="mdi mdi-lead-pencil"></i></a>
+
                                         <a href="../ProsesA/d_basisp.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>

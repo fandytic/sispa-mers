@@ -1,4 +1,9 @@
-<?php include '_header.php'; ?>
+<?php include '_header.php'; 
+
+include "../controller/c_Penyakit.php";
+$pt = new Penyakit;
+$pt->TampilAngka();
+?>
 		<!-- ============================================================== -->
 		<!-- Page wrapper  -->
 		<!-- ============================================================== -->
@@ -39,7 +44,7 @@
 									<div class="form-group">
 										<label class="col-md-12">Kode Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" placeholder="" class="form-control form-control-line" name="kode">
+											<input type="text" value="P<?php print $pt->nilai+1; ?>" class="form-control form-control-line" name="kode" readonly="true">
 										</div>
 									</div>
 									<div class="form-group">
