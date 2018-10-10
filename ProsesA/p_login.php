@@ -8,7 +8,7 @@ $login = new Admin;
 
 $login->Login($username,$password);
 $row = mysqli_fetch_array($login);
-if($row['username'] == $username AND $row['password'] == $password) {
+if($row['username'] == $username && $row['password'] == $password) {
 		session_start(); //memulai fungsi session
 		$_SESSION['username'] = $username;
 	header("location: ../admin/profil.php");

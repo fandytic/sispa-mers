@@ -1,6 +1,6 @@
 <?php
 //memanggil file koneksi.php
-include "koneksi.php";
+include "koneksi/koneksi.php";
 
 //membuat variable dengan nilai dari form
 $username = $_POST['username'];
@@ -13,13 +13,13 @@ $row = mysqli_fetch_array($hasil);
 	if($row['username'] == $username && $row['password'] == $password) {
 		session_start(); //memulai fungsi session
 		$_SESSION['username'] = $username;
-		//header('location:login.php'); //jika berhasil login, maka masuk ke file loginadmin1.php
+		header('location:admin/profil.php'); //jika berhasil login, maka masuk ke file loginadmin1.php
 		}
 		else{
 			?>
  				<script language="JavaScript">
 					alert('Username or Password is invalid');
-					document.location='loginadmin.php'</script>
+					document.location='login.php'</script>
 	  			<?php
 			}
 	?>
