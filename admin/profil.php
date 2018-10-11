@@ -1,4 +1,6 @@
-<?php include '_header.php'; ?>
+<?php 
+include '_header.php';
+?>
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
@@ -40,7 +42,7 @@
                     <div class="card">
                         <div class="card-body">
                             <center class="m-t-30"> <img src="../assetsA/assets/images/users/5.jpg" class="rounded-circle" width="150" />
-                                <h4 class="card-title m-t-10">Hanna Gover</h4>
+                                <h4 class="card-title m-t-10"><?php echo $row["nama"]; ?></h4>
                                 <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
                             </center>
                         </div>
@@ -60,19 +62,19 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Username</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["username"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Nama</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["nama"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" value="password" class="form-control form-control-line">
+                                            <input type="password" value="<?php echo $row["password"]; ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">

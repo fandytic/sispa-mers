@@ -1,3 +1,16 @@
+<?php
+session_start();
+include "../koneksi/koneksi.php";
+
+if(!isset($_SESSION['username'])){
+    header('location:../login.php');
+} else {
+    $username = $_SESSION["username"]; 
+}
+require_once('../koneksi/koneksi.php');
+$hasil = mysqli_query($con, "select * from admin where username='$username'");
+$row = mysqli_fetch_array($hasil);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +28,7 @@
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assetsA/assets/libs/datatable/dataTables.bootstrap.min.css">
 
-    
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -104,7 +117,7 @@
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assetsA/assets/images/users/images.png" alt="user" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
                             <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
-                            <a class="dropdown-item" href="../login.php"><i class="mdi mdi-logout-variant"></i> Logout</a>
+                            <a class="dropdown-item" href="../logout.php"><i class="mdi mdi-logout-variant"></i> Logout</a>
                         </div>
                     </li>
                     <!-- ============================================================== -->
@@ -133,7 +146,7 @@
                             <div class="user-pic"><img src="../assetsA/assets/images/users/images.png" alt="users" class="rounded-circle" width="40" /></div>
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <h5 class="m-b-0 user-name font-medium">Fandy Hidayat</h5>
+                                    <h5 class="m-b-0 user-name font-medium"><?php echo $row['nama']; ?></h5>
                                     <span class="op-5 user-email">fandy@gmail.com</span>
                                 </a>
                             </div>
