@@ -58,24 +58,29 @@ include '_header.php';
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material">
+                                <form method="post" action="../ProsesA/e_profil.php" class="form-horizontal form-material">
                                     <div class="form-group">
                                         <label class="col-md-12">Username</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["username"]; ?>" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["username"]; ?>" class="form-control form-control-line" readonly="true" name="username">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Nama</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo $row["nama"]; ?>" class="form-control form-control-line">
+                                            <input type="text" value="<?php echo $row["nama"]; ?>" class="form-control form-control-line" name="nama">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" value="<?php echo $row["password"]; ?>" class="form-control form-control-line">
+                                            <input type="password" value="<?php echo $row["password"]; ?>" class="form-control form-control-line form-password" name="password">
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                        <input type="checkbox" class="form-checkbox"> Tampilkan password
+                                    </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
@@ -103,4 +108,18 @@ include '_header.php';
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
+
 <?php include '_footer.php'; ?>
+
+<!-- javascript tampilkan password -->
+<script type="text/javascript">
+    $(document).ready(function(){       
+        $('.form-checkbox').click(function(){
+            if($(this).is(':checked')){
+                $('.form-password').attr('type','text');
+            }else{
+                $('.form-password').attr('type','password');
+            }
+        });
+    });
+</script>

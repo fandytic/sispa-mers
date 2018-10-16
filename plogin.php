@@ -13,7 +13,7 @@ $row = mysqli_fetch_array($hasil);
 	if($row['username'] == $username && $row['password'] == $password) {
 		session_start(); //memulai fungsi session
 		$_SESSION['username'] = $username;
-		header('location:admin/profil.php'); //jika berhasil login, maka masuk ke file loginadmin1.php
+		header('location:admin/profil.php'); //jika berhasil login, maka masuk ke file yang dituju
 		}
 		else{
 			?>
