@@ -50,10 +50,10 @@ class BasisP
 			values('$id_penyakit', '$id_gejala', '$ds')");
 	}
 
-	function EditBasis($id,$id_penyakit,$id_gejala,$ds)
+	function EditBasis($id,$ds)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "UPDATE ds_aturan SET id_penyakit='$id_penyakit', id_gejala='$id_gejala', ds='$ds' WHERE id = '$id'");
+		$query = mysqli_query($con, "UPDATE ds_aturan SET ds='$ds' WHERE id = '$id'");
 	}
 }
 ?>
