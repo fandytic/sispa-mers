@@ -51,7 +51,7 @@ $r = new Riwayat;
                                     <th style="color: white;">Nama Penyakit</th>
                                     <th style="color: white;" width="9%">Nilai DS</th>
                                     <th style="color: white;" width="5%">Persentase</th>
-                                    <th style="color: white;">Aksi</th>
+                                    <th style="color: white;" width="5%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
