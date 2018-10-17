@@ -1,4 +1,7 @@
 <?php include '_header.php'; 
+
+include "../controller/c_Riwayat.php";
+$r = new Riwayat;
 ?>
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
@@ -20,7 +23,6 @@
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="tpenyakit.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Data</a>
                 </div>
             </div>
         </div>
@@ -43,23 +45,32 @@
                             <table id="bootstrap-data-table" class="table table-hover table-bordered">
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th style="color: white;" width="13%">Kode Penyakit</th>
+                                    <th style="color: white;" width="5%">ID</th>
+                                    <th style="color: white;" width="16%">Tanggal dan Waktu</th>
+                                    <th style="color: white;">Gejala Penyakit</th>
                                     <th style="color: white;">Nama Penyakit</th>
-                                    <th style="color: white;">Keterangan Penyakit</th>
+                                    <th style="color: white;" width="9%">Nilai DS</th>
+                                    <th style="color: white;" width="5%">Persentase</th>
                                     <th style="color: white;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                $data = $r->TampilSemua();
+                                foreach($data as $d){
+                                    ?>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><?php print $d['id_diagnosa']; ?></td>
+                                        <td><?php print $d['tanggal']; ?></td>
+                                        <td><?php print $d['gejala']; ?></td>
+                                        <td><?php print $d['penyakit']; ?></td>
+                                        <td><?php print $d['nilai']; ?></td>
+                                        <td><?php print $d['persentase']; ?></td>
                                         <td>
-                                            <a href="epenyakit.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Penyakit"><i class="mdi mdi-lead-pencil"></i></a>
-
                                             <a href="../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </tbody>
