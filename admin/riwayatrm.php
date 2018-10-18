@@ -59,14 +59,15 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                             </thead>
                             <tbody>
                                 <?php foreach ($data as $r) {
+                                    $i++;
                                    ?>
                                    <tr>
-                                    <td></td>
+                                    <td><?php print $i; ?></td>
                                     <td><?php print $r['tanggal']; ?></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><?php print $r['gejala']; ?></td>
+                                    <td><?php print $r['penyakit']; ?></td>
+                                    <td><?php print $r['nilai']; ?></td>
+                                    <td><?php print $r['persentase']; ?></td>
                                     <td>
                                         <a href="../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
                                     </td>
