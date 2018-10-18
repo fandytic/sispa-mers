@@ -46,7 +46,7 @@ $p = new Pasien;
                             <table id="bootstrap-data-table" class="table table-hover table-bordered">
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th style="color: white;" width="13%">ID</th>
+                                    <th style="color: white;" width="5%">ID</th>
                                     <th style="color: white;">Nama Pasien</th>
                                     <th style="color: white;">Tanggal Lahir</th>
                                     <th style="color: white;">Aksi</th>

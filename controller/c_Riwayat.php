@@ -22,5 +22,11 @@ class Riwayat
 		}
 		return $data;
 	}
+
+	function Hapus($id_diagnosa)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "DELETE FROM diagnosa WHERE id_diagnosa = '$id_diagnosa'");
+	}
 }
  ?>
