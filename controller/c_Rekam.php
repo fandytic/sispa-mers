@@ -23,5 +23,11 @@ class Rekam
 		}
 		return $data;
 	}
+
+	function Hapus($id_riwayat)
+	{
+		include '../koneksi/koneksi.php';
+		$query = mysqli_query($con,"DELETE FROM riwayat WHERE id_riwayat = '$id_riwayat'");
+	}
 }
  ?>

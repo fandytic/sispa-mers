@@ -23,7 +23,7 @@ class Penyakit
 
 	function InsertPenyakit($kode, $nama, $kett){
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "insert into ds_penyakit (kode, nama, kett)
+		$query = mysqli_query($con, "INSERT into ds_penyakit (kode, nama, kett)
 			values('$kode', '$nama', '$kett')");
 	}
 

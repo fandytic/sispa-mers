@@ -58,29 +58,43 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($data as $r) {
-                                    $i++;
-                                   ?>
-                                   <tr>
-                                    <td><?php print $i; ?></td>
-                                    <td><?php print $r['tanggal']; ?></td>
-                                    <td><?php print $r['gejala']; ?></td>
-                                    <td><?php print $r['penyakit']; ?></td>
-                                    <td><?php print $r['nilai']; ?></td>
-                                    <td><?php print $r['persentase']; ?></td>
-                                    <td>
-                                        <a href="../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
+                                <?php 
+                                if (!isset($data)) {
+                                    ?>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <?php
+                                } else {
+                                    foreach ($data as $r) {
+                                        $i++;
+                                        ?>
+                                        <tr>
+                                            <td><?php print $i; ?></td>
+                                            <td><?php print $r['tanggal']; ?></td>
+                                            <td><?php print $r['gejala']; ?></td>
+                                            <td><?php print $r['penyakit']; ?></td>
+                                            <td><?php print $r['nilai']; ?></td>
+                                            <td><?php print $r['persentase']; ?></td>
+                                            <td>
+                                                <a href="../ProsesA/d_rekam.php?id_riwayat=<?php print $r['id_riwayat']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Rekam Medis"><i class="fa fa-times"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php }} ?>
+                                </tbody>
+                            </table>
                         </tbody>
                     </table>
-                </tbody>
-            </table>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 <!-- ============================================================== -->
 <!-- End PAge Content -->

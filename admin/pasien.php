@@ -23,7 +23,7 @@ $p = new Pasien;
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="tpenyakit.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Pasien</a>
+                    <a href="tpasien.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Pasien</a>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@ $p = new Pasien;
                                         <td>
                                             <a href="riwayatrm.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Lihat Rekam Medis"><i class="mdi mdi-eye"></i></a>
 
-                                            <a href="epenyakit.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Pasien"><i class="mdi mdi-lead-pencil"></i></a>
+                                            <a href="epasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Pasien"><i class="mdi mdi-lead-pencil"></i></a>
 
                                             <a href="../ProsesA/d_pasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Pasien"><i class="fa fa-times"></i></a>
                                         </td>
