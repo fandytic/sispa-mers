@@ -11,12 +11,12 @@
 			<div class="page-breadcrumb">
 				<div class="row align-items-center">
 					<div class="col-5">
-						<h4 class="page-title">Manajemen Tambah Gejala</h4>
+						<h4 class="page-title">Manajemen Tambah Data Pasien</h4>
 						<div class="d-flex align-items-center">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item" aria-current="page"><a href="gejala.php">Gejala</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Tambah Gejala</li>
+								<li class="breadcrumb-item" aria-current="page"><a href="pasien.php">Pasien</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Tambah Data Pasien</li>
 							</ol>
 						</div>
 					</div>
