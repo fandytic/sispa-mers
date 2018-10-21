@@ -25,7 +25,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="tpenyakit.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Diagnosa</a>
+                    <a href="diagnosa.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Diagnosa</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                             <table id="bootstrap-data-table" class="table table-hover table-bordered">
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th style="color: white;" width="13%">ID</th>
+                                    <th style="color: white;" width="5%">ID</th>
                                     <th style="color: white;">Tanggal</th>
                                     <th style="color: white;">Gejala</th>
                                     <th style="color: white;">Penyakit</th>
@@ -83,7 +83,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                             <td><?php print $r['nilai']; ?></td>
                                             <td><?php print $r['persentase']; ?></td>
                                             <td>
-                                                <a href="../ProsesA/d_rekam.php?id_riwayat=<?php print $r['id_riwayat']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Rekam Medis"><i class="fa fa-times"></i></a>
+                                                <a onclick="myFunction()" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Rekam Medis"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                     <?php }} ?>
@@ -111,3 +111,14 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
+
+<script type="text/javascript">
+    function myFunction(){
+    var r = confirm("Apakah anda yakin akan menghapus riwayat rekam medis dari daftar ?");
+    if (r == true) {
+        window.location = "../ProsesA/d_rekam.php?id_riwayat=<?php print $r['id_riwayat']; ?>";
+    } else {
+        document.location('riwayatrm.php');
+    }
+}
+</script>

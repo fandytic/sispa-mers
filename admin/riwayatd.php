@@ -67,7 +67,7 @@ $r = new Riwayat;
                                         <td><?php print $d['nilai']; ?></td>
                                         <td><?php print $d['persentase']; ?></td>
                                         <td>
-                                            <a href="../ProsesA/d_riwayat.php?id_diagnosa=<?php print $d['id_diagnosa']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Riwayat"><i class="fa fa-times"></i></a>
+                                            <a onclick="myFunction()" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Riwayat"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -95,3 +95,13 @@ $r = new Riwayat;
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
+<script type="text/javascript">
+    function myFunction(){
+    var r = confirm("Apakah anda yakin akan menghapus riwayat diagnosa dari daftar ?");
+    if (r == true) {
+        window.location = "../ProsesA/d_riwayat.php?id_diagnosa=<?php print $d['id_diagnosa']; ?>";
+    } else {
+        document.location('riwayatd.php');
+    }
+}
+</script>

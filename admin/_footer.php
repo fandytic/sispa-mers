@@ -42,6 +42,8 @@
 <script src="../assetsA/assets/libs/data-table/buttons.print.min.js"></script>
 <script src="../assetsA/assets/libs/data-table/buttons.colVis.min.js"></script>
 <script src="../assetsA/assets/libs/data-table/datatables-init.js"></script>
+
+
 </body>
 
 </html>

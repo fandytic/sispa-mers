@@ -64,7 +64,7 @@ $bsp = new BasisP;
                                     <td>
                                         <a href="ebasisp.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Basis Pengetahuan"><i class="mdi mdi-lead-pencil"></i></a>
 
-                                        <a href="../ProsesA/d_basisp.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Basis Pengetahuan"><i class="fa fa-times"></i></a>
+                                        <a onclick="myFunction()" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Basis Pengetahuan"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php } ?>
@@ -90,3 +90,13 @@ $bsp = new BasisP;
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
+<script type="text/javascript">
+    function myFunction(){
+    var r = confirm("Apakah anda yakin akan menghapus basis pengetahuan dari daftar ?");
+    if (r == true) {
+        window.location = "../ProsesA/d_basisp.php?id=<?php print $d['id']; ?>";
+    } else {
+        document.location('basisp.php');
+    }
+}
+</script>
