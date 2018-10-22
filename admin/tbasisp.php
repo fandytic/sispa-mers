@@ -44,62 +44,80 @@ $data2 = $tt->TampilSemua();
 			<div class="col-lg-8 col-xlg-9 col-md-7">
 				<div class="card">
 					<div class="card-body">
-						<form method="post" class="form-horizontal form-material" action="../ProsesA/t_basisp.php">
+						<form id="myform" method="post" class="form-horizontal form-material" action="../ProsesA/t_basisp.php">
 							<div class="form-group">
 								<label class="col-md-12">Nama Penyakit</label>
 								<div class="col-md-12">
-										<select class="form-control form-control-line" name="id_penyakit">
-											<?php foreach($data as $d){
-												?>
+									<select class="form-control form-control-line" name="id_penyakit">
+										<?php foreach($data as $d){
+											?>
 											<option value="<?php print $d['id']; ?>"><?php print $d['nama']; ?></option>
 										<?php } ?>
-										</select>
-									</div>
+									</select>
 								</div>
-								<div class="form-group">
-									<label class="col-md-12">Nama Gejala</label>
-									<div class="col-md-12">
-										<select class="form-control form-control-line" name="id_gejala">
-											<?php foreach($data2 as $dd){
-												?>
+							</div>
+							<div class="form-group">
+								<label class="col-md-12">Nama Gejala</label>
+								<div class="col-md-12">
+									<select class="form-control form-control-line" name="id_gejala">
+										<?php foreach($data2 as $dd){
+											?>
 											<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>
 										<?php } ?>
-										</select>
-									</div>
+									</select>
 								</div>
+							</div>
 
-								<div class="form-group">
-									<label class="col-md-12">Nilai Kepercayaan</label>
-									<div class="col-md-12">
-										<input type="text" class="form-control form-control-line" name="ds">
-									</div>
+							<div class="form-group">
+								<label class="col-md-12">Nilai Kepercayaan</label>
+								<div class="col-md-12">
+									<input id="numb" type="text" class="form-control form-control-line" name="ds" placeholder="contoh input nilai : 0.5">
+									<p id="demo" style="color: red;"></p>
 								</div>
+							</div>
 
-								<div class="form-group">
-									<div class="col-sm-12">
-										<button class="btn btn-success" type="submit">Tambah Data</button>
-									</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button onclick="myFunction()" class="btn btn-success" type="button">Tambah Data</button>
 								</div>
-							</form>
-						</div>
+							</div>
+						</form>
 					</div>
 				</div>
-				<!-- Column -->
 			</div>
+			<!-- Column -->
 		</div>
 	</div>
-	<!-- ============================================================== -->
-	<!-- End PAge Content -->
-	<!-- ============================================================== -->
-	<!-- ============================================================== -->
-	<!-- Right sidebar -->
-	<!-- ============================================================== -->
-	<!-- .right-sidebar -->
-	<!-- ============================================================== -->
-	<!-- End Right sidebar -->
-	<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<!-- ============================================================== -->
+<!-- End Right sidebar -->
+<!-- ============================================================== -->
 </div>
 <!-- ============================================================== -->
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
+
+<script type="text/javascript">
+	function myFunction(){
+		var x, text;
+		// Get the value of the input field with id="numb"
+		x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 0 || x > 1) {
+    	text = "*Format yang diinputkan harus antara 0 - 1";
+    } else {
+    	text = "Format benar";
+		document.forms["myform"].submit();
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>

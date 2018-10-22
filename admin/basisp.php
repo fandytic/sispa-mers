@@ -46,6 +46,7 @@ $bsp = new BasisP;
                                 <table id="bootstrap-data-table" class="table table-hover table-bordered">
                                     <thead style="background-color: #7f8c8d; color: white;">
                                       <tr>
+                                        <th style="color: white;" width="5%">No</th>
                                         <th style="color: white;">Nama Penyakit</th>
                                         <th style="color: white;">Nama Gejala</th>
                                         <th style="color: white;" width="15%">Nilai Kepercayaan</th>
@@ -56,8 +57,10 @@ $bsp = new BasisP;
                                     <?php
                                 $data = $bsp->TampilSemua();
                                 foreach($data as $d){
+                                    $i++;
                                     ?>
                                   <tr>
+                                    <td><?php print $i; ?></td>
                                     <td><?php print $d['nama_penyakit']; ?></td>
                                     <td><?php print $d['nama_gejala']; ?></td>
                                     <td><?php print $d['ds']; ?></td>
