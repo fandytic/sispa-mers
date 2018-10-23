@@ -83,7 +83,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                             <td><?php print $r['nilai']; ?></td>
                                             <td><?php print $r['persentase']; ?></td>
                                             <td>
-                                                <a onclick="myFunction()" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Rekam Medis"><i class="fa fa-times"></i></a>
+                                                <a onclick="if (! confirm('Apakah anda yakin akan menghapus riwayat rekam medis dari daftar ?')) { return false; }" href="../ProsesA/d_rekam.php?id_riwayat=<?php print $r['id_riwayat']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Rekam Medis"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                     <?php }} ?>
@@ -111,14 +111,3 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
-
-<script type="text/javascript">
-    function myFunction(){
-    var r = confirm("Apakah anda yakin akan menghapus riwayat rekam medis dari daftar ?");
-    if (r == true) {
-        window.location = "../ProsesA/d_rekam.php?id_riwayat=<?php print $r['id_riwayat']; ?>";
-    } else {
-        document.location('riwayatrm.php');
-    }
-}
-</script>

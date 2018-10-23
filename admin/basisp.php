@@ -2,6 +2,7 @@
 
 include "../controller/c_BasisP.php";
 $bsp = new BasisP;
+$data = $bsp->TampilSemua();
 ?>
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
@@ -53,9 +54,19 @@ $bsp = new BasisP;
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <?php
-                                $data = $bsp->TampilSemua();
+                            <tbody>                                
+                                <?php 
+                                if (!isset($data)) {
+                                    ?>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <?php
+                                } else {
                                 foreach($data as $d){
                                     $i++;
                                     ?>
@@ -67,10 +78,10 @@ $bsp = new BasisP;
                                         <td>
                                             <a href="ebasisp.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Basis Pengetahuan"><i class="mdi mdi-lead-pencil"></i></a>
 
-                                            <a href="../ProsesA/d_basisp.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white confirmation" title="Hapus Basis Pengetahuan"><i class="fa fa-times"></i></a>
+                                            <a onclick="if (! confirm('Apakah anda yakin akan menghapus basis pengetahuan dari daftar ?')) { return false; }" href="../ProsesA/d_basisp.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white confirmation" title="Hapus Basis Pengetahuan"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php }} ?>
                             </tbody>
                         </table>
                     </div>
@@ -93,6 +104,7 @@ $bsp = new BasisP;
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
+<!--
 <script type="text/javascript">
     var elems = document.getElementsByClassName('confirmation');
     var confirmIt = function (e) {
@@ -102,7 +114,8 @@ $bsp = new BasisP;
         elems[i].addEventListener('click', confirmIt, false);
     }
 </script>
-<!--
+
+
 <script type="text/javascript">
 
     

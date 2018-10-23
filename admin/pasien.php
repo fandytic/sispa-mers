@@ -66,7 +66,7 @@ $p = new Pasien;
 
                                             <a href="epasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Pasien"><i class="mdi mdi-lead-pencil"></i></a>
 
-                                            <a onclick="myFunction()" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Pasien"><i class="fa fa-times"></i></a>
+                                            <a onclick="if (! confirm('Apakah anda yakin akan menghapus pasien dari daftar ?')) { return false; }" href="../ProsesA/d_pasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Pasien"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -94,14 +94,3 @@ $p = new Pasien;
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
-
-<script type="text/javascript">
-    function myFunction(){
-    var r = confirm("Apakah anda yakin akan menghapus pasien dari daftar ?");
-    if (r == true) {
-        window.location = "../ProsesA/d_pasien.php?id_pasien=<?php print $d['id_pasien']; ?>";
-    } else {
-        document.location('pasien.php');
-    }
-}
-</script>
