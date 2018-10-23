@@ -64,7 +64,7 @@ $pt = new Penyakit;
                                         <td>
                                             <a href="epenyakit.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Penyakit"><i class="mdi mdi-lead-pencil"></i></a>
 
-                                            <a onclick="myFunction()" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
+                                            <a href="../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white confirmation" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -93,12 +93,7 @@ $pt = new Penyakit;
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
 <script type="text/javascript">
-    function myFunction(){
-    var r = confirm("Apakah anda yakin akan menghapus penyakit dari daftar ?");
-    if (r == true) {
-        window.location = "../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>";
-    } else {
-        document.location('penyakit.php');
-    }
-}
+    $('.confirmation').on('click', function () {
+        return confirm('Apakah anda yakin akan menghapus penyakit dari daftar ?');
+    });
 </script>
