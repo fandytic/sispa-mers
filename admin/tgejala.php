@@ -44,7 +44,7 @@ $tt->TampilAngka();
 									<div class="form-group">
 										<label class="col-md-12">Kode Gejala</label>
 										<div class="col-md-12">
-											<input type="text" value="P<?php print $tt->nilai+1; ?>" class="form-control form-control-line" name="kode" readonly="true">
+											<input type="text" value="G<?php print $tt->nilai+1; ?>" class="form-control form-control-line" name="kode" readonly="true">
 										</div>
 									</div>
 									<div class="form-group">
