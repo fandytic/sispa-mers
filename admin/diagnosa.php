@@ -80,12 +80,12 @@ $pt = new Gejala;
     <div class="page-breadcrumb">
         <div class="row align-items-center">
             <div class="col-5">
-                <h4 class="page-title">Manajemen Rekam Medis</h4>
+                <h4 class="page-title">Diagnosa</h4>
                 <div class="d-flex align-items-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="pasien.php">Pasien</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Rekam Medis</li>
+                        <li class="breadcrumb-item active" aria-current="page">Diagnosa</li>
                     </ol>
                 </div>
             </div>
