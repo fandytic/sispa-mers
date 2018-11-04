@@ -49,8 +49,11 @@ include '_header.php';
                     </div>
                     <div>
                         <hr> </div>
-                        <div class="card-body"> <small class="text-muted">Email address </small>
-                            <h6>hannagover@gmail.com</h6>
+                        <div class="card-body"> 
+                            <small class="text-muted">Email address </small>
+                            <h6><?php echo $row["email"]; ?></h6>
+                            <small class="text-muted">Phone Number </small>
+                            <h6><?php echo $row["nohp"]; ?></h6>
                         </div>
                     </div>
                 </div>
@@ -70,6 +73,18 @@ include '_header.php';
                                     <label class="col-md-12">Nama</label>
                                     <div class="col-md-12">
                                         <input type="text" value="<?php echo $row["nama"]; ?>" class="form-control form-control-line" name="nama">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Email</label>
+                                    <div class="col-md-12">
+                                        <input type="email" value="<?php echo $row["email"]; ?>" class="form-control form-control-line form-password" name="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">No Hp</label>
+                                    <div class="col-md-12">
+                                        <input type="number" value="<?php echo $row["nohp"]; ?>" class="form-control form-control-line form-password" name="nohp">
                                     </div>
                                 </div>
                                 <div class="form-group">

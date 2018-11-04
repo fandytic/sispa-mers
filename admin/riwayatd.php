@@ -57,6 +57,19 @@ $r = new Riwayat;
                             <tbody>
                                 <?php
                                 $data = $r->TampilSemua();
+                                if (!isset($data)) {
+                                    ?>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <?php
+                                } else {
                                 foreach($data as $d){
                                     ?>
                                     <tr>
@@ -70,7 +83,7 @@ $r = new Riwayat;
                                             <a onclick="if (! confirm('Apakah anda yakin akan menghapus riwayat diagnosa dari daftar ?')) { return false; }" href="../ProsesA/d_riwayat.php?id_diagnosa=<?php print $d['id_diagnosa']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Riwayat"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php }} ?>
                             </tbody>
                         </table>
                     </tbody>

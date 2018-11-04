@@ -55,10 +55,24 @@ $p = new Pasien;
                             <tbody>
                                 <?php 
                                 $data = $p->TampilSemua();
-                                foreach($data as $d){ 
+                                if (!isset($data)) {
                                     ?>
                                     <tr>
-                                        <td><?php print $d['id_pasien']; ?></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <?php
+                                } else {
+                                foreach($data as $d){ 
+                                    $i++;
+                                    ?>
+                                    <tr>
+                                        <td><?php print $i; ?></td>
                                         <td><?php print $d['nama']; ?></td>
                                         <td><?php print $d['tgl_lahir']; ?></td>
                                         <td>
@@ -69,7 +83,7 @@ $p = new Pasien;
                                             <a onclick="if (! confirm('Apakah anda yakin akan menghapus pasien dari daftar ?')) { return false; }" href="../ProsesA/d_pasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Pasien"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php }} ?>
                             </tbody>
                         </table>
                     </tbody>

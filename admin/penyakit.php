@@ -55,6 +55,19 @@ $pt = new Penyakit;
                             <tbody>
                                 <?php
                                 $data = $pt->TampilSemua();
+                                if (!isset($data)) {
+                                    ?>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <?php
+                                } else {
                                 foreach($data as $d){
                                     ?>
                                     <tr>
@@ -67,7 +80,7 @@ $pt = new Penyakit;
                                             <a onclick="if (! confirm('Apakah anda yakin akan menghapus penyakit dari daftar ?')) { return false; }" href="../ProsesA/d_penyakit.php?id=<?php print $d['id']; ?>" class="btn btn-danger btn-simple btn-xs text-white confirmation" title="Hapus Penyakit"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php }} ?>
                             </tbody>
                         </table>
                     </tbody>

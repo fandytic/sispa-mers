@@ -147,7 +147,7 @@ $row = mysqli_fetch_array($hasil);
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <h5 class="m-b-0 user-name font-medium"><?php echo $row['nama']; ?></h5>
-                                    <span class="op-5 user-email">fandy@gmail.com</span>
+                                    <span class="op-5 user-email"><?php echo $row['email']; ?></span>
                                 </a>
                             </div>
                         </div>
