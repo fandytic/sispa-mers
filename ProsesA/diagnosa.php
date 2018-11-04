@@ -69,12 +69,14 @@ if(isset($_POST['gejala'])){
 					$densitas_baru[$k]=$d/(1-(isset($densitas_baru["&theta;"])?$densitas_baru["&theta;"]:0));
 				}
 			}
+			//menampilkan array perhitungan
 			print_r($densitas_baru);
 		}
 
 		//--- perangkingan
 		unset($densitas_baru["&theta;"]);
 		arsort($densitas_baru);
+		//menampilkan array perhitungan
 		print_r($densitas_baru);
 
 		//--- menampilkan hasil akhir
