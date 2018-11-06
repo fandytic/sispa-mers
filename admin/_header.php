@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($hasil);
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assetsA/assets/images/Logo-SP.png">
-    <title>Admin - Gejala | Sistem Pakar</title>
+    <title>Admin | Sistem Pakar</title>
     <!-- Custom CSS -->
     <link href="../assetsA/dist/css/style.min.css" rel="stylesheet">
 
@@ -116,7 +116,7 @@ $row = mysqli_fetch_array($hasil);
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assetsA/assets/images/users/images.png" alt="user" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
+                            <a class="dropdown-item" href="../index.php"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
                             <a class="dropdown-item" href="../logout.php"><i class="mdi mdi-logout-variant"></i> Logout</a>
                         </div>
                     </li>

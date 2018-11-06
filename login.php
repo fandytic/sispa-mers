@@ -59,7 +59,7 @@ include "koneksi/koneksi.php";
 						</div>
 
 						<div>
-							<a href="#" class="txt1">
+							<a href="index.php" class="txt1">
 								Kembali ke website
 							</a>
 						</div>

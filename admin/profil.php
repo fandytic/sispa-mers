@@ -78,13 +78,13 @@ include '_header.php';
                                 <div class="form-group">
                                     <label class="col-md-12">Email</label>
                                     <div class="col-md-12">
-                                        <input type="email" value="<?php echo $row["email"]; ?>" class="form-control form-control-line form-password" name="email">
+                                        <input type="email" value="<?php echo $row["email"]; ?>" class="form-control form-control-line" name="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">No Hp</label>
                                     <div class="col-md-12">
-                                        <input type="number" value="<?php echo $row["nohp"]; ?>" class="form-control form-control-line form-password" name="nohp">
+                                        <input type="number" value="<?php echo $row["nohp"]; ?>" class="form-control form-control-line" name="nohp">
                                     </div>
                                 </div>
                                 <div class="form-group">
