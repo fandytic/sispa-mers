@@ -64,10 +64,20 @@
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
                 <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                <span class="section-heading-lower">About Our Cafe</span>
+                <span class="section-heading-lower">Panduan Tata Cara Diagnosa Penyakit</span>
               </h2>
-              <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-              <p class="mb-0">We guarantee that you will fall in <em>lust</em> with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+              <p style="text-align: justify;">Sistem Pakar diagnosa penyakit saraf merupakan sebuah sistem yang mampu melakukan diagnosa penyakit saraf berdasarkan gejala yang ada pada tubuh manusia yang dapat dirasakan. untuk melakukan diagnosa penyakit, terdapat beberapa tatacara dan aturan yang harus dilakukan, adalah sebagai berikut:</p>
+
+              <h3><span class="section-heading-upper">BAGAIMANA CARA MELAKUKAN DIAGNOSA PENYAKIT?</span></h3>
+              <p class="mb-0">Diagnosa penyakit dapat dilakukan apabila telah menginput 2 gejala atau lebih, dikarenakan untuk mendiagnosa sebuah penyakit dibutuhkan minimal 2 buah gejala agar penyakit dapat didiagnosa.</p>
+
+              <br>
+              <h3><span class="section-heading-upper">BAGAIMANA JIKA GEJALA YANG ANDA RASAKAN TIDAK TERDAPAT DI SISTEM?</span></h3>
+              <p class="mb-0">Pada saat ini hanya beberapa gejala dan penyakit yang dapat didiagnosa oleh sistem, maka dari itu proses diagnosa penyakit hanya bisa dilakukan jika gejala dan penyakit sudah terdaftar pada sistem.</p>
+
+              <br>
+              <h3><span class="section-heading-upper">APAKAH DIAGNOSA PENYAKIT PADA SISTEM SUDAH 100% BENAR?</span></h3>
+              <p class="mb-0">Diagnosa penyakit pada sistem dilakukan dengan perhitungan matematis yang bersumber dari pakar/dokter ahli saraf, guna melakukan upaya penanganan dini terhadap penyakit tersebut. tetapi akan lebih baik jika melakukan konsultasi ulang bersama dokter ahli saraf, agar masalah yang anda hadapi dapat ditangani lebih baik.</p>
             </div>
           </div>
         </div>
