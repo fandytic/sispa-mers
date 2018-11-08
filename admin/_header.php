@@ -146,9 +146,14 @@ $row = mysqli_fetch_array($hasil);
                             <div class="user-pic"><img src="../assetsA/assets/images/users/images.png" alt="users" class="rounded-circle" width="40" /></div>
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <h5 class="m-b-0 user-name font-medium"><?php echo $row['nama']; ?></h5>
+                                    <h5 class="m-b-0 user-name font-medium"><?php echo $row['nama']; ?> <i class="fa fa-angle-down"></i></h5>
                                     <span class="op-5 user-email"><?php echo $row['email']; ?></span>
                                 </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
+                                        <a class="dropdown-item" href="../index.php"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="../logout.php"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                    </div>
                             </div>
                         </div>
                         <!-- End User Profile-->

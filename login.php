@@ -1,5 +1,14 @@
 <?php
+session_start();
 include "koneksi/koneksi.php";
+
+if(!isset($_SESSION['username'])){
+
+} else {
+    $username = $_SESSION["username"];
+    header('location:admin/pasien.php');
+}
+require_once('koneksi/koneksi.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
