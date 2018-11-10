@@ -86,6 +86,21 @@ if(isset($_POST['gejala'])){
 		WHERE kode IN('{$codes[0]}')";
 		$result=mysqli_query($con,$sql);
 		$row=$result->fetch_row();
-		echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."%";
+		echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
+
+		$queries = "SELECT kett FROM ds_penyakit WHERE nama = '$row[0]'";
+		$result = mysqli_query($con,$queries);
+		$value = mysqli_fetch_object($result);
+		echo "Keterangan :<br>".$value->kett."<br><br>";
+
+		echo "Gejala yang dipilih :<br>";
+		foreach ($_POST['gejala'] as $item) {
+			$query = "SELECT nama FROM ds_gejala WHERE id = '$item'";
+			$result = mysqli_query($con,$query);
+			$value = mysqli_fetch_object($result);
+			$i++;
+			print $i;
+			echo ". ".$value->nama."<br>";
+		}
 	}
 }
