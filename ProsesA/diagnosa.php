@@ -88,11 +88,13 @@ if(isset($_POST['gejala'])){
 		$row=$result->fetch_row();
 		echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
 
+		//--- menampilkan keterangan dari penyakit
 		$queries = "SELECT kett FROM ds_penyakit WHERE nama = '$row[0]'";
 		$result = mysqli_query($con,$queries);
 		$value = mysqli_fetch_object($result);
 		echo "Keterangan :<br>".$value->kett."<br><br>";
 
+		//--- menampilkan gejala yang dipilih
 		echo "Gejala yang dipilih :<br>";
 		foreach ($_POST['gejala'] as $item) {
 			$query = "SELECT nama FROM ds_gejala WHERE id = '$item'";
