@@ -146,7 +146,7 @@
 										unset($densitas_baru["&theta;"]);
 										arsort($densitas_baru);
 										//menampilkan array perhitungan
-										print_r($densitas_baru);
+										/*print_r($densitas_baru);*/
 
 										//--- menampilkan hasil akhir
 										$codes=array_keys($densitas_baru);
@@ -155,7 +155,7 @@
 										WHERE kode IN('{$codes[0]}')";
 										$result=mysqli_query($con,$sql);
 										$row=$result->fetch_row();
-										echo "{$codes[0]} Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
+										echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
 
 										//--- menampilkan keterangan dari penyakit
 										$queries = "SELECT kett FROM ds_penyakit WHERE nama = '$row[0]'";

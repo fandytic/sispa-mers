@@ -71,9 +71,10 @@ $r = new Riwayat;
                                     <?php
                                 } else {
                                 foreach($data as $d){
+                                    $i++;
                                     ?>
                                     <tr>
-                                        <td><?php print $d['id_diagnosa']; ?></td>
+                                        <td><?php print $i; ?></td>
                                         <td><?php print $d['tanggal']; ?></td>
                                         <td><?php print $d['gejala']; ?></td>
                                         <td><?php print $d['penyakit']; ?></td>
