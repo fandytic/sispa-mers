@@ -2,6 +2,10 @@
 
 include "../controller/c_Gejala.php";
 $pt = new Gejala;
+
+include "../controller/c_Rekam.php";
+$p = new Rekam;
+$data = $p->TampilRPasien($_GET['id_pasien']);
 ?>
 <style>
 /* The container */
@@ -111,8 +115,9 @@ $pt = new Gejala;
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <form method="post" action="../ProsesA/diagnosa.php">
-
+                            <form method="post" action="hdiagnosa.php">
+                                <input type="hidden" name="id_pasien" value="<?php print $_GET['id_pasien'] ?>">
+                                
                                 <h2>Silahkan pilih apa yang anda rasakan</h2><hr>
                                 <?php
                                 $data = $pt->TampilSemua();

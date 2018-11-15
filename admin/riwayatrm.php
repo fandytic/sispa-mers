@@ -25,7 +25,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="diagnosa.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Diagnosa</a>
+                    <a href="diagnosa.php?id_pasien=<?php print $_GET['id_pasien'] ?>" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Diagnosa</a>
                 </div>
             </div>
         </div>
