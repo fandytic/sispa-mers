@@ -72,7 +72,12 @@
 
 								if(isset($_POST['gejala'])){
 									if(count($_POST['gejala'])<2){
-										echo "Pilih minimal 2 gejala";
+										?>
+										<script language="JavaScript">
+											alert('Pilih minimal 2 gejala');
+										document.location='diagnosa.php'</script>
+										<?php
+										/*echo "Pilih minimal 2 gejala";*/
 									}else{
 										$sql = "SELECT GROUP_CONCAT(b.kode), a.ds
 										FROM ds_aturan a

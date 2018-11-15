@@ -152,6 +152,7 @@ $pt = new Gejala;
 
               <?php } ?>
               <br><hr>
+              <p style="color: red">*Minimal pilih 2 Gejala</p>
               <button type="submit" value="Diagnosa Penyakit" class="btn btn-danger text-white">Diagnosa</button>
             </form>
           </div>
