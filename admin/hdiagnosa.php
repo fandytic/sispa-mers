@@ -234,12 +234,12 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                         //-- insert persentase
                                         $persentase = round($densitas_baru[$codes[0]]*100,2)."%";
                                         //-- insert tanggal sekarang
-
+                                        $tanggal = date("d-m-Y")."<br>".date("h:i:s A");
                                         //-- id pasien
                                         $id_pasien = $_POST['id_pasien'];
 
                                         //--- memasukkan hasil diagnosa ke database
-                                        $input = mysqli_query($con,"INSERT INTO riwayat (id_pasien, gejala, penyakit, nilai, persentase) values('$id_pasien', '$gejala', '$penyakit', '$nilai', '$persentase')");
+                                        $input = mysqli_query($con,"INSERT INTO riwayat (id_pasien, tanggal, gejala, penyakit, nilai, persentase) values('$id_pasien', '$tanggal', '$gejala', '$penyakit', '$nilai', '$persentase')");
                                     }
                                 } ?>
                                 <br>

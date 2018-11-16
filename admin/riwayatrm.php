@@ -54,6 +54,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                     <th style="color: white;">Penyakit</th>
                                     <th style="color: white;">Nilai</th>
                                     <th style="color: white;">Persentase</th>
+                                    <th style="color: white;">Dokter</th>
                                     <th style="color: white;">Aksi</th>
                                 </tr>
                             </thead>
@@ -62,6 +63,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                 if (!isset($data)) {
                                     ?>
                                     <tr>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -82,7 +84,10 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                             <td><?php print $r['penyakit']; ?></td>
                                             <td><?php print $r['nilai']; ?></td>
                                             <td><?php print $r['persentase']; ?></td>
+                                            <td><?php print $r['dokter']; ?></td>
                                             <td>
+                                                <!-- <a href="egejala.php?id=<?php print $d['id']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Gejala"><i class="mdi mdi-lead-pencil"></i></a> -->
+                                                
                                                 <a onclick="if (! confirm('Apakah anda yakin akan menghapus riwayat rekam medis dari daftar ?')) { return false; }" href="../ProsesA/d_rekam.php?id_riwayat=<?php print $r['id_riwayat']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Rekam Medis"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>

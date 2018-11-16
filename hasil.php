@@ -33,7 +33,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
-			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Sistem Pakar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -188,10 +188,10 @@
 										//-- insert persentase
 										$persentase = round($densitas_baru[$codes[0]]*100,2)."%";
 										//-- insert tanggal sekarang
-
+										$tanggal = date("d-m-Y")."<br>".date("h:i:s A");
 
 										//--- memasukkan hasil diagnosa ke database
-										$input = mysqli_query($con,"INSERT INTO diagnosa (gejala, penyakit, nilai, persentase) values('$gejala', '$penyakit', '$nilai', '$persentase')");
+										$input = mysqli_query($con,"INSERT INTO diagnosa (tanggal, gejala, penyakit, nilai, persentase) values('$tanggal', '$gejala', '$penyakit', '$nilai', '$persentase')");
 									}
 								} ?>
 							</p>
