@@ -52,6 +52,7 @@ $p->TampilSatuData($_GET['id_pasien']);
 										<label class="col-md-12">Tanggal Lahir</label>
 										<div class="col-md-12">
 											<input type="date" class="form-control form-control-line" value="<?php print $p->tgl_lahir; ?>" name="tgl_lahir">
+											<p style="color: red">*Format Bulan/Tanggal/Tahun</p>
 										</div>
 									</div>
 

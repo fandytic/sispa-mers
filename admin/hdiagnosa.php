@@ -142,7 +142,6 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                         $row=$result->fetch_row();
                                         $fod=$row[0];
 
-                                        //-- masukkan kode perhitungannya di sini
                                         //--- menentukan nilai densitas
                                         $densitas_baru=array();
                                         while(!empty($gejala)){
@@ -245,7 +244,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                 <br>
                                 <hr>
                                 <br>
-                                <a href="pasien.php" class="btn btn-danger text-white">Kembali</a>
+                                <a href="riwayatrm.php?id_pasien=<?php print $_POST['id_pasien']; ?>" class="btn btn-danger text-white">Kembali</a>
                     </div>
                 </div>
             </div>

@@ -130,7 +130,6 @@
 										$row=$result->fetch_row();
 										$fod=$row[0];
 
-										//-- masukkan kode perhitungannya di sini
 										//--- menentukan nilai densitas
 										$densitas_baru=array();
 										while(!empty($gejala)){
