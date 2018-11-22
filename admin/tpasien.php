@@ -48,6 +48,7 @@
 										<label class="col-md-12">Tanggal Lahir</label>
 										<div class="col-md-12">
 											<input type="date" class="form-control form-control-line" name="tgl_lahir">
+											<p style="color: red">*Format Bulan/Tanggal/Tahun</p>
 										</div>
 									</div>
 

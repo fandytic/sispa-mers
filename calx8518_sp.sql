@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 07, 2018 at 10:41 PM
+-- Generation Time: Nov 18, 2018 at 09:22 PM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -51,7 +51,7 @@ INSERT INTO `admin` (`id_admin`, `username`, `nama`, `password`, `email`, `nohp`
 CREATE TABLE `diagnosa` (
   `id_diagnosa` int(11) NOT NULL,
   `tanggal` varchar(50) NOT NULL,
-  `gejala` varchar(500) NOT NULL,
+  `gejala` text NOT NULL,
   `penyakit` varchar(250) NOT NULL,
   `nilai` varchar(50) NOT NULL,
   `persentase` varchar(50) NOT NULL
@@ -62,7 +62,26 @@ CREATE TABLE `diagnosa` (
 --
 
 INSERT INTO `diagnosa` (`id_diagnosa`, `tanggal`, `gejala`, `penyakit`, `nilai`, `persentase`) VALUES
-(2, '24 Februari', '1. adasdasd <br>\r\n2. dkasdajsdjasda <br>\r\n3. asdasdas', 'vasca', '54454', '54');
+(2, '24 Februari', '1. adasdasd <br>\r\n2. dkasdajsdjasda <br>\r\n3. asdasdas', 'vasca', '54454', '54'),
+(3, '', 'Array1. Terasa gatal-gatal pada tenggorokan<br>2. Kepala terasa sakit<br>3. Demam yang dirasakan naik turun<br>', 'Stadium 1', '1', '60.94%'),
+(4, '', '3. Merasakan flu<br>', 'Stadium 3', 'Array', '58.33%'),
+(5, '', 'Array1. Tenggorokan terasa ada yang nyangkut<br>2. Kepala terasa sakit<br>3. Susah menarik nafas panjang<br>', 'Stadium 3', '', '40%'),
+(6, '', 'ArraySusah menarik nafas panjang<br>Demam yang dirasakan naik turun<br>Demam<br>', 'Stadium 1', '1', '80%'),
+(7, '', 'Terasa gatal-gatal pada tenggorokan<br>Pada siang hari badan terasa sakit-sakit<br>Demam tinggi ( > 39º )<br>', 'Stadium 3', '1', '96.75%'),
+(8, '', '1. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>2. Susah menarik nafas panjang<br>3. Denyut jantung yang dirasakan agak cepat berdetak<br>', 'Stadium 3', '', '93%'),
+(9, '', '1. Merasakan flu<br>2. Kepala terasa sakit<br>3. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>', 'Stadium 3', 'P3', '90.38%'),
+(10, '', '1. Tenggorokan terasa sakit<br>2. Demam yang dirasakan naik turun<br>3. Demam<br>', 'Stadium 1', '0.8', '80%'),
+(11, '', '1. Terasa gatal-gatal pada tenggorokan<br>2. Susah menarik nafas panjang<br>3. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 3', '0.35', '35%'),
+(12, '', '1. Batuk kering<br>2. Susah menarik nafas panjang<br>3. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.95', '95%'),
+(13, '', '1. Batuk kering<br>2. Susah menarik nafas panjang<br>3. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.78350515463918', '78.35%'),
+(14, '', '1. Batuk kering<br>2. Susah menarik nafas panjang<br>3. Denyut jantung yang dirasakan agak cepat berdetak<br>', 'Stadium 2', '0.74842767295597', '74.84%'),
+(15, '2018-11-16<br>09:43:25', '1. Susah menarik nafas panjang<br>2. Pada siang hari badan terasa sakit-sakit<br>3. Demam<br>', 'Stadium 2', '0.9775', '97.75%'),
+(16, '16-11-2018<br>09:44:47', '1. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>2. Pada siang hari badan terasa sakit-sakit<br>3. Demam yang dirasakan naik turun<br>4. Demam<br>', 'Stadium 2', '0.958', '95.8%'),
+(17, '16-11-2018<br>09:46:04pm', '1. Susah menarik nafas panjang<br>2. Denyut jantung yang dirasakan agak cepat berdetak<br>3. Demam yang dirasakan naik turun<br>', 'Stadium 2', '0.8392101551481', '83.92%'),
+(18, '16-11-2018<br>09:46:30PM', '1. Susah menarik nafas panjang<br>2. Denyut jantung yang dirasakan agak cepat berdetak<br>3. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 2', '0.8961937716263', '89.62%'),
+(19, '16-11-2018<br>09:46:52 PM', '1. Dada terasa sesak<br>2. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>3. Susah menarik nafas panjang<br>4. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.967585089141', '96.76%'),
+(20, '18-11-2018<br>05:13:40 PM', '1. Pada siang hari badan terasa sakit-sakit<br>2. Demam<br>3. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.74025974025974', '74.03%'),
+(21, '18-11-2018<br>05:21:05 PM', '1. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>2. Demam<br>', 'Stadium 2', '0.7', '70%');
 
 -- --------------------------------------------------------
 
@@ -140,8 +159,7 @@ INSERT INTO `ds_gejala` (`id`, `kode`, `nama`) VALUES
 (14, 'G14', 'Demam yang dirasakan naik turun'),
 (15, 'G15', 'Demam'),
 (16, 'G16', 'Demam tinggi ( > 39º )'),
-(17, 'G17', 'Pada saat malam hari badan terasa panas dan siang terasa dingin'),
-(18, 'G18', 'dimas');
+(17, 'G17', 'Pada saat malam hari badan terasa panas dan siang terasa dingin');
 
 -- --------------------------------------------------------
 
@@ -184,7 +202,8 @@ CREATE TABLE `pasien` (
 INSERT INTO `pasien` (`id_pasien`, `nama`, `tgl_lahir`) VALUES
 (3, 'Nika', '2018-10-01'),
 (5, 'Fandy Hidayat', '2018-10-05'),
-(6, 'Rido', '1997-11-04');
+(6, 'Rido', '1997-11-04'),
+(7, 'Alif', '1997-02-24');
 
 -- --------------------------------------------------------
 
@@ -196,18 +215,25 @@ CREATE TABLE `riwayat` (
   `id_riwayat` int(11) NOT NULL,
   `id_pasien` int(11) NOT NULL,
   `tanggal` varchar(50) NOT NULL,
-  `gejala` varchar(500) NOT NULL,
+  `gejala` text NOT NULL,
   `penyakit` varchar(200) NOT NULL,
   `nilai` varchar(20) NOT NULL,
-  `persentase` varchar(20) NOT NULL
+  `persentase` varchar(20) NOT NULL,
+  `dokter` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `riwayat`
 --
 
-INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `tanggal`, `gejala`, `penyakit`, `nilai`, `persentase`) VALUES
-(5, 3, '2445', 'dsfs', 'sdfsd', '245', '4');
+INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `tanggal`, `gejala`, `penyakit`, `nilai`, `persentase`, `dokter`) VALUES
+(9, 3, '', '1. Merasakan flu<br>2. Dada terasa sesak<br>3. Demam<br>', 'Stadium 3', '0.61832061068702', '61.83%', ''),
+(13, 3, '16-11-2018<br>09:49:21 PM', '1. Merasakan flu<br>2. Tenggorokan terasa sakit<br>3. Terasa gatal-gatal pada tenggorokan<br>', 'Stadium 3', '0.24418604651163', '24.42%', ''),
+(14, 5, '18-11-2018<br>05:14:54 PM', '1. Batuk berdahak<br>2. Merasakan flu berat<br>3. Tenggorokan terasa ada yang nyangkut<br>4. Kepala terasa sakit<br>5. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>6. Demam<br>7. Demam tinggi ( > 39º )<br>8. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 3', '0.94626140238335', '94.63%', ''),
+(15, 3, '18-11-2018<br>09:08:41 PM', '1. Kepala terasa sakit<br>2. Susah menarik nafas panjang<br>3. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 2', '0.925', '92.5%', ''),
+(16, 3, '18-11-2018<br>09:10:19 PM', '1. Merasakan flu<br>2. Tenggorokan terasa ada yang nyangkut<br>3. Kepala terasa sakit<br>4. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>', 'Stadium 2', '0.532', '53.2%', ''),
+(17, 6, '18-11-2018<br>09:11:47 PM', '1. Merasakan flu<br>2. Terasa gatal-gatal pada tenggorokan<br>3. Kepala terasa sakit<br>4. Dada terasa sesak<br>', 'Stadium 3', '0.8961661341853', '89.62%', ''),
+(18, 7, '18-11-2018<br>09:12:41 PM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Merasakan flu berat<br>', 'Stadium 3', '0.6978021978022', '69.78%', '');
 
 --
 -- Indexes for dumped tables
@@ -271,7 +297,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `diagnosa`
 --
 ALTER TABLE `diagnosa`
-  MODIFY `id_diagnosa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_diagnosa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `ds_aturan`
 --
@@ -281,22 +307,22 @@ ALTER TABLE `ds_aturan`
 -- AUTO_INCREMENT for table `ds_gejala`
 --
 ALTER TABLE `ds_gejala`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `ds_penyakit`
 --
 ALTER TABLE `ds_penyakit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `riwayat`
 --
 ALTER TABLE `riwayat`
-  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- Constraints for dumped tables
 --
