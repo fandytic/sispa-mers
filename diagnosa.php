@@ -129,7 +129,7 @@ $pt = new Gejala;
 
   <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white"></a></button>
 
-  <h1 class="site-heading text-center text-white d-none d-lg-block">
+  <h1 class="site-heading text-center d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Diagnosa Penyakit MERS-CoV</span>
     <span class="site-heading-lower">Sistem Pakar</span>
   </h1>

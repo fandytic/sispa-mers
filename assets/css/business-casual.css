@@ -6,12 +6,12 @@
 
 body {
   font-family: 'Lora';
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65)))/*, url("../img/bg.jpg")*/;
-  background: linear-gradient(rgba(47, 23, 15, 0.65))/*, url("../img/bg.jpg")*/;
+  /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("../img/bg.jpg");
+  background: linear-gradient(rgba(47, 23, 15, 0.65))/*, url("../img/bg.jpg")*/;*/
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-color: #fff;
+  background-color: #ECECEC;
 }
 
 h1,
@@ -37,6 +37,7 @@ p {
   text-transform: uppercase;
   line-height: 1;
   font-family: 'Raleway';
+  color: #343b40;
 }
 
 .site-heading .site-heading-upper {
@@ -82,7 +83,7 @@ p {
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #03A9F4 /*#e6a756*/;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -91,7 +92,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #03A9F4 /*#e6a756*/;
 }
 
 @media (min-width: 992px) {
@@ -102,7 +103,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #03A9F4 /*#e6a756*/;
   }
 }
 
@@ -212,7 +213,7 @@ p {
 
 .list-hours .list-hours-item.today {
   font-weight: bold;
-  color: #e6a756;
+  color: #03A9F4 /*#e6a756*/;
 }
 
 @media (min-width: 992px) {
@@ -231,11 +232,11 @@ p {
 }
 
 .text-primary {
-  color: #e6a756 !important;
+  color: #03A9F4 /*#e6a756*/ !important;
 }
 
 .bg-primary {
-  background-color: #e6a756 !important;
+  background-color: #03A9F4 /*#e6a756*/ !important;
 }
 
 .btn {
@@ -244,12 +245,12 @@ p {
 }
 
 .btn-primary {
-  background-color: #e6a756;
-  border-color: #e6a756;
+  background-color: #03A9F4 /*#e6a756*/;
+  border-color: #03A9F4 /*#e6a756*/;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #df902a;
+  background-color: #df902a; /*ini bagian warna button*/
   border-color: #df902a;
 }
 

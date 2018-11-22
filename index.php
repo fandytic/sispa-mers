@@ -58,7 +58,7 @@
 
   <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white"></a></button>
 
-  <h1 class="site-heading text-center text-white d-none d-lg-block">
+  <h1 class="site-heading text-center d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Diagnosa Penyakit MERS-CoV</span>
     <span class="site-heading-lower">Sistem Pakar</span>
   </h1>
@@ -100,7 +100,7 @@
           <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
           </p>
           <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
+            <a class="btn btn-primary btn-xl" href="diagnosa.php">Diagnosa Penyakit</a>
           </div>
         </div>
       </div>
