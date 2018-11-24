@@ -189,14 +189,14 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                                 }
                                             }
                                             //menampilkan array perhitungan
-                                            /*print_r($densitas_baru);*/
+                                            print_r($densitas_baru);
                                         }
 
                                         //--- perangkingan
                                         unset($densitas_baru["&theta;"]);
                                         arsort($densitas_baru);
                                         //menampilkan array perhitungan
-                                        /*print_r($densitas_baru);*/
+                                        print_r($densitas_baru);
 
                                         //--- menampilkan hasil akhir
                                         $codes=array_keys($densitas_baru);

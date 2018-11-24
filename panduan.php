@@ -100,18 +100,18 @@
                 <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
                 <span class="section-heading-lower">Panduan Tata Cara Diagnosa Penyakit</span>
               </h2>
-              <p style="text-align: justify;">Sistem Pakar diagnosa penyakit saraf merupakan sebuah sistem yang mampu melakukan diagnosa penyakit saraf berdasarkan gejala yang ada pada tubuh manusia yang dapat dirasakan. untuk melakukan diagnosa penyakit, terdapat beberapa tatacara dan aturan yang harus dilakukan, adalah sebagai berikut:</p>
+              <p style="text-align: justify;">Sistem Pakar diagnosa penyakit MERS-CoV merupakan sebuah sistem yang mampu melakukan diagnosa penyakit MERS-CoV berdasarkan gejala yang dapat dirasakan. untuk melakukan diagnosa penyakit, terdapat beberapa tatacara dan aturan yang harus dilakukan, adalah sebagai berikut:</p>
 
               <h3><span class="section-heading-upper">BAGAIMANA CARA MELAKUKAN DIAGNOSA PENYAKIT?</span></h3>
               <p class="mb-0">Diagnosa penyakit dapat dilakukan apabila telah menginput 2 gejala atau lebih, dikarenakan untuk mendiagnosa sebuah penyakit dibutuhkan minimal 2 buah gejala agar penyakit dapat didiagnosa.</p>
 
               <br>
               <h3><span class="section-heading-upper">BAGAIMANA JIKA GEJALA YANG ANDA RASAKAN TIDAK TERDAPAT DI SISTEM?</span></h3>
-              <p class="mb-0">Pada saat ini hanya beberapa gejala dan penyakit yang dapat didiagnosa oleh sistem, maka dari itu proses diagnosa penyakit hanya bisa dilakukan jika gejala dan penyakit sudah terdaftar pada sistem.</p>
+              <p class="mb-0">Pada saat ini hanya beberapa gejala dan tingkatan penyakit yang dapat didiagnosa oleh sistem, maka dari itu proses diagnosa penyakit hanya bisa dilakukan jika gejala dan penyakit sudah terdaftar pada sistem.</p>
 
               <br>
               <h3><span class="section-heading-upper">APAKAH DIAGNOSA PENYAKIT PADA SISTEM SUDAH 100% BENAR?</span></h3>
-              <p class="mb-0">Diagnosa penyakit pada sistem dilakukan dengan perhitungan matematis yang bersumber dari pakar/dokter ahli saraf, guna melakukan upaya penanganan dini terhadap penyakit tersebut. tetapi akan lebih baik jika melakukan konsultasi ulang bersama dokter ahli saraf, agar masalah yang anda hadapi dapat ditangani lebih baik.</p>
+              <p class="mb-0">Diagnosa penyakit pada sistem dilakukan dengan perhitungan matematis yang bersumber dari pakar/dokter ahli paru-paru, guna melakukan upaya penanganan dini terhadap penyakit tersebut. tetapi akan lebih baik jika melakukan konsultasi ulang bersama dokter ahli paru-paru, agar masalah yang anda hadapi dapat ditangani lebih baik.</p>
             </div>
           </div>
         </div>
