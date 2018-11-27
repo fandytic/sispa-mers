@@ -62,7 +62,7 @@ $data2 = $tt->TampilSemua();
 										<tr>
 											<td>Gejala : </td>
 											<td>
-												<select class="form-control form-control-line" name="id_gejala">
+												<select class="form-control form-control-line" name="id_gejala[]">
 													<?php foreach($data2 as $dd){
 														?>
 														<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>
@@ -70,7 +70,7 @@ $data2 = $tt->TampilSemua();
 												</select>
 											</td>
 											<td>
-												<input id="numb" type="text" class="form-control form-control-line" name="ds" placeholder="contoh input nilai : 0.5">
+												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5">
 											</td>
 											<td>
 												
@@ -80,7 +80,7 @@ $data2 = $tt->TampilSemua();
 									<div class="form-group">
 										<div class="col-sm-12">
 											<button name="add" id="add" class="btn btn-failed" type="button">Tambah Gejala</button>
-											<button class="btn btn-success" type="button">Submit</button>
+											<button id="submit" name="submit" class="btn btn-success" type="button">Submit</button>
 										</div>
 									</div>
 								</div>
@@ -165,14 +165,25 @@ $data2 = $tt->TampilSemua();
 		var i = 1;
 		$('#add').click(function(){
 			i++;
-			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala">													<?php foreach($data2 as $dd){
+			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">													<?php foreach($data2 as $dd){
 				?>
 				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>													<?php } ?>
-				</select></td><td>												<input id="numb" type="text" class="form-control form-control-line" name="ds" placeholder="contoh input nilai : 0.5">											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>')
+				</select></td><td>												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5">											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>')
 		});
 		$(document).on('click','.btn_remove', function(){
 			var button_id = $(this).attr("id");
 			$('#row'+button_id+'').remove();
 		});
+		$('#submit').click(function(){
+			$.ajax({
+				url:"../ProsesA/t_basisp.php",
+				method:"POST",
+				data:$('#add_name').serialize(),
+				success:function(data)  
+                {  
+                     window.location = "basisp.php";
+                }  
+			})
+		})
 	});
 </script>

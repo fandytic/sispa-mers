@@ -61,6 +61,25 @@ class BasisP
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "SELECT * FROM ds_aturan WHERE id_penyakit = '$id_penyakit' AND id_gejala = '$id_gejala'");
 
+
+		if ($id_gejala > 0) {
+			for ($i=0; $i < $id_gejala; $i++) { 
+				if (trim($_POST['id_gejala'][$i] != '') && trim($_POST['ds'][$i] != '')) {
+					if (mysqli_num_rows($query) > 0) {
+						?>
+						<script language="JavaScript">
+							alert('Maaf Data sudah ada');
+						document.location='../admin/tbasisp.php'</script>
+						<?php
+					} else {
+						$query2 = mysqli_query($con, "INSERT INTO ds_aturan (id_penyakit, id_gejala,ds)
+							values('$id_penyakit', '".mysqli_real_escape_string($con,$_POST["id_gejala"][$i])."', '".mysqli_real_escape_string($con,$_POST["ds"][$i])."')");
+					}
+				}
+			}
+		}
+
+/*
 		if (mysqli_num_rows($query) > 0) {
 			?>
 			<script language="JavaScript">
@@ -69,8 +88,8 @@ class BasisP
 			<?php
 		} else {
 			$query2 = mysqli_query($con, "INSERT INTO ds_aturan (id_penyakit, id_gejala,ds)
-			values('$id_penyakit', '$id_gejala', '$ds')");
+				values('$id_penyakit', '$id_gejala', '$ds')");
 			header('location: ../admin/basisp.php');
-		}
+		}*/
 	}
 }
