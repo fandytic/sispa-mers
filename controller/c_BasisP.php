@@ -59,12 +59,11 @@ class BasisP
 	function Cek($id_penyakit,$id_gejala, $ds)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "SELECT * FROM ds_aturan WHERE id_penyakit = '$id_penyakit' AND id_gejala = '$id_gejala'");
-
 
 		if ($id_gejala > 0) {
 			for ($i=0; $i < $id_gejala; $i++) { 
 				if (trim($_POST['id_gejala'][$i] != '') && trim($_POST['ds'][$i] != '')) {
+					$query = mysqli_query($con, "SELECT * FROM ds_aturan WHERE id_penyakit = '$id_penyakit' AND id_gejala = '".mysqli_real_escape_string($con,$_POST["id_gejala"][$i])."'");
 					if (mysqli_num_rows($query) > 0) {
 						?>
 						<script language="JavaScript">
