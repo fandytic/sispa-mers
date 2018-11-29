@@ -71,6 +71,7 @@ $data2 = $tt->TampilSemua();
 											</td>
 											<td>
 												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5">
+												<p id="demo" style="color: red;"></p>
 											</td>
 											<td>
 												
@@ -80,7 +81,7 @@ $data2 = $tt->TampilSemua();
 									<div class="form-group">
 										<div class="col-sm-12">
 											<button name="add" id="add" class="btn btn-failed" type="button">Tambah Gejala</button>
-											<button id="submit" name="submit" class="btn btn-success" type="button">Submit</button>
+											<button id="submit" onclick="myFunction()" name="submit" class="btn btn-success" type="button">Submit</button>
 										</div>
 									</div>
 								</div>
@@ -161,29 +162,55 @@ $data2 = $tt->TampilSemua();
 }
 </script> -->
 <script>
-	$(document).ready(function(){
-		var i = 1;
-		$('#add').click(function(){
-			i++;
-			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">													<?php foreach($data2 as $dd){
-				?>
-				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>													<?php } ?>
-				</select></td><td>												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5">											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>')
-		});
-		$(document).on('click','.btn_remove', function(){
-			var button_id = $(this).attr("id");
-			$('#row'+button_id+'').remove();
-		});
-		$('#submit').click(function(){
-			$.ajax({
-				url:"../ProsesA/t_basisp.php",
-				method:"POST",
-				data:$('#add_name').serialize(),
-				success:function(data)  
-                {  
-                     window.location = "basisp.php";
-                }  
-			})
-		})
+	
+$(document).ready(function(){
+	var i = 1;
+	$('#add').click(function(){
+		i++;
+		$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">													<?php foreach($data2 as $dd){
+			?>
+			<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>													<?php } ?>
+			</select></td><td>												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p>											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>')
 	});
+	$(document).on('click','.btn_remove', function(){
+		var button_id = $(this).attr("id");
+		$('#row'+button_id+'').remove();
+	});
+	/*$('#submit').click(function(){
+		$.ajax({
+			url:"../ProsesA/t_basisp.php",
+			method:"POST",
+			data:$('#add_name').serialize(),
+			success:function(data)  
+			{
+				alert("Data berhasil diinputkan!");  
+				window.location = "basisp.php";
+			}  
+		})
+	})*/
+});
+function myFunction(){
+		var x, text;
+		// Get the value of the input field with id="numb"
+		x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 0 || x > 1) {
+    	text = "*Format yang diinputkan harus antara 0 - 1";
+    } else {
+    	text = "Format benar";
+    	$.ajax({
+			url:"../ProsesA/t_basisp.php",
+			method:"POST",
+			data:$('#add_name').serialize(),
+			success:function(data)  
+			{
+				alert("Data berhasil diinputkan!");  
+				window.location = "basisp.php";
+			}  
+		})
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+
 </script>
