@@ -54,7 +54,10 @@ $ttt->TampilSatuData($_GET['id']);
 								<div class="col-md-12">
 									<input type="hidden" value="<?php print $_GET['id']; ?>" name="id">
 										<select class="form-control form-control-line" name="id_penyakit">
-											<option><?php print $ttt->nama_penyakit; ?></option>
+											<?php foreach($data as $d){
+														?>
+														<option <?php if($ttt->id_gejala == $d['id'])  { ?> selected <?php } ?> value="<?php print $d['id']; ?>"><?php print $d['nama']; ?></option>
+													<?php } ?>
 										</select>
 									</div>
 								</div>
@@ -62,7 +65,10 @@ $ttt->TampilSatuData($_GET['id']);
 									<label class="col-md-12">Nama Gejala</label>
 									<div class="col-md-12">
 										<select class="form-control form-control-line" name="id_gejala">
-											<option><?php print $ttt->nama_gejala; ?></option>
+											<?php foreach($data2 as $dd){
+														?>
+														<option <?php if($ttt->id_gejala == $dd['id']) { ?> selected <?php } ?> value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>
+													<?php } ?>
 										</select>
 									</div>
 								</div>
