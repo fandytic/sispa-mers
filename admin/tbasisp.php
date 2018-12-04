@@ -70,7 +70,8 @@ $data2 = $tt->TampilSemua();
 												</select>
 											</td>
 											<td>
-												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5">
+												<input id="numb" type="number" name="ds[]" class="form-control form-control-line" oninput="myFunction()" min="0" max="1" step="0.05" placeholder="contoh input nilai : 0.5">
+												<!-- <input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"> -->
 												<p id="demo" style="color: red;"></p>
 											</td>
 											<td>
@@ -170,7 +171,8 @@ $data2 = $tt->TampilSemua();
 			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">													<?php foreach($data2 as $dd){
 				?>
 				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>													<?php } ?>
-				</select></td><td>												<input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p>											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>')
+				</select></td><td>												<input id="numb" type="text" oninput="myFunction()" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p>											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+			/*alert($('input[id="numb[]"]').length);*/
 		});
 		$(document).on('click','.btn_remove', function(){
 			var button_id = $(this).attr("id");
@@ -178,6 +180,10 @@ $data2 = $tt->TampilSemua();
 		});
 
 		$('#submit').click(function(){
+
+		});
+
+		/*$('#submit').click(function(){
 			$.each($('#numb'), function(){
 				var x, text;
 				x = document.getElementById(this.id).value;
@@ -188,9 +194,12 @@ $data2 = $tt->TampilSemua();
 				}
 				$(this).parents().find("p").text(text);
 			})
-		})
+		});*/
+
+
+
 	});
-/*function myFunction(){
+function myFunction(){
 		var x, text;
 		// Get the value of the input field with id="numb"
 		x = document.getElementById("numb").value;
@@ -200,7 +209,7 @@ $data2 = $tt->TampilSemua();
     	text = "*Format yang diinputkan harus antara 0 - 1";
     } else {
     	text = "Format benar";
-    	$.ajax({
+    	/*$.ajax({
 			url:"../ProsesA/t_basisp.php",
 			method:"POST",
 			data:$('#add_name').serialize(),
@@ -209,9 +218,9 @@ $data2 = $tt->TampilSemua();
 				alert("Data berhasil diinputkan!");  
 				window.location = "basisp.php";
 			}  
-		})
+		})*/
     }
     document.getElementById("demo").innerHTML = text;
-}*/
+}
 
 </script>

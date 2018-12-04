@@ -250,8 +250,8 @@ p {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #df902a; /*ini bagian warna button*/
-  border-color: #df902a;
+  background-color: #0286c2; /*ini bagian warna button*/
+  border-color: #0286c2;
 }
 
 .font-weight-light {
