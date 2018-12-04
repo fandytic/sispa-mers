@@ -1,3 +1,9 @@
+<?php  
+include 'controller/c_Riwayat.php';
+$cl = new Riwayat;
+$cl->Count();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,11 +63,14 @@
 <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
 
   <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white"></a></button>
+  <p style="text-align: right; font-size: 20px">Jumlah Riwayat Diagnosa : <?php print $cl->Count(); ?></p>
 
   <h1 class="site-heading text-center d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Diagnosa Penyakit MERS-CoV</span>
     <span class="site-heading-lower">Sistem Pakar</span>
   </h1>
+
+  
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">

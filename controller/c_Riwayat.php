@@ -29,5 +29,10 @@ class Riwayat
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "DELETE FROM diagnosa WHERE id_diagnosa = '$id_diagnosa'");
 	}
+
+	function Count(){
+		include 'koneksi/koneksi.php';
+		$query = mysqli_query($con, "SELECT COUNT(*) FROM diagnosa");
+	}
 }
  ?>
