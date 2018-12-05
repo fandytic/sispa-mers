@@ -124,6 +124,9 @@ $pt = new Gejala;
     var ss = waktu.getSeconds() + "";  //memunculkan jam:menit:detik dengan menambahkan angka 0 jika angkanya cuma satu digit (0-9)
     document.getElementById("clock").innerHTML = (sh.length==1?"0"+sh:sh) + ":" + (sm.length==1?"0"+sm:sm) + ":" + (ss.length==1?"0"+ss:ss);
 }
+ function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'id'}, 'google_translate_element');
+  }
 </script>
 
 </head>
@@ -146,6 +149,9 @@ $pt = new Gejala;
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
+          <li class="nav-item px-lg-4"></li>
+          <li class="nav-item px-lg-4"></li>
+          <li class="nav-item px-lg-4"></li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="index.php">Home
               <span class="sr-only">(current)</span>
@@ -159,6 +165,7 @@ $pt = new Gejala;
           </li>
         </ul>
       </div>
+      <div id="google_translate_element"></div>
     </div>
   </nav>
 
@@ -203,6 +210,7 @@ $pt = new Gejala;
 <!-- Bootstrap core JavaScript -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
