@@ -1,4 +1,7 @@
 <?php
+include 'controller/c_Riwayat.php';
+$cl = new Riwayat;
+$cl->Count();
 
 include "controller/c_Gejala.php";
 $pt = new Gejala; 
@@ -193,7 +196,7 @@ $pt = new Gejala;
 
 <footer class="footer text-faded text-center py-5">
   <div class="container">
-    <p class="m-0 small">Copyright &copy; <a href="login.php">Sispa</a> 2018</p>
+    <p style="color: white;">Copyright &copy; <a href="login.php">Sispa</a> 2018 | Jumlah riwayat diagnosa saat ini : <?php echo $cl->jum; ?></p>
   </div>
 </footer>
 

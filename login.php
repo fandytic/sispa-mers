@@ -5,8 +5,8 @@ include "koneksi/koneksi.php";
 if(!isset($_SESSION['username'])){
 
 } else {
-    $username = $_SESSION["username"];
-    header('location:admin/pasien.php');
+	$username = $_SESSION["username"];
+	header('location:admin/pasien.php');
 }
 require_once('koneksi/koneksi.php');
 ?>
@@ -62,9 +62,22 @@ require_once('koneksi/koneksi.php');
 						<input class="input100" type="password" name="password" placeholder="Enter password">
 						<span class="focus-input100"></span>
 					</div>
+					
+					<div class="flex-sb-m w-full p-b-30">
+						<?php  
+						if (isset($_SESSION["error"])) {
+							$error = $_SESSION["error"];
+							echo "<p style='color: red'>$error</p>";
+						}
+						?>
+						<div class="contact100-form-checkbox">
+							
+						</div>
+					</div>
 
 					<div class="flex-sb-m w-full p-b-30">
 						<div class="contact100-form-checkbox">
+							
 						</div>
 
 						<div>
@@ -102,3 +115,4 @@ require_once('koneksi/koneksi.php');
 
 </body>
 </html>
+<?php unset($_SESSION["error"]); ?>

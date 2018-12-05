@@ -45,13 +45,13 @@ $p->TampilSatuData($_GET['id_pasien']);
 										<input type="hidden" value="<?php print $_GET['id_pasien'] ?>" name="id_pasien" />
 										<label class="col-md-12">Nama Pasien</label>
 										<div class="col-md-12">
-											<input type="text" value="<?php print $p->nama; ?>" class="form-control form-control-line" name="nama">
+											<input type="text" value="<?php print $p->nama; ?>" class="form-control form-control-line" name="nama" required>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-md-12">Tanggal Lahir</label>
 										<div class="col-md-12">
-											<input type="date" class="form-control form-control-line" value="<?php print $p->tgl_lahir; ?>" name="tgl_lahir">
+											<input type="date" class="form-control form-control-line" value="<?php print $p->tgl_lahir; ?>" name="tgl_lahir" required>
 											<p style="color: red">*Format Bulan/Tanggal/Tahun</p>
 										</div>
 									</div>

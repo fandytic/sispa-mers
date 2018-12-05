@@ -50,7 +50,7 @@ $tt->TampilAngka();
 									<div class="form-group">
 										<label class="col-md-12">Nama Gejala</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line" name="nama">
+											<input type="text" class="form-control form-control-line" name="nama" required="">
 										</div>
 									</div>
 

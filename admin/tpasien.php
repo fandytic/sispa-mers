@@ -41,13 +41,13 @@
 									<div class="form-group">
 										<label class="col-md-12">Nama Pasien</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line" name="nama">
+											<input type="text" class="form-control form-control-line" name="nama" required="">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-md-12">Tanggal Lahir</label>
 										<div class="col-md-12">
-											<input type="date" class="form-control form-control-line" name="tgl_lahir">
+											<input type="date" class="form-control form-control-line" name="tgl_lahir" required="">
 											<p style="color: red">*Format Bulan/Tanggal/Tahun</p>
 										</div>
 									</div>

@@ -32,7 +32,9 @@ class Riwayat
 
 	function Count(){
 		include 'koneksi/koneksi.php';
-		$query = mysqli_query($con, "SELECT COUNT(*) FROM diagnosa");
+		$query = mysqli_query($con, "SELECT COUNT(*) as jum FROM diagnosa");
+		$hasil = mysqli_fetch_object($query);
+		$this->jum = $hasil->jum;
 	}
 }
  ?>

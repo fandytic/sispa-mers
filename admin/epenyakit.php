@@ -51,7 +51,7 @@ $p->TampilSatuData($_GET['id']);
 									<div class="form-group">
 										<label class="col-md-12">Nama Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line" value="<?php print $p->nama; ?>" name="nama">
+											<input type="text" class="form-control form-control-line" value="<?php print $p->nama; ?>" name="nama" required>
 										</div>
 									</div>
 									<div class="form-group">
