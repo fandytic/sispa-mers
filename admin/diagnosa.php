@@ -123,7 +123,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                 $data = $pt->TampilSemua();
                                 foreach($data as $d){ ?>
 
-                                    <label class="container"><?php print $d['kode'] ?> <?php print $d['nama'] ?>
+                                    <label class="container"><?php print $d['nama'] ?>
                                     <input type="checkbox" name='gejala[]' value='<?php print $d['id'] ?>' >
                                     <span class="checkmark"></span>
                                 </label>

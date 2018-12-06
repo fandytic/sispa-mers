@@ -134,7 +134,7 @@ $cl->Count();
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p style="color: white;">Copyright &copy; <a href="login.php">Sispa</a> 2018 | Jumlah riwayat diagnosa saat ini : <?php echo $cl->jum; ?></p>
+      <p style="color: white;">Jumlah riwayat diagnosa saat ini : <?php echo $cl->jum; ?> | Copyright &copy; <a href="login.php">Sispa</a> 2018</p>
     </div>
   </footer>
 
