@@ -41,7 +41,7 @@ $data2 = $tt->TampilSemua();
 		<!-- ============================================================== -->
 		<div class="row">
 			<!-- Column -->
-			<div class="col-12">
+			<div class="col-10">
 				<div class="card">
 					<div class="card-body">
 						<!-- <form id="myform" method="post" class="form-horizontal form-material" action="../ProsesA/t_basisp.php"> -->
@@ -70,7 +70,7 @@ $data2 = $tt->TampilSemua();
 												</select>
 											</td>
 											<td>
-												<input id="numb" type="number" name="ds[]" class="form-control form-control-line" oninput="myFunction()" min="0" max="1" step="0.05" placeholder="contoh input nilai : 0.5">
+												<input type="number" name="ds[]" class="form-control form-control-line numb" min="0" max="1" step="0.05" placeholder="contoh input nilai : 0.5">
 												<!-- <input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"> -->
 												<p id="demo" style="color: red;"></p>
 											</td>
@@ -162,16 +162,31 @@ $data2 = $tt->TampilSemua();
     document.getElementById("demo").innerHTML = text;
 }
 </script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 	
 	$(document).ready(function(){
 		var i = 1;
 		$('#add').click(function(){
 			i++;
-			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">													<?php foreach($data2 as $dd){
-				?>
-				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option>													<?php } ?>
-				</select></td><td>												<input id="numb" type="text" oninput="myFunction()" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p>											</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">											<?php foreach($data2 as $dd){?>
+				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option><?php } ?>
+				</select></td><td>	<input type="number" class="form-control form-control-line numb" name="ds[]" min="0" max="1" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p> </td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+
+			$(".numb").each(function(){
+				$(this).change(function() {
+					var max = parseInt($(this).attr('max'));
+					var min = parseInt($(this).attr('min'));
+					if ($(this).val() > max)
+					{
+						$(this).val(max);
+					}
+					else if ($(this).val() < min)
+					{
+						$(this).val(min);
+					}       
+				});
+			});
 			/*alert($('input[id="numb[]"]').length);*/
 		});
 		$(document).on('click','.btn_remove', function(){
@@ -179,8 +194,33 @@ $data2 = $tt->TampilSemua();
 			$('#row'+button_id+'').remove();
 		});
 
-		$('#submit').click(function(){
+		$(".numb").each(function(){
+			$(this).change(function() {
+				var max = parseInt($(this).attr('max'));
+				var min = parseInt($(this).attr('min'));
+				if ($(this).val() > max)
+				{
+					$(this).val(max);
+				}
+				else if ($(this).val() < min)
+				{
+					$(this).val(min);
+				}       
+			});
+		});
 
+
+		$('#submit').click(function(){
+			$.ajax({
+			url:"../ProsesA/t_basisp.php",
+			method:"POST",
+			data:$('#add_name').serialize(),
+			success:function(data)  
+			{
+				alert("Data berhasil diinputkan!");  
+				window.location = "basisp.php";
+			}  
+		})
 		});
 
 		/*$('#submit').click(function(){
@@ -199,7 +239,7 @@ $data2 = $tt->TampilSemua();
 
 
 	});
-function myFunction(){
+/*function myFunction(){
 		var x, text;
 		// Get the value of the input field with id="numb"
 		x = document.getElementById("numb").value;
@@ -218,9 +258,9 @@ function myFunction(){
 				alert("Data berhasil diinputkan!");  
 				window.location = "basisp.php";
 			}  
-		})*/
+		})
     }
     document.getElementById("demo").innerHTML = text;
-}
+}*/
 
 </script>
