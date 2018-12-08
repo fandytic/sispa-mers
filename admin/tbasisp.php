@@ -171,7 +171,7 @@ $data2 = $tt->TampilSemua();
 			i++;
 			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">											<?php foreach($data2 as $dd){?>
 				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option><?php } ?>
-				</select></td><td>	<input type="number" class="form-control form-control-line numb" name="ds[]" min="0" max="1" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p> </td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+				</select></td><td>	<input type="number" name="ds[]" class="form-control form-control-line numb" min="0" max="1" step="0.05" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p> </td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
 
 			$(".numb").each(function(){
 				$(this).change(function() {

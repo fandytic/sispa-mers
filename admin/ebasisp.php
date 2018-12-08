@@ -56,7 +56,7 @@ $ttt->TampilSatuData($_GET['id']);
 										<select class="form-control form-control-line" name="id_penyakit">
 											<?php foreach($data as $d){
 														?>
-														<option <?php if($ttt->id_gejala == $d['id'])  { ?> selected <?php } ?> value="<?php print $d['id']; ?>"><?php print $d['nama']; ?></option>
+														<option <?php if($ttt->id_penyakit == $d['id'])  { ?> selected <?php } ?> value="<?php print $d['id']; ?>"><?php print $d['nama']; ?></option>
 													<?php } ?>
 										</select>
 									</div>
