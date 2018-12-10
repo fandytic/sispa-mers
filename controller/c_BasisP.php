@@ -54,17 +54,9 @@ class BasisP
 	function EditBasis($id,$id_penyakit,$id_gejala,$ds)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "SELECT * FROM ds_aturan WHERE id_penyakit = '$id_penyakit' AND id_gejala = '$id_gejala'");
-		if (mysqli_num_rows($query) > 0) {
-			?>
-			<script language="JavaScript">
-				alert('Maaf Data sudah ada');
-			document.location='../admin/ebasisp.php?id=<?php print $id ?>'</script>
-			<?php 
-		} else {
-			$query2 = mysqli_query($con, "UPDATE ds_aturan SET id_penyakit='$id_penyakit', id_gejala='$id_gejala', ds='$ds' WHERE id = '$id'");
-			header('location: ../admin/basisp.php');
-		}
+		$query2 = mysqli_query($con, "UPDATE ds_aturan SET id_penyakit='$id_penyakit', id_gejala='$id_gejala', ds='$ds' WHERE id = '$id'");
+		header('location: ../admin/basisp.php');
+		
 	}
 
 	function Cek($id_penyakit,$id_gejala, $ds)

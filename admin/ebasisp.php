@@ -22,12 +22,12 @@ $ttt->TampilSatuData($_GET['id']);
 	<div class="page-breadcrumb">
 		<div class="row align-items-center">
 			<div class="col-5">
-				<h4 class="page-title">Manajemen Tambah Basis Pengetahuan</h4>
+				<h4 class="page-title">Manajemen Ubah Basis Pengetahuan</h4>
 				<div class="d-flex align-items-center">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
 						<li class="breadcrumb-item" aria-current="page"><a href="basisp.php">Basis Pengetahuan</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Tambah Basis Pengetahuan</li>
+						<li class="breadcrumb-item active" aria-current="page">Ubah Basis Pengetahuan</li>
 					</ol>
 				</div>
 			</div>
@@ -76,7 +76,7 @@ $ttt->TampilSatuData($_GET['id']);
 								<div class="form-group">
 									<label class="col-md-12">Nilai Kepercayaan</label>
 									<div class="col-md-12">
-										<input id="numb" type="text" value="<?php print $ttt->ds; ?>" class="form-control form-control-line" name="ds" placeholder="contoh input nilai : 0.5">
+										<input id="numb" type="number" step="0.05" value="<?php print $ttt->ds; ?>" class="form-control form-control-line" name="ds" placeholder="contoh input nilai : 0.5">
 										<p id="demo" style="color: red;"></p>
 									</div>
 								</div>

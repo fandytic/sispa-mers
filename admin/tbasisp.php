@@ -47,7 +47,7 @@ $data2 = $tt->TampilSemua();
 						<!-- <form id="myform" method="post" class="form-horizontal form-material" action="../ProsesA/t_basisp.php"> -->
 							<form name="add_name" id="add_name">
 								<div class="form-group">
-									<table class="table table-bordered" id="dynamic_field">
+									<table class="table" id="dynamic_field">
 										<tr>
 											<td>Tingkatan Penyakit :</td>
 											<td>
@@ -70,21 +70,16 @@ $data2 = $tt->TampilSemua();
 												</select>
 											</td>
 											<td>
-												<input type="number" name="ds[]" class="form-control form-control-line numb" min="0" max="1" step="0.05" placeholder="contoh input nilai : 0.5">
+												<input type="number" name="ds[]" class="form-control form-control-line numb" min="0" max="1" step="0.05" placeholder="0 - 1">
 												<!-- <input id="numb" type="text" class="form-control form-control-line" name="ds[]" placeholder="contoh input nilai : 0.5"> -->
 												<p id="demo" style="color: red;"></p>
 											</td>
 											<td>
-												
+												<button type="button" name="remove" class="btn btn-danger btn_remove">X</button>
 											</td>
 										</tr>
 									</table>
-									<div class="form-group">
-										<div class="col-sm-12">
-											<button name="add" id="add" class="btn btn-failed" type="button">Tambah Gejala</button>
-											<button id="submit" name="submit" class="btn btn-success" type="button">Submit</button>
-										</div>
-									</div>
+									
 								</div>
 								<!-- <div class="form-group">
 									<label class="col-md-12">Nama Penyakit</label>
@@ -123,6 +118,20 @@ $data2 = $tt->TampilSemua();
 									</div>
 								</div> -->
 							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="card">
+						<div class="card-body">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button name="add" id="add" class="btn btn-failed" type="button">Tambah Gejala</button>
+									<br>
+									<br>
+									<button id="submit" name="submit" class="btn btn-success" type="button">Submit</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -171,7 +180,7 @@ $data2 = $tt->TampilSemua();
 			i++;
 			$('#dynamic_field').append('<tr id="row'+i+'"><td></td><td><select class="form-control form-control-line" name="id_gejala[]">											<?php foreach($data2 as $dd){?>
 				<option value="<?php print $dd['id']; ?>"><?php print $dd['nama']; ?></option><?php } ?>
-				</select></td><td>	<input type="number" name="ds[]" class="form-control form-control-line numb" min="0" max="1" step="0.05" placeholder="contoh input nilai : 0.5"><p id="demo" style="color: red;"></p> </td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+				</select></td><td>	<input type="number" name="ds[]" class="form-control form-control-line numb" min="0" max="1" step="0.05" placeholder="0 - 1"><p id="demo" style="color: red;"></p> </td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
 
 			$(".numb").each(function(){
 				$(this).change(function() {
@@ -212,15 +221,15 @@ $data2 = $tt->TampilSemua();
 
 		$('#submit').click(function(){
 			$.ajax({
-			url:"../ProsesA/t_basisp.php",
-			method:"POST",
-			data:$('#add_name').serialize(),
-			success:function(data)  
-			{
-				alert("Data berhasil diinputkan!");  
-				window.location = "basisp.php";
-			}  
-		})
+				url:"../ProsesA/t_basisp.php",
+				method:"POST",
+				data:$('#add_name').serialize(),
+				success:function(data)  
+				{
+					alert("Data berhasil diinputkan!");  
+					window.location = "basisp.php";
+				}  
+			})
 		});
 
 		/*$('#submit').click(function(){
