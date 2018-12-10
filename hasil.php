@@ -75,7 +75,7 @@ function googleTranslateElementInit() {
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
 		<div class="container">
-			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Sistem Pakar</a>
+			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.php">Sistem Pakar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -103,7 +103,7 @@ function googleTranslateElementInit() {
 
 	<section class="page-section about-heading">
 		<div class="container">
-			<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="">
+			<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/test.jpg" alt="">
 			<div class="about-heading-content">
 				<div class="row">
 					<div class="col-xl-9 col-lg-10 mx-auto">
