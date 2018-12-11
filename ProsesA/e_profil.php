@@ -14,13 +14,28 @@ $password = $_POST["password"];
 $email = $_POST["email"];
 $nohp = $_POST["nohp"];
 
+//session sukses
+$sukses = "<div class='alert success'>
+<span class='closebtn'>&times;</span>  
+<strong>Berhasil!</strong> Data telah diperbarui.
+</div>";
+
+//session gagal
+$gagal = "<div class='alert warning'>
+<span class='closebtn'>&times;</span>  
+<strong>Gagal!</strong> Data tidak lengkap, silahkan lengkapi data.
+</div>";
+
 //query update database
 $sql = "UPDATE admin SET nama = '$nama', password = '$password', email = '$email', nohp = '$nohp' WHERE username = '$username'";
 
 //melakukan eksekusi
-if(mysqli_query($con, $sql)){
+if($nama != "" && $password != "" && $email != "" && $nohp != ""){
+	mysqli_query($con, $sql);
+	$_SESSION["sukses"] = $sukses;
 	header('location:../admin/profil.php');
 } else {
-header('location:../admin/wawa.php');
+	$_SESSION["gagal"] = $gagal;
+	header('location:../admin/profil.php');
 }
 ?>

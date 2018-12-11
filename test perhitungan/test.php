@@ -2,25 +2,41 @@
 <html>
 <head>
 	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-	<form id="upload_form" enctype="multipart/form-data" method="post">
-		<input type="text" name="name[]" id="name"><p id="p"></p>
-		<br>
-		<input type="text" name="name[]" id="name"></p>
-		<br>
-		<input type="file" name="file1" id="file1">
-		<br>
-		<input type="button" value="Upload File" onclick="uploadFile()">
-	</form>
+	<form name="add_name" id="add_name">
+		<div class="form-group">
+			<table class="table">
+				<tr>
+					<td>Tingkatan Penyakit :</td>
+					<td><input type="text" name="">
+					</td>
+				</tr>
+			</table>
+			<button name="add" id="add" class="btn btn-failed" type="button">Tambah Gejala</button>
+		</div>
+	
+
+			<table class="table" id="dynamic_field">
+				<tr>
+					<th>Judul Kolom</th>
+				</tr>
+											
+			</table>
+			</form>
 </body>
-<script type="text/javascript">
-	function uploadFile() {
-		var names = document.getElementsByName('name[]');
-		for (var i = 0, iLen = names.length; i < iLen; i++) {
-			echo = names[i].value;
-			document.getElementById("p").innerHTML = echo;
-		}
-	}
-</script>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var i = 1;
+		$('#add').click(function(){
+			i++;
+			$('#dynamic_field').append('<tr id="row'+i+'"><td>awwawk</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+		});
+		$(document).on('click','.btn_remove', function(){
+			var button_id = $(this).attr("id");
+			$('#row'+button_id+'').remove();
+		});
+	});
+</script>

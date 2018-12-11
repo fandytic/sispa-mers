@@ -45,6 +45,34 @@ $row = mysqli_fetch_array($hasil);
     document.getElementById("clock").innerHTML = (sh.length==1?"0"+sh:sh) + ":" + (sm.length==1?"0"+sm:sm) + ":" + (ss.length==1?"0"+ss:ss);
 }
 </script>
+<style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #36bea6;}
+.alert.warning {background-color: #f62d51;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
 </head>
 
 <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
@@ -82,22 +110,22 @@ $row = mysqli_fetch_array($hasil);
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
-                           <!-- dark Logo text -->
-                           <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
-                           <!-- Light Logo text -->    
-                           <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
-                       </span>
-                   </a>
-                   <!-- ============================================================== -->
-                   <!-- End Logo -->
-                   <!-- ============================================================== -->
-                   <!-- This is for the sidebar toggle which is visible on mobile only -->
-                   <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-               </div>
-               <!-- ============================================================== -->
-               <!-- End Logo -->
-               <!-- ============================================================== -->
-               <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                         <!-- dark Logo text -->
+                         <img src="../assetsA/assets/images/Logo-texts.png" width="150px" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assetsA/assets/images/Logo-text-light.png" width="150px" class="light-logo" alt="homepage" />
+                     </span>
+                 </a>
+                 <!-- ============================================================== -->
+                 <!-- End Logo -->
+                 <!-- ============================================================== -->
+                 <!-- This is for the sidebar toggle which is visible on mobile only -->
+                 <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+             </div>
+             <!-- ============================================================== -->
+             <!-- End Logo -->
+             <!-- ============================================================== -->
+             <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
                 <!-- ============================================================== -->
                 <!-- toggle and nav items -->
                 <!-- ============================================================== -->
@@ -150,10 +178,10 @@ $row = mysqli_fetch_array($hasil);
                                     <span class="op-5 user-email"><?php echo $row['email']; ?></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
-                                        <a class="dropdown-item" href="../index.php"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="../logout.php"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-                                    </div>
+                                    <a class="dropdown-item" href="../index.php"><i class="mdi mdi-view-dashboard"></i> Home Web</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="../logout.php"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                </div>
                             </div>
                         </div>
                         <!-- End User Profile-->

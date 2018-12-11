@@ -60,6 +60,15 @@ include '_header.php';
                 <!-- Column -->
                 <!-- Column -->
                 <div class="col-lg-8 col-xlg-9 col-md-7">
+                    <?php  
+                    if (isset($_SESSION["sukses"])) {
+                        $sukses = $_SESSION["sukses"];
+                        echo $sukses;
+                    } else if (isset($_SESSION["gagal"])) {
+                        $gagal = $_SESSION["gagal"];
+                        echo $gagal;
+                    }
+                    ?>
                     <div class="card">
                         <div class="card-body">
                             <form id="myform" method="post" action="../ProsesA/e_profil.php" class="form-horizontal form-material">
@@ -150,3 +159,17 @@ include '_header.php';
                 }
             }
         </script>
+        <script>
+            var close = document.getElementsByClassName("closebtn");
+            var i;
+
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.style.display = "none"; }, 600);
+            }
+        }
+    </script>
+    <?php unset($_SESSION["sukses"]); ?>
+    <?php unset($_SESSION["gagal"]); ?>
