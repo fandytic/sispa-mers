@@ -143,49 +143,49 @@ function googleTranslateElementInit() {
 										$fod=$row[0];
 
 										//--- menentukan nilai densitas
-										$densitas_baru=array();
-										while(!empty($gejala)){
-											$densitas1[0]=array_shift($gejala);
-											$densitas1[1]=array($fod,1-$densitas1[0][1]);
-											$densitas2=array();
-											if(empty($densitas_baru)){
-												$densitas2[0]=array_shift($gejala);
+										$densitas_baru=array(); 		 						// 1
+										while(!empty($gejala)){  								// 2
+											$densitas1[0]=array_shift($gejala); 				// 3
+											$densitas1[1]=array($fod,1-$densitas1[0][1]); 		// 4
+											$densitas2=array(); 								// 5
+											if(empty($densitas_baru)){ 							// 6
+												$densitas2[0]=array_shift($gejala);				// 7
 											}else{
-												foreach($densitas_baru as $k=>$r){
-													if($k!="&theta;"){
-														$densitas2[]=array($k,$r);
+												foreach($densitas_baru as $k=>$r){				// 8
+													if($k!="&theta;"){							// 9
+														$densitas2[]=array($k,$r);				// 10
 													}
 												}
 											}
-											$theta=1;
-											foreach($densitas2 as $d) $theta-=$d[1];
-											$densitas2[]=array($fod,$theta);
-											$m=count($densitas2);
-											$densitas_baru=array();
-											for($y=0;$y<$m;$y++){
-												for($x=0;$x<2;$x++){
-													if(!($y==$m-1 && $x==1)){
-														$v=explode(',',$densitas1[$x][0]);
-														$w=explode(',',$densitas2[$y][0]);
-														sort($v);
-														sort($w);
-														$vw=array_intersect($v,$w);
-														if(empty($vw)){
-															$k="&theta;";
+											$theta=1;											// 11
+											foreach($densitas2 as $d) $theta-=$d[1];			// 12 & 13
+											$densitas2[]=array($fod,$theta);					// 14
+											$m=count($densitas2);								// 15
+											$densitas_baru=array();								// 16
+											for($y=0;$y<$m;$y++){								// 17
+												for($x=0;$x<2;$x++){							// 18
+													if(!($y==$m-1 && $x==1)){					// 19
+														$v=explode(',',$densitas1[$x][0]);		// 20
+														$w=explode(',',$densitas2[$y][0]);		// 21
+														sort($v);								// 22
+														sort($w);								// 23
+														$vw=array_intersect($v,$w);				// 24
+														if(empty($vw)){							// 25
+															$k="&theta;";						// 26
 														}else{
-															$k=implode(',',$vw);
+															$k=implode(',',$vw);				// 27
 														}
-														if(!isset($densitas_baru[$k])){
-															$densitas_baru[$k]=$densitas1[$x][1]*$densitas2[$y][1];
+														if(!isset($densitas_baru[$k])){			// 28
+															$densitas_baru[$k]=$densitas1[$x][1]*$densitas2[$y][1]; // 29
 														}else{
-															$densitas_baru[$k]+=$densitas1[$x][1]*$densitas2[$y][1];
+															$densitas_baru[$k]+=$densitas1[$x][1]*$densitas2[$y][1]; // 30
 														}
 													}
 												}
 											}
-											foreach($densitas_baru as $k=>$d){
-												if($k!="&theta;"){
-													$densitas_baru[$k]=$d/(1-(isset($densitas_baru["&theta;"])?$densitas_baru["&theta;"]:0));
+											foreach($densitas_baru as $k=>$d){					// 31
+												if($k!="&theta;"){								// 32
+													$densitas_baru[$k]=$d/(1-(isset($densitas_baru["&theta;"])?$densitas_baru["&theta;"]:0));	//33
 												}
 											}
 											//menampilkan array perhitungan
@@ -193,7 +193,7 @@ function googleTranslateElementInit() {
 										}
 
 										//--- perangkingan
-										unset($densitas_baru["&theta;"]);
+										unset($densitas_baru["&theta;"]);						// 34
 										arsort($densitas_baru);
 										//menampilkan array perhitungan
 										/*print_r($densitas_baru);*/

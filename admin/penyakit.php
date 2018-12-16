@@ -13,11 +13,11 @@ $pt = new Penyakit;
     <div class="page-breadcrumb">
         <div class="row align-items-center">
             <div class="col-5">
-                <h4 class="page-title">Manajemen Penyakit</h4>
+                <h4 class="page-title">Manajemen Tingkatan Penyakit</h4>
                 <div class="d-flex align-items-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Penyakit</li>
+                        <li class="breadcrumb-item active" aria-current="page">Tingkatan Penyakit</li>
                     </ol>
                 </div>
             </div>
@@ -47,8 +47,8 @@ $pt = new Penyakit;
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
                                     <th style="color: white;" width="13%">Kode Penyakit</th>
-                                    <th style="color: white;">Nama Penyakit</th>
-                                    <th style="color: white;">Keterangan Penyakit</th>
+                                    <th style="color: white;">Nama Tingkatan Penyakit</th>
+                                    <th style="color: white;">Keterangan Tingkatan Penyakit</th>
                                     <th style="color: white;">Aksi</th>
                                 </tr>
                             </thead>

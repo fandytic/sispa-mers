@@ -48,7 +48,7 @@ $data = $bsp->TampilSemua();
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
                                     <th style="color: white;" width="5%">No</th>
-                                    <th style="color: white;">Nama Penyakit</th>
+                                    <th style="color: white;">Tingkatan Penyakit</th>
                                     <th style="color: white;">Nama Gejala</th>
                                     <th style="color: white;" width="15%">Nilai Kepercayaan</th>
                                     <th>Aksi</th>

@@ -14,12 +14,12 @@ $p->TampilSatuData($_GET['id']);
 			<div class="page-breadcrumb">
 				<div class="row align-items-center">
 					<div class="col-5">
-						<h4 class="page-title">Manajemen Ubah Penyakit</h4>
+						<h4 class="page-title">Manajemen Ubah Tingkatan Penyakit</h4>
 						<div class="d-flex align-items-center">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item" aria-current="page"><a href="penyakit.php">Penyakit</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Ubah Penyakit</li>
+								<li class="breadcrumb-item" aria-current="page"><a href="penyakit.php">Tingkatan Penyakit</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Ubah Tingkatan Penyakit</li>
 							</ol>
 						</div>
 					</div>
@@ -49,15 +49,15 @@ $p->TampilSatuData($_GET['id']);
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-md-12">Nama Penyakit</label>
+										<label class="col-md-12">Nama Tingkatan Penyakit</label>
 										<div class="col-md-12">
 											<input type="text" class="form-control form-control-line" value="<?php print $p->nama; ?>" name="nama" required>
 										</div>
 									</div>
 									<div class="form-group">
-										<label for="example-email" class="col-md-12">Keterangan Penyakit</label>
+										<label for="example-email" class="col-md-12">Keterangan Tingkatan Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control form-control-line" value="<?php print $p->kett; ?>" name="kett">
+											<input type="text" class="form-control form-control-line" value="<?php print $p->kett; ?>" name="kett" required>
 										</div>
 									</div>
 

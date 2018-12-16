@@ -105,16 +105,16 @@ function googleTranslateElementInit() {
   <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/test.jpg" alt="">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/home1.jpg" alt="">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Fresh Coffee</span>
-            <span class="section-heading-lower">Worth Drinking</span>
+            <span class="section-heading-upper">Apa itu</span>
+            <span class="section-heading-lower">MERS-CoV?</span>
           </h2>
-          <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
+          <p class="mb-3" >MERS CoV adalah singkatan dari Middle East Respiratory Syndrome Corona Virus. Cek sekarang apakah kamu terkena Mers-CoV?
           </p>
           <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="diagnosa.php">Diagnosa Penyakit</a>
+            <a class="btn btn-primary btn-xl" href="diagnosa.php">Diagnosa Sekarang</a>
           </div>
         </div>
       </div>
@@ -127,10 +127,11 @@ function googleTranslateElementInit() {
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Our Promise</span>
-              <span class="section-heading-lower">To You</span>
+              <span class="section-heading-upper">Tentang</span>
+              <span class="section-heading-lower">Mers-CoV</span>
             </h2>
-            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+            <p class="mb-0" style="text-align: justify;">MERS CoV adalah singkatan dari Middle East Respiratory Syndrome Corona Virus. Keberadaan virus ini pertama kali dilaporkan pada bulan September 2012 di Arab Saudi. Virus ini merupakan jenis baru dari kelompok Corona virus (Novel Corona Virus) namun  berbeda dengan  virus Severe Acute Respiratory Syndrome (SARS) pada tahun 2003. Gejala apabila terserang Virus Mers CoV adalah demam, batuk dan sesak nafas, bersifat akut, biasanya pasien memiliki penyakit ko-morbid/penyerta dan memiliki inkubasi 2-14 hari.</p><br>
+            <p><video width="100%" height="100%" src="assets/video/MERS_CoV_Hajj_Umrah_Infograhic_EN.mp4" controls></video></p>
           </div>
         </div>
       </div>
