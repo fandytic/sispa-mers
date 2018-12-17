@@ -240,7 +240,14 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                         //--- memasukkan hasil diagnosa ke database
                                         $input = mysqli_query($con,"INSERT INTO riwayat (id_pasien, tanggal, gejala, penyakit, nilai, persentase) values('$id_pasien', '$tanggal', '$gejala', '$penyakit', '$nilai', '$persentase')");
                                     }
-                                } ?>
+                                } else {
+                                    ?>
+                                        <script language="JavaScript">
+                                            alert('Silahkan Pilih gejala yang dirasakan');
+                                        document.location='diagnosa.php?id_pasien=<?php print $_POST['id_pasien'] ?>'</script>
+                                        <?php
+                                } 
+                                ?>
                                 <br>
                                 <hr>
                                 <br>
