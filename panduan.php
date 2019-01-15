@@ -104,13 +104,13 @@ $cl->Count();
 
   <section class="page-section about-heading">
     <div class="container">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/panduan.jpg" alt="">
       <div class="about-heading-content">
         <div class="row">
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
+                <!-- <span class="section-heading-upper">Strong Coffee, Strong Roots</span> -->
                 <span class="section-heading-lower">Panduan Tata Cara Diagnosa Penyakit</span>
               </h2>
               <p style="text-align: justify;">Sistem Pakar diagnosa penyakit MERS-CoV merupakan sebuah sistem yang mampu melakukan diagnosa penyakit MERS-CoV berdasarkan gejala yang dapat dirasakan. untuk melakukan diagnosa penyakit, terdapat beberapa tatacara dan aturan yang harus dilakukan, adalah sebagai berikut:</p>

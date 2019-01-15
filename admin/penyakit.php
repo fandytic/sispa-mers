@@ -49,7 +49,7 @@ $pt = new Penyakit;
                                     <th style="color: white;" width="13%">Kode Penyakit</th>
                                     <th style="color: white;">Nama Tingkatan Penyakit</th>
                                     <th style="color: white;">Keterangan Tingkatan Penyakit</th>
-                                    <th style="color: white;">Aksi</th>
+                                    <th style="color: white;" width="8%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
