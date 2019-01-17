@@ -43,7 +43,7 @@ $pt = new Penyakit;
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="bootstrap-data-table" class="table table-hover table-bordered">
+                            <table id="example3" class="table table-hover table-bordered">
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
                                     <th style="color: white;" width="13%">Kode Penyakit</th>
@@ -71,7 +71,7 @@ $pt = new Penyakit;
                                 foreach($data as $d){
                                     ?>
                                     <tr>
-                                        <td><?php print $d['kode']; ?></td>
+                                        <td><?php print "P".$d['id']; ?></td>
                                         <td><?php print $d['nama']; ?></td>
                                         <td><?php print $d['kett']; ?></td>
                                         <td>

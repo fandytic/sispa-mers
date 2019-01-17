@@ -13,17 +13,16 @@ class Gejala
 		while($d = mysqli_fetch_array($query))
 		{
 			$data[$i]['id'] = $d['id'];
-			$data[$i]['kode'] = $d['kode'];
 			$data[$i]['nama'] = $d['nama'];
 			$i++;
 		}
 		return $data;
 	}
 
-	function InsertGejala($kode, $nama){
+	function InsertGejala($nama){
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "INSERT INTO ds_gejala (kode, nama)
-			values('$kode', '$nama')");
+		$query = mysqli_query($con, "INSERT INTO ds_gejala (nama)
+			values('$nama')");
 	}
 
 	function HapusGejala($id)
@@ -32,10 +31,10 @@ class Gejala
 		mysqli_query($con, "DELETE FROM ds_gejala WHERE id = '$id'");
 	}
 
-	function EditGejala($id,$kode,$nama)
+	function EditGejala($id,$nama)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "UPDATE ds_gejala set kode='$kode',nama='$nama' WHERE id='$id'");
+		$query = mysqli_query($con, "UPDATE ds_gejala set nama='$nama' WHERE id='$id'");
 	}
 
 	function TampilSatuData($id)
@@ -43,7 +42,6 @@ class Gejala
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "SELECT * FROM ds_gejala WHERE id = '$id'");
 		$g = mysqli_fetch_object($query);
-		$this->kode = $g->kode;
 		$this->nama = $g->nama;
 	}
 
@@ -65,7 +63,6 @@ class Gejala
 		while($d = mysqli_fetch_array($query))
 		{
 			$data[$i]['id'] = $d['id'];
-			$data[$i]['kode'] = $d['kode'];
 			$data[$i]['nama'] = $d['nama'];
 			$i++;
 		}

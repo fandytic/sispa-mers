@@ -13,7 +13,6 @@ class Penyakit
 		while($d = mysqli_fetch_array($query))
 		{
 			$data[$i]['id'] = $d['id'];
-			$data[$i]['kode'] = $d['kode'];
 			$data[$i]['nama'] = $d['nama'];
 			$data[$i]['kett'] = $d['kett'];
 			$i++;
@@ -21,10 +20,10 @@ class Penyakit
 		return $data;
 	}
 
-	function InsertPenyakit($kode, $nama, $kett){
+	function InsertPenyakit($nama, $kett){
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "INSERT into ds_penyakit (kode, nama, kett)
-			values('$kode', '$nama', '$kett')");
+		$query = mysqli_query($con, "INSERT into ds_penyakit ( nama, kett)
+			values('$nama', '$kett')");
 	}
 
 	function HapusPenyakit($id)
@@ -33,10 +32,10 @@ class Penyakit
 		$query = mysqli_query($con, "DELETE FROM ds_penyakit WHERE id = '$id'");
 	}
 
-	function EditPenyakit($id,$kode,$nama,$kett)
+	function EditPenyakit($id,$nama,$kett)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "UPDATE ds_penyakit set kode='$kode',nama='$nama',kett='$kett' WHERE id='$id'");
+		$query = mysqli_query($con, "UPDATE ds_penyakit set nama='$nama',kett='$kett' WHERE id='$id'");
 	}
 
 	function TampilSatuData($id)
@@ -44,7 +43,6 @@ class Penyakit
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "SELECT * FROM ds_penyakit WHERE id = '$id'");
 		$p = mysqli_fetch_object($query);
-		$this->kode = $p->kode;
 		$this->nama = $p->nama;
 		$this->kett = $p->kett;
 	}

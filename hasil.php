@@ -19,6 +19,9 @@ $dg = new Diagnosa;
 
 	<title>Sispa - Sistem Pakar Diagnosa Penyakit MERS-CoV</title>
 
+	<!-- SEO -->
+  <meta name="keywords" content="Sispa, Sistem Pakar, Sistem Pakar Diagnosa MERS-CoV, MERS-CoV, Diagnos MERS-CoV, Fandy TIC, Fandy Hidayat, Diagnosa Penyakit, Apa itu Mers-Cov?,Middle East Respiratory Syndrome Corona Virus, Corona Virus">
+
 	<!-- Bootstrap core CSS -->
 	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
