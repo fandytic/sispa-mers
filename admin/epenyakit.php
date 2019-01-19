@@ -45,7 +45,7 @@ $p->TampilSatuData($_GET['id']);
 										<input type="hidden" value="<?php print $_GET['id'] ?>" name="id" />
 										<label class="col-md-12">Kode Penyakit</label>
 										<div class="col-md-12">
-											<input type="text" value="<?php print $p->kode; ?>" class="form-control form-control-line" name="kode" readonly="true">
+											<input type="text" value="<?php print "P".$p->id; ?>" class="form-control form-control-line" name="kode" readonly="true">
 										</div>
 									</div>
 									<div class="form-group">

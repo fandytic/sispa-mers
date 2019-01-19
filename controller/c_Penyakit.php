@@ -43,6 +43,7 @@ class Penyakit
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "SELECT * FROM ds_penyakit WHERE id = '$id'");
 		$p = mysqli_fetch_object($query);
+		$this->id = $p->id;
 		$this->nama = $p->nama;
 		$this->kett = $p->kett;
 	}

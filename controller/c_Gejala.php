@@ -42,6 +42,7 @@ class Gejala
 		include "../koneksi/koneksi.php";
 		$query = mysqli_query($con, "SELECT * FROM ds_gejala WHERE id = '$id'");
 		$g = mysqli_fetch_object($query);
+		$this->id = $g->id;
 		$this->nama = $g->nama;
 	}
 

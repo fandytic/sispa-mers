@@ -131,7 +131,7 @@ function googleTranslateElementInit() {
 										<?php
 										/*echo "Pilih minimal 2 gejala";*/
 									}else{
-										$sql = "SELECT GROUP_CONCAT(b.kode), a.ds
+										$sql = "SELECT GROUP_CONCAT(b.id), a.ds
 										FROM ds_aturan a
 										JOIN ds_penyakit b ON a.id_penyakit=b.id
 										WHERE a.id_gejala IN(".implode(',',$_POST['gejala']).") 
@@ -143,7 +143,7 @@ function googleTranslateElementInit() {
 										}
 
 										//--- menentukan environement
-										$sql="SELECT GROUP_CONCAT(kode) FROM ds_penyakit";
+										$sql="SELECT GROUP_CONCAT(id) FROM ds_penyakit";
 										$result= mysqli_query($con,$sql);
 										$row=$result->fetch_row();
 										$fod=$row[0];
@@ -209,7 +209,7 @@ function googleTranslateElementInit() {
 										$codes=array_keys($densitas_baru);
 										$sql="SELECT GROUP_CONCAT(nama) 
 										FROM ds_penyakit 
-										WHERE kode IN('{$codes[0]}')";
+										WHERE id IN('{$codes[0]}')";
 										$result=mysqli_query($con,$sql);
 										$row=$result->fetch_row();
 										echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
