@@ -30,4 +30,5 @@ class Rekam
 		$query = mysqli_query($con,"DELETE FROM riwayat WHERE id_riwayat = '$id_riwayat'");
 	}
 }
+error_reporting(0);
 ?>
