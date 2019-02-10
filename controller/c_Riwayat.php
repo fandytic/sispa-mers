@@ -18,7 +18,6 @@ class Riwayat
 			$data[$i]['penyakit'] = $d['penyakit'];
 			$data[$i]['nilai'] = $d['nilai'];
 			$data[$i]['persentase'] = $d['persentase'];
-			$data[$i]['dokter'] = $d['dokter'];
 			$i++;
 		}
 		return $data;

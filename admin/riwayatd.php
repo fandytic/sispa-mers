@@ -70,6 +70,7 @@ $r = new Riwayat;
                                     </tr>
                                     <?php
                                 } else {
+                                    $i=0;
                                 foreach($data as $d){
                                     $i++;
                                     ?>

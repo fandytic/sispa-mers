@@ -224,6 +224,7 @@ function googleTranslateElementInit() {
 
 										//--- menampilkan gejala yang dipilih
 										echo "Gejala yang dipilih :<br>";
+										$i=0;
 										foreach ($_POST['gejala'] as $item) {
 											$query = "SELECT nama FROM ds_gejala WHERE id = '$item'";
 											$result = mysqli_query($con,$query);

@@ -72,6 +72,7 @@ $data = $p->TampilRPasien($_GET['id_pasien']);
                                     </tr>
                                     <?php
                                 } else {
+                                    $i=0;
                                     foreach ($data as $r) {
                                         $i++;
                                         ?>
