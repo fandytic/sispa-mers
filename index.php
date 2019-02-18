@@ -117,7 +117,7 @@ function googleTranslateElementInit() {
           <p class="mb-3" >MERS CoV adalah singkatan dari Middle East Respiratory Syndrome Corona Virus. Cek sekarang apakah kamu terkena Mers-CoV?
           </p>
           <div class="intro-button mx-auto">
-            <h2><a class="btn btn-primary btn-xl" href="diagnosa.php">Diagnosa Sekarang</a></h2>
+            <h2><a class="btn btn-primary btn-xl" href="diagnosa.php">DIAGNOSA SEKARANG</a></h2>
           </div>
         </div>
       </div>
@@ -135,6 +135,26 @@ function googleTranslateElementInit() {
             </h2>
             <p class="mb-0" style="text-align: justify;">MERS CoV adalah singkatan dari Middle East Respiratory Syndrome Corona Virus. Keberadaan virus ini pertama kali dilaporkan pada bulan September 2012 di Arab Saudi. Virus ini merupakan jenis baru dari kelompok Corona virus (Novel Corona Virus) namun  berbeda dengan  virus Severe Acute Respiratory Syndrome (SARS) pada tahun 2003. Gejala apabila terserang Virus Mers CoV adalah demam, batuk dan sesak nafas, bersifat akut, biasanya pasien memiliki penyakit ko-morbid/penyerta dan memiliki inkubasi 2-14 hari.</p><br>
             <p><video width="100%" height="100%" src="assets/video/MERS_CoV_Hajj_Umrah_Infograhic_EN.mp4" controls></video></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section about-heading">
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5">
+
+              <h3><center><span class="section-heading-upper">5 Hal yang harus diketahui tentang MERS</span></center></h3><br>
+              <video width="100%" height="100%" src="assets/video/Five_things_you_need_to_know_about_MERS.mp4" controls></video>
+            </div>
           </div>
         </div>
       </div>
