@@ -10,8 +10,8 @@ $cl->Count();
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Author: Fandy Hidayat, About: Mers-Cov, Category: Expert System">
+  <meta name="author" content="Fandy Hidayat, Fandy TIC">
   <link rel="icon" type="image/png" sizes="16x16" href="assetsA/assets/images/Logo-SP.png">
 
   <title>Sispa - Sistem Pakar Diagnosa Penyakit MERS-CoV</title>

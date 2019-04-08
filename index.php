@@ -10,8 +10,8 @@ $cl->Count();
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Author: Fandy Hidayat, About: Mers-Cov, Category: Expert System">
+  <meta name="author" content="Fandy Hidayat, Fandy TIC">
   <link rel="icon" type="image/png" sizes="16x16" href="assetsA/assets/images/Logo-SP.png">
 
   <title>Sispa - Sistem Pakar Diagnosa Penyakit MERS-CoV</title>
@@ -67,7 +67,7 @@ function googleTranslateElementInit() {
 
 <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white"></a></button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white" target="_blank" rel="noopener"></a></button>
 
   <h1 class="site-heading text-center d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Diagnosa Penyakit MERS-CoV</span>
@@ -79,7 +79,7 @@ function googleTranslateElementInit() {
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Sistem Pakar</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#" target="_blank" rel="noopener">Sistem Pakar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -89,15 +89,15 @@ function googleTranslateElementInit() {
           <li class="nav-item px-lg-4"></li>
           <li class="nav-item px-lg-4"></li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.php">Home
+            <a class="nav-link text-uppercase text-expanded" href="index.php" target="_blank" rel="noopener">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="diagnosa.php">Diagnosa Penyakit</a>
+            <a class="nav-link text-uppercase text-expanded" href="diagnosa.php" target="_blank" rel="noopener">Diagnosa Penyakit</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="panduan.php">Panduan</a>
+            <a class="nav-link text-uppercase text-expanded" href="panduan.php" target="_blank" rel="noopener">Panduan</a>
           </li>
         </ul>
       </div>
@@ -117,7 +117,7 @@ function googleTranslateElementInit() {
           <p class="mb-3" >MERS CoV adalah singkatan dari Middle East Respiratory Syndrome Corona Virus. Cek sekarang apakah kamu terkena Mers-CoV?
           </p>
           <div class="intro-button mx-auto">
-            <h2><a class="btn btn-primary btn-xl" href="diagnosa.php">DIAGNOSA SEKARANG</a></h2>
+            <h2><a class="btn btn-primary btn-xl" href="diagnosa.php" target="_blank" rel="noopener">DIAGNOSA SEKARANG</a></h2>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@ function googleTranslateElementInit() {
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p style="color: white;">Jumlah riwayat diagnosa saat ini : <?php echo $cl->jum; ?> | Copyright &copy; <a href="login.php">Sispa</a> 2018</p>
+      <p style="color: white;">Jumlah riwayat diagnosa saat ini : <?php echo $cl->jum; ?> | Copyright &copy; <a href="login.php" target="_blank" rel="noopener">Sispa</a> 2018</p>
     </div>
   </footer>
 
