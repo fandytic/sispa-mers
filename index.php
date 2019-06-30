@@ -89,15 +89,15 @@ function googleTranslateElementInit() {
           <li class="nav-item px-lg-4"></li>
           <li class="nav-item px-lg-4"></li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.php" target="_blank" rel="noopener">Home
+            <a class="nav-link text-uppercase text-expanded" href="index.php">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="diagnosa.php" target="_blank" rel="noopener">Diagnosa Penyakit</a>
+            <a class="nav-link text-uppercase text-expanded" href="diagnosa.php">Diagnosa Penyakit</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="panduan.php" target="_blank" rel="noopener">Panduan</a>
+            <a class="nav-link text-uppercase text-expanded" href="panduan.php">Panduan</a>
           </li>
         </ul>
       </div>
