@@ -67,7 +67,7 @@ function googleTranslateElementInit() {
 
 <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white" target="_blank" rel="noopener"></a></button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" id="clock" style="color: white" rel="noopener"></a></button>
 
   <h1 class="site-heading text-center d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Diagnosa Penyakit MERS-CoV</span>
