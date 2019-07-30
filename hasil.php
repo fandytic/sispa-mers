@@ -168,7 +168,7 @@ function googleTranslateElementInit() {
 											$densitas2[]=array($fod,$theta);					// 14
 											$m=count($densitas2);								// 15
 											$densitas_baru=array();								// 16
-											// for($y=0;$y<$m;$y++){								// 17
+											// for($y=0;$y<$m;$y++){							// 17
 											// 	for($x=0;$x<2;$x++){							// 18
 											// 		if(!($y==$m-1 && $x==1)){					// 19
 											// 			$v=explode(',',$densitas1[$x][0]);		// 20
