@@ -12,14 +12,13 @@ $error = "Periksa kembali username dan password anda";
 //proses login
 
 //menyesuaikan dengan data di database
-$hasil = mysqli_query($con, "select*from admin");
+$hasil = mysqli_query($con, "select * from admin");
 $row = mysqli_fetch_array($hasil);
 if($row['username'] == $username && $row['password'] == $password) {
-		
-		$_SESSION['username'] = $username;
-		header('location:admin/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
-	} else {
-		$_SESSION["error"] = $error;
-		header("location: login.php");
-	}
-	?>
+	$_SESSION['username'] = $username;
+	header('location:admin/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
+} else {
+	$_SESSION["error"] = $error;
+	header("location: login.php");
+}
+?>
