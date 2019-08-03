@@ -11,12 +11,26 @@ $password = $_POST['password'];
 $error = "Periksa kembali username dan password anda";
 //proses login
 
-//menyesuaikan dengan data di database
-$hasil = mysqli_query($con, "select * from admin");
-$row = mysqli_fetch_array($hasil);
-if($row['username'] == $username && $row['password'] == $password) {
-	$_SESSION['username'] = $username;
-	header('location:admin/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
+// menyeleksi data user dengan username dan password yang sesuai
+$login = mysqli_query($con, "select * from admin where username='$username' and password='$password'");
+// menghitung jumlah data yang ditemukan
+$cek = mysqli_num_rows($login);
+
+// cek apakah username dan password di temukan pada database
+if ($cek > 0) {
+	$data = mysqli_fetch_assoc($login);
+
+	// cek jika user login sebagai admin
+	if ($data['tingkat']=="admin") {
+		$_SESSION['username'] = $username;
+		header('location:admin/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
+	} elseif ($data['tingkat']=="dokter") {
+		$_SESSION['username'] = $username;
+		header('location:dokter/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
+	} else {
+		$_SESSION["error"] = $error;
+		header("location: login.php");
+	}
 } else {
 	$_SESSION["error"] = $error;
 	header("location: login.php");
