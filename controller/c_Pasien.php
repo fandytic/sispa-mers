@@ -16,8 +16,8 @@ class Pasien
 			$data[$i]['nama'] = $d['nama'];
 			$data[$i]['tgl_lahir'] = $d['tgl_lahir'];
 			$i++;
+			return $data;
 		}
-		return $data;
 	}
 
 	function Tambah($nama, $tgl_lahir)

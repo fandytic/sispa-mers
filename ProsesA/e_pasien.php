@@ -8,5 +8,5 @@ $tgl_lahir = $_POST['tgl_lahir'];
 $update = new Pasien;
 $update->Edit($id_pasien, $nama,$tgl_lahir);
 
-header('location: ../admin/pasien.php');
+header('location: ../dokter/pasien.php');
 ?>

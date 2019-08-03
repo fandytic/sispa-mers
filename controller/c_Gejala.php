@@ -15,8 +15,8 @@ class Gejala
 			$data[$i]['id'] = $d['id'];
 			$data[$i]['nama'] = $d['nama'];
 			$i++;
+			return $data;
 		}
-		return $data;
 	}
 
 	function InsertGejala($nama){

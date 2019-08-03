@@ -18,8 +18,6 @@ class Admin
 		$this->nohp = $p->nohp;
 	}
 
-
-
 	function DokterSemua()
 	{
 		include '../koneksi/koneksi.php';
@@ -34,8 +32,8 @@ class Admin
 			$data[$i]['email'] = $d['email'];
 			$data[$i]['nohp'] = $d['nohp'];
 			$i++;
+			return $data;
 		}
-		return $data;
 	}
 
 	function TambahDokter($nama, $username, $password, $email, $nohp, $tingkat)

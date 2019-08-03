@@ -62,9 +62,6 @@ $p = new Pasien;
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
                                     </tr>
                                     <?php
                                 } else {
@@ -109,3 +106,4 @@ $p = new Pasien;
 <!-- End Container fluid  -->
 <!-- ============================================================== -->
 <?php include '_footer.php'; ?>
+

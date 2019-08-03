@@ -6,7 +6,7 @@ if(!isset($_SESSION['username'])){
 
 } else {
 	$username = $_SESSION["username"];
-	header('location:admin/pasien.php');
+	header('location:dokter/pasien.php');
 }
 require_once('koneksi/koneksi.php');
 ?>

@@ -23,9 +23,11 @@ if ($cek > 0) {
 	// cek jika user login sebagai admin
 	if ($data['tingkat']=="admin") {
 		$_SESSION['username'] = $username;
-		header('location:admin/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
+		$_SESSION['tingkat'] = "admin";
+		header('location:admin/dokter.php'); //jika berhasil login, maka masuk ke file yang dituju
 	} elseif ($data['tingkat']=="dokter") {
 		$_SESSION['username'] = $username;
+		$_SESSION['tingkat'] = "dokter";
 		header('location:dokter/pasien.php'); //jika berhasil login, maka masuk ke file yang dituju
 	} else {
 		$_SESSION["error"] = $error;
