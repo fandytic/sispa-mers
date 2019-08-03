@@ -10,13 +10,15 @@ class Admin
 		include '../koneksi/koneksi.php';
 		$query = mysqli_query($con, "SELECT * FROM admin where id_admin = '$id_admin'");
 		$p = mysqli_fetch_object($query);
-		$id_admin = $p->id_admin;
-		$username = $p->username;
-		$nama = $p->nama;
-		$email = $p->email;
-		$password = $p->password;
-		$nohp = $p->nohp;
+		$this->id_admin = $p->id_admin;
+		$this->nama = $p->nama;
+		$this->username = $p->username;
+		$this->password = $p->password;
+		$this->email = $p->email;
+		$this->nohp = $p->nohp;
 	}
+
+
 
 	function DokterSemua()
 	{
@@ -34,6 +36,19 @@ class Admin
 			$i++;
 		}
 		return $data;
+	}
+
+	function TambahDokter($nama, $username, $password, $email, $nohp, $tingkat)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "INSERT INTO admin (nama, username, password, email, nohp, tingkat)
+			values('$nama', '$username', '$password', '$email', '$nohp', '$tingkat')");
+	}
+
+	function UbahDokter($id_admin, $nama, $username, $password, $email, $nohp)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "UPDATE admin set nama='$nama',username='$username',password='$password',email='$email',nohp='nohp' WHERE id_admin='$id_admin'");
 	}
 
 	function HapusDokter($id_admin)

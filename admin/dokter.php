@@ -23,7 +23,7 @@ $p = new Admin;
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="tpasien.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Dokter</a>
+                    <a href="tdokter.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Dokter</a>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@ $p = new Admin;
                                         <td><?php print $d['email']; ?></td>
                                         <td><?php print $d['nohp']; ?></td>
                                         <td>
-                                            <a href="epasien.php?id_admin=<?php print $d['id_admin']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Dokter"><i class="mdi mdi-lead-pencil"></i></a>
+                                            <a href="edokter.php?id_admin=<?php print $d['id_admin']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Dokter"><i class="mdi mdi-lead-pencil"></i></a>
 
                                             <a onclick="if (! confirm('Apakah anda yakin akan menghapus Dokter dari daftar ?')) { return false; }" href="../ProsesA/d_dokter.php?id_admin=<?php print $d['id_admin']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Dokter"><i class="fa fa-times"></i></a>
                                         </td>
