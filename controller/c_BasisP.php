@@ -22,8 +22,8 @@ class BasisP
 			$data[$i]['nama_penyakit'] = $d['nama_penyakit'];
 			$data[$i]['nama_gejala'] = $d['nama_gejala'];
 			$i++;
-			return $data;
 		}
+		return $data;
 	}
 
 	function TampilSatuData($id)
@@ -91,3 +91,4 @@ class BasisP
 		}*/
 	}
 }
+error_reporting(0);

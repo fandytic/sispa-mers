@@ -5,7 +5,8 @@ include "../koneksi/koneksi.php";
 if(!isset($_SESSION['username'])){
     header('location:../login.php');
 } else {
-    $username = $_SESSION["username"]; 
+    $username = $_SESSION["username"];
+    $id_admin = $_SESSION['id_admin']; 
 }
 require_once('../koneksi/koneksi.php');
 $hasil = mysqli_query($con, "select * from admin where username='$username'");

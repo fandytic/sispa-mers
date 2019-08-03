@@ -20,8 +20,8 @@ class Rekam
 			$data[$i]['nilai'] = $d['nilai'];
 			$data[$i]['persentase'] = $d['persentase'];
 			$i++;
-			return $data;
 		}
+		return $data;
 	}
 
 	function Hapus($id_riwayat)

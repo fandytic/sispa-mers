@@ -16,8 +16,8 @@ class Penyakit
 			$data[$i]['nama'] = $d['nama'];
 			$data[$i]['kett'] = $d['kett'];
 			$i++;
-			return $data;
 		}
+		return $data;
 	}
 
 	function InsertPenyakit($nama, $kett){
@@ -57,4 +57,5 @@ class Penyakit
 	}
 
 }
+error_reporting(0);
 ?>

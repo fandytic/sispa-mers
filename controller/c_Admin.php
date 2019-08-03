@@ -32,8 +32,8 @@ class Admin
 			$data[$i]['email'] = $d['email'];
 			$data[$i]['nohp'] = $d['nohp'];
 			$i++;
-			return $data;
 		}
+		return $data;
 	}
 
 	function TambahDokter($nama, $username, $password, $email, $nohp, $tingkat)
@@ -61,4 +61,5 @@ class Admin
 		$query = mysqli_query($con, "SELECT * FROM admin where username='$username' AND password='$password'");		
 	}
 }
+error_reporting(0);
  ?>

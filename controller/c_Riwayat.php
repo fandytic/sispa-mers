@@ -19,8 +19,8 @@ class Riwayat
 			$data[$i]['nilai'] = $d['nilai'];
 			$data[$i]['persentase'] = $d['persentase'];
 			$i++;
-			return $data;
 		}
+		return $data;
 	}
 
 	function Hapus($id_diagnosa)
@@ -36,4 +36,5 @@ class Riwayat
 		$this->jum = $hasil->jum;
 	}
 }
+error_reporting(0);
  ?>

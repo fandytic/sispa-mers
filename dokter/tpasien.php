@@ -38,6 +38,7 @@
 						<div class="card">
 							<div class="card-body">
 								<form method="post" class="form-horizontal form-material" action="../ProsesA/t_pasien.php">
+									<input type="hidden" value="<?php echo $_SESSION["id_admin"] ?>" name="id_admin">
 									<div class="form-group">
 										<label class="col-md-12">Nama Pasien</label>
 										<div class="col-md-12">

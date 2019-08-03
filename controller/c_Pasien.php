@@ -5,10 +5,10 @@
 class Pasien
 {
 	
-	function TampilSemua()
+	function TampilSemua($id_admin)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "SELECT * FROM pasien");
+		$query = mysqli_query($con, "SELECT * FROM pasien WHERE id_admin='$id_admin'");
 		$i = 0;
 		while($d = mysqli_fetch_array($query))
 		{
@@ -16,15 +16,15 @@ class Pasien
 			$data[$i]['nama'] = $d['nama'];
 			$data[$i]['tgl_lahir'] = $d['tgl_lahir'];
 			$i++;
-			return $data;
 		}
+		return $data;
 	}
 
-	function Tambah($nama, $tgl_lahir)
+	function Tambah($nama, $tgl_lahir, $id_admin)
 	{
 		include "../koneksi/koneksi.php";
-		$query = mysqli_query($con, "INSERT INTO pasien (nama, tgl_lahir)
-			values('$nama', '$tgl_lahir')");
+		$query = mysqli_query($con, "INSERT INTO pasien (nama, tgl_lahir, id_admin)
+			values('$nama', '$tgl_lahir', '$id_admin')");
 	}
 
 	function Hapus($id_pasien)
@@ -48,4 +48,5 @@ class Pasien
 		$this->tgl_lahir = $g->tgl_lahir;
 	}
 }
+error_reporting(0);
 ?>

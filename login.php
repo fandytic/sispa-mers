@@ -5,8 +5,15 @@ include "koneksi/koneksi.php";
 if(!isset($_SESSION['username'])){
 
 } else {
-	$username = $_SESSION["username"];
-	header('location:dokter/pasien.php');
+	if ($_SESSION["tingkat"] == "dokter") {
+		$username = $_SESSION["username"];
+		$id_admin = $_SESSION['id_admin'];
+		header('location:dokter/pasien.php');
+	}
+	if ($_SESSION['tingkat'] == "admin") {
+		$username = $_SESSION["username"];
+		header('location:admin/dokter.php');
+	}
 }
 require_once('koneksi/koneksi.php');
 ?>

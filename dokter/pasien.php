@@ -54,7 +54,7 @@ $p = new Pasien;
                             </thead>
                             <tbody>
                                 <?php 
-                                $data = $p->TampilSemua();
+                                $data = $p->TampilSemua($id_admin);
                                 if (!isset($data)) {
                                     ?>
                                     <tr>
