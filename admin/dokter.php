@@ -1,7 +1,7 @@
 <?php include '_header.php'; 
 
-include "../controller/c_Pasien.php";
-$p = new Pasien;
+include "../controller/c_Admin.php";
+$p = new Admin;
 ?>
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
@@ -13,17 +13,17 @@ $p = new Pasien;
     <div class="page-breadcrumb">
         <div class="row align-items-center">
             <div class="col-5">
-                <h4 class="page-title">Manajemen Pasien</h4>
+                <h4 class="page-title">Manajemen dokter</h4>
                 <div class="d-flex align-items-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Pasien</li>
+                        <li class="breadcrumb-item active" aria-current="page">Dokter</li>
                     </ol>
                 </div>
             </div>
             <div class="col-7">
                 <div class="text-right upgrade-btn">
-                    <a href="tpasien.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Pasien</a>
+                    <a href="tpasien.php" class="btn btn-danger text-white"><i class="mdi mdi-plus"></i> Tambah Dokter</a>
                 </div>
             </div>
         </div>
@@ -46,15 +46,18 @@ $p = new Pasien;
                             <table id="bootstrap-data-table" class="table table-hover table-bordered">
                                 <thead style="background-color: #7f8c8d; color: white;">
                                   <tr>
-                                    <th style="color: white;" width="5%">ID</th>
-                                    <th style="color: white;">Nama Pasien</th>
-                                    <th style="color: white;">Tanggal Lahir</th>
+                                    <th style="color: white;" width="5%">No</th>
+                                    <th style="color: white;">Nama</th>
+                                    <th style="color: white;">Username</th>
+                                    <th style="color: white;">Password</th>
+                                    <th style="color: white;">Email</th>
+                                    <th style="color: white;">No Hp</th>
                                     <th style="color: white;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
-                                $data = $p->TampilSemua();
+                                $data = $p->DokterSemua();
                                 if (!isset($data)) {
                                     ?>
                                     <tr>
@@ -75,7 +78,10 @@ $p = new Pasien;
                                     <tr>
                                         <td><?php print $i; ?></td>
                                         <td><?php print $d['nama']; ?></td>
-                                        <td><?php print $d['tgl_lahir']; ?></td>
+                                        <td><?php print $d['username']; ?></td>
+                                        <td><?php print $d['password']; ?></td>
+                                        <td><?php print $d['email']; ?></td>
+                                        <td><?php print $d['nohp']; ?></td>
                                         <td>
                                             <a href="riwayatrm.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Lihat Rekam Medis"><i class="mdi mdi-eye"></i></a>
 

@@ -188,7 +188,7 @@ $row = mysqli_fetch_array($hasil);
                     </li>
                     <li class="p-15 m-t-10"><a href="javascript:void(0)" class="btn btn-block create-btn text-white no-block d-flex align-items-center">Waktu : &nbsp;<span class="hide-menu m-l-5" id="clock"></span> </a></li>
                     <!-- Data Pasien -->
-                    <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link" href="pasien.php" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Data Pasien</span></a></li>
+                    <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link" href="pasien.php" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Diagnosa Pasien</span></a></li>
                     <!-- Profil -->
                     <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link" href="profil.php" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span class="hide-menu">Profil</span></a></li>
                 </ul>

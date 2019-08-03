@@ -77,7 +77,7 @@ $p = new Pasien;
                                         <td><?php print $d['nama']; ?></td>
                                         <td><?php print $d['tgl_lahir']; ?></td>
                                         <td>
-                                            <a href="riwayatrm.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Lihat Rekam Medis"><i class="mdi mdi-eye"></i></a>
+                                            <a href="riwayatrm.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Lihat Diagnosa Pasien"><i class="mdi mdi-eye"></i></a>
 
                                             <a href="epasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Pasien"><i class="mdi mdi-lead-pencil"></i></a>
 

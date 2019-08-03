@@ -196,7 +196,7 @@ $row = mysqli_fetch_array($hasil);
                     <!-- Riwayat Diagnosa -->
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="riwayatd.php" aria-expanded="false"><i class="mdi mdi-history"></i><span class="hide-menu">Log Diagnosa</span></a></li>
                     <!-- Data Pasien -->
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pasien.php" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Data Pasien</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dokter.php" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Data Dokter</span></a></li>
                     <!-- Profil -->
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profil.php" aria-expanded="false"><i class="mdi mdi-account-settings-variant"></i><span class="hide-menu">Profil</span></a></li>
                 </ul>
