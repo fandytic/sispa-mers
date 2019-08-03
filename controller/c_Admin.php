@@ -16,7 +16,6 @@ class Admin
 		$email = $p->email;
 		$password = $p->password;
 		$nohp = $p->nohp;
-		$posisi = $p->posisi;
 	}
 
 	function DokterSemua()
@@ -35,6 +34,12 @@ class Admin
 			$i++;
 		}
 		return $data;
+	}
+
+	function HapusDokter($id_admin)
+	{
+		include "../koneksi/koneksi.php";
+		$query = mysqli_query($con, "DELETE FROM admin WHERE id_admin = '$id_admin'");
 	}
 
 	function Login($username, $password)

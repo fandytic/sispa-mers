@@ -83,11 +83,9 @@ $p = new Admin;
                                         <td><?php print $d['email']; ?></td>
                                         <td><?php print $d['nohp']; ?></td>
                                         <td>
-                                            <a href="riwayatrm.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Lihat Rekam Medis"><i class="mdi mdi-eye"></i></a>
+                                            <a href="epasien.php?id_admin=<?php print $d['id_admin']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Dokter"><i class="mdi mdi-lead-pencil"></i></a>
 
-                                            <a href="epasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-info btn-simple btn-xs text-white" title="Edit Data Pasien"><i class="mdi mdi-lead-pencil"></i></a>
-
-                                            <a onclick="if (! confirm('Apakah anda yakin akan menghapus pasien dari daftar ?')) { return false; }" href="../ProsesA/d_pasien.php?id_pasien=<?php print $d['id_pasien']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Pasien"><i class="fa fa-times"></i></a>
+                                            <a onclick="if (! confirm('Apakah anda yakin akan menghapus Dokter dari daftar ?')) { return false; }" href="../ProsesA/d_dokter.php?id_admin=<?php print $d['id_admin']; ?>" class="btn btn-danger btn-simple btn-xs text-white" title="Hapus Dokter"><i class="fa fa-times"></i></a>
                                         </td>
                                     </tr>
                                 <?php }} ?>
