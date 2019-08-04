@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2019 at 04:02 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Waktu pembuatan: 04 Agu 2019 pada 09.54
+-- Versi server: 10.3.16-MariaDB
+-- Versi PHP: 7.1.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,30 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
   `id_admin` int(5) NOT NULL,
-  `username` varchar(20) NOT NULL,
   `nama` varchar(40) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `password` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `nohp` varchar(20) NOT NULL
+  `nohp` varchar(20) NOT NULL,
+  `tingkat` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
-INSERT INTO `admin` (`id_admin`, `username`, `nama`, `password`, `email`, `nohp`) VALUES
-(1, 'admin', 'Admin', 'root', 'admin@sp.com', '081277890522'),
-(2, 'pakar', 'dr. Azizman Saad, Sp.P (K)', 'root', '', '');
+INSERT INTO `admin` (`id_admin`, `nama`, `username`, `password`, `email`, `nohp`, `tingkat`) VALUES
+(1, 'Admin', 'admin', 'root', 'admin@sp.com', '081277890522', 'admin'),
+(2, 'dr. Azizman Saad, Sp.P (K)', 'pakar', 'root', 'azisman@unri.ac.id', '123123', 'dokter'),
+(4, 'hachanooooo', 'nana', '123', 'fasda@gmail.com', 'nohp', 'dokter'),
+(5, 'alif', 'alifsatria00', '12345', 'arusmana76@gmail.com', '123', 'dokter'),
+(6, '123', 'asd', '123', 'ilham.novitra22@gmail.com', '44444', 'dokter');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diagnosa`
+-- Struktur dari tabel `diagnosa`
 --
 
 CREATE TABLE `diagnosa` (
@@ -59,7 +65,7 @@ CREATE TABLE `diagnosa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `diagnosa`
+-- Dumping data untuk tabel `diagnosa`
 --
 
 INSERT INTO `diagnosa` (`id_diagnosa`, `tanggal`, `gejala`, `penyakit`, `nilai`, `persentase`) VALUES
@@ -101,23 +107,81 @@ INSERT INTO `diagnosa` (`id_diagnosa`, `tanggal`, `gejala`, `penyakit`, `nilai`,
 (79, '11-01-2019<br>07:51:58 PM', '1. Tenggorokan terasa sakit<br>2. Tenggorokan terasa ada yang nyangkut<br>3. Kepala terasa sakit<br>4. Dada terasa sesak<br>5. Demam yang dirasakan naik turun<br>', 'Stadium 3', '0.62933210924948', '62.93%'),
 (80, '11-01-2019<br>07:52:28 PM', '1. Merasakan flu berat<br>2. Kepala terasa sakit<br>3. Susah menarik nafas panjang<br>4. Pada siang hari badan terasa sakit-sakit<br>5. Demam<br>', 'Stadium 2', '0.91569086651054', '91.57%'),
 (81, '14-01-2019<br>09:30:15 PM', '1. Terasa gatal-gatal pada tenggorokan<br>2. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>3. Pada siang hari badan terasa sakit-sakit<br>4. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 2', '0.36077705827937', '36.08%'),
-(82, '10-02-2019<br>10:34:42 AM', '1. Batuk berdahak<br>2. Merasakan flu berat<br>3. Tenggorokan terasa sakit<br>4. Demam yang dirasakan naik turun<br>5. Demam<br>', 'Stadium 2', '0.64391691394659', '64.39%'),
-(83, '10-02-2019<br>10:35:12 AM', '1. Batuk berdahak<br>2. Merasakan flu berat<br>3. Tenggorokan terasa sakit<br>4. Demam yang dirasakan naik turun<br>5. Demam<br>', 'Stadium 2', '0.64391691394659', '64.39%'),
-(84, '10-02-2019<br>10:35:18 AM', '1. Batuk berdahak<br>2. Merasakan flu berat<br>3. Tenggorokan terasa sakit<br>4. Demam yang dirasakan naik turun<br>5. Demam<br>', 'Stadium 2', '0.64391691394659', '64.39%'),
-(85, '10-02-2019<br>10:46:56 AM', '1. Merasakan flu<br>2. Merasakan flu berat<br>3. Terasa gatal-gatal pada tenggorokan<br>4. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>5. Denyut jantung yang dirasakan agak cepat berdetak<br>6. Demam<br>', 'Stadium 3', '0.58375263013448', '58.38%'),
-(86, '10-02-2019<br>10:47:39 AM', '1. Merasakan flu<br>2. Merasakan flu berat<br>3. Terasa gatal-gatal pada tenggorokan<br>4. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>5. Denyut jantung yang dirasakan agak cepat berdetak<br>6. Demam<br>', 'Stadium 3', '0.58375263013448', '58.38%'),
-(87, '18-02-2019<br>10:44:21 AM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>', 'Stadium 1', '0.3075', '30.75%'),
-(88, '18-02-2019<br>10:44:36 AM', '1. Tenggorokan terasa sakit<br>2. Tenggorokan terasa ada yang nyangkut<br>3. Kepala terasa sakit<br>', 'Stadium 2', '0.21369863013699', '21.37%'),
-(89, '18-02-2019<br>10:44:46 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>', 'Stadium 2', '0.33870967741935', '33.87%'),
-(90, '18-02-2019<br>10:44:58 AM', '1. Batuk berdahak<br>2. Merasakan flu<br>3. Merasakan flu berat<br>', 'Stadium 3', '0.64285714285714', '64.29%'),
-(91, '18-02-2019<br>10:46:45 AM', '1. Batuk kering<br>2. Merasakan flu<br>', 'Stadium 1', '0.3', '30%'),
-(92, '18-02-2019<br>10:48:23 AM', '1. Tenggorokan terasa sakit<br>2. Tenggorokan terasa ada yang nyangkut<br>', 'Stadium 1', '0.28767123287671', '28.77%'),
-(93, '18-02-2019<br>10:49:32 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>', 'Stadium 2', '0.33870967741935', '33.87%');
+(82, '25-01-2019<br>11:35:54 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>4. Tenggorokan terasa ada yang nyangkut<br>5. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>6. Denyut jantung yang dirasakan agak cepat berdetak<br>7. Demam yang dirasakan naik turun<br>', 'Stadium 2', '0.67893638838796', '67.89%'),
+(83, '29-01-2019<br>09:57:36 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>', '', '0.33870967741935', '33.87%'),
+(84, '29-01-2019<br>09:58:24 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Terasa gatal-gatal pada tenggorokan<br>5. Kepala terasa sakit<br>6. Dada terasa sesak<br>7. Demam<br>', 'Stadium 3', '0.77475422782604', '77.48%'),
+(85, '29-01-2019<br>09:58:52 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Merasakan flu berat<br>5. Tenggorokan terasa sakit<br>6. Tenggorokan terasa ada yang nyangkut<br>7. Terasa gatal-gatal pada tenggorokan<br>8. Kepala terasa sakit<br>9. Dada terasa sesak<br>10. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>11. Susah menarik nafas panjang<br>12. Denyut jantung yang dirasakan agak cepat berdetak<br>13. Pada siang hari badan terasa sakit-sakit<br>14. Demam<br>15. Demam tinggi ( > 39º )<br>16. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 3', '0.97329230572673', '97.33%'),
+(86, '29-01-2019<br>09:58:59 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Merasakan flu berat<br>5. Tenggorokan terasa sakit<br>6. Tenggorokan terasa ada yang nyangkut<br>7. Terasa gatal-gatal pada tenggorokan<br>8. Kepala terasa sakit<br>9. Dada terasa sesak<br>10. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>11. Susah menarik nafas panjang<br>12. Denyut jantung yang dirasakan agak cepat berdetak<br>13. Pada siang hari badan terasa sakit-sakit<br>14. Demam yang dirasakan naik turun<br>15. Demam<br>16. Demam tinggi ( > 39º )<br>17. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 3', '0.87935059800462', '87.94%'),
+(87, '29-01-2019<br>10:08:32 AM', '1. Terasa gatal-gatal pada tenggorokan<br>2. Kepala terasa sakit<br>3. Dada terasa sesak<br>4. Susah menarik nafas panjang<br>', 'Stadium 3', '0.68331303288672', '68.33%'),
+(88, '29-01-2019<br>10:08:40 AM', '1. Terasa gatal-gatal pada tenggorokan<br>2. Kepala terasa sakit<br>3. Dada terasa sesak<br>4. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>5. Susah menarik nafas panjang<br>', 'Stadium 3', '0.68331303288672', '68.33%'),
+(89, '02-02-2019<br>11:38:13 PM', '1. Tenggorokan terasa sakit<br>2. Tenggorokan terasa ada yang nyangkut<br>', '', '0.28767123287671', '28.77%'),
+(90, '09-02-2019<br>09:36:28 PM', '1. Batuk kering<br>2. Tenggorokan terasa sakit<br>3. Terasa gatal-gatal pada tenggorokan<br>', 'Stadium 3', '0.35', '35%'),
+(91, '18-02-2019<br>10:50:42 PM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>', 'Stadium 2', '0.33870967741935', '33.87%'),
+(92, '18-02-2019<br>10:50:55 PM', '1. Tenggorokan terasa sakit<br>2. Tenggorokan terasa ada yang nyangkut<br>3. Kepala terasa sakit<br>', 'Stadium 2', '0.21369863013699', '21.37%'),
+(93, '18-02-2019<br>10:51:05 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>', 'Stadium 1', '0.3075', '30.75%'),
+(94, '19-02-2019<br>07:35:35 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>', 'Stadium 1', '0.3075', '30.75%'),
+(95, '19-02-2019<br>07:36:48 PM', '1. Batuk kering<br>2. Merasakan flu berat<br>3. Tenggorokan terasa ada yang nyangkut<br>4. Kepala terasa sakit<br>', 'Stadium 3', '0.72941176470588', '72.94%'),
+(96, '19-02-2019<br>07:38:49 PM', '1. Dada terasa sesak<br>2. Susah menarik nafas panjang<br>3. Pada siang hari badan terasa sakit-sakit<br>4. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.93720565149137', '93.72%'),
+(97, '19-02-2019<br>11:10:14 PM', '1. Merasakan flu<br>2. Tenggorokan terasa sakit<br>3. Tenggorokan terasa ada yang nyangkut<br>4. Terasa gatal-gatal pada tenggorokan<br>', 'Stadium 3', '0.20982514571191', '20.98%'),
+(98, '20-02-2019<br>08:42:55 PM', '1. Batuk kering<br>2. Kepala terasa sakit<br>3. Dada terasa sesak<br>', 'Stadium 3', '0.91', '91%'),
+(99, '20-02-2019<br>09:20:32 PM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Merasakan flu berat<br>5. Tenggorokan terasa sakit<br>6. Tenggorokan terasa ada yang nyangkut<br>7. Terasa gatal-gatal pada tenggorokan<br>8. Kepala terasa sakit<br>9. Dada terasa sesak<br>10. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>11. Susah menarik nafas panjang<br>12. Denyut jantung yang dirasakan agak cepat berdetak<br>13. Pada siang hari badan terasa sakit-sakit<br>14. Demam yang dirasakan naik turun<br>15. Demam<br>16. Demam tinggi ( > 39º )<br>17. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 3', '0.87935059800462', '87.94%'),
+(100, '21-02-2019<br>02:45:39 PM', '1. Merasakan flu<br>2. Merasakan flu berat<br>', 'Stadium 3', '0.64285714285714', '64.29%'),
+(101, '21-02-2019<br>02:48:38 PM', '1. Merasakan flu<br>2. Terasa gatal-gatal pada tenggorokan<br>3. Dada terasa sesak<br>', 'Stadium 3', '0.8961661341853', '89.62%'),
+(102, '21-02-2019<br>02:56:38 PM', '1. Tenggorokan terasa ada yang nyangkut<br>2. Kepala terasa sakit<br>3. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>4. Demam<br>', 'Stadium 2', '0.775', '77.5%'),
+(103, '21-02-2019<br>07:53:58 PM', '1. Batuk berdahak<br>2. Merasakan flu<br>3. Terasa gatal-gatal pada tenggorokan<br>', 'Stadium 2', '0.31744186046512', '31.74%'),
+(104, '22-02-2019<br>10:38:24 AM', '1. Dada terasa sesak<br>2. Susah menarik nafas panjang<br>3. Denyut jantung yang dirasakan agak cepat berdetak<br>', 'Stadium 3', '0.66587112171838', '66.59%'),
+(105, '22-02-2019<br>10:44:59 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Susah menarik nafas panjang<br>', 'Stadium 2', '0.86100386100386', '86.1%'),
+(106, '22-02-2019<br>08:33:22 PM', '1. Dada terasa sesak<br>2. Denyut jantung yang dirasakan agak cepat berdetak<br>', 'Stadium 3', '0.93', '93%'),
+(107, '24-02-2019<br>07:08:52 PM', '1. Merasakan flu<br>2. Tenggorokan terasa sakit<br>3. Tenggorokan terasa ada yang nyangkut<br>4. Dada terasa sesak<br>5. Susah menarik nafas panjang<br>6. Denyut jantung yang dirasakan agak cepat berdetak<br>', 'Stadium 3', '0.56538136785815', '56.54%'),
+(108, '24-02-2019<br>09:25:55 PM', '1. Tenggorokan terasa ada yang nyangkut<br>2. Terasa gatal-gatal pada tenggorokan<br>', 'Stadium 3', '0.28767123287671', '28.77%'),
+(109, '24-02-2019<br>09:26:45 PM', '1. Tenggorokan terasa sakit<br>2. Tenggorokan terasa ada yang nyangkut<br>', 'Stadium 1', '0.28767123287671', '28.77%'),
+(110, '25-02-2019<br>08:43:49 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>', 'Stadium 1', '0.3075', '30.75%'),
+(111, '26-02-2019<br>07:40:52 PM', '1. Batuk kering<br>2. Merasakan flu berat<br>3. Tenggorokan terasa sakit<br>4. Kepala terasa sakit<br>5. Dada terasa sesak<br>6. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>7. Susah menarik nafas panjang<br>8. Denyut jantung yang dirasakan agak cepat berdetak<br>9. Pada siang hari badan terasa sakit-sakit<br>10. Demam yang dirasakan naik turun<br>11. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 3', '0.62931363653323', '62.93%'),
+(112, '26-02-2019<br>07:46:05 PM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Tenggorokan terasa sakit<br>5. Tenggorokan terasa ada yang nyangkut<br>6. Kepala terasa sakit<br>7. Dada terasa sesak<br>8. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>9. Demam yang dirasakan naik turun<br>10. Demam<br>', 'Stadium 2', '0.63337284877233', '63.34%'),
+(113, '26-02-2019<br>08:09:34 PM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Tenggorokan terasa sakit<br>4. Kepala terasa sakit<br>5. Demam yang dirasakan naik turun<br>', 'Stadium 2', '0.48177161795722', '48.18%'),
+(114, '27-02-2019<br>04:43:13 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>4. Kepala terasa sakit<br>5. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>6. Pada siang hari badan terasa sakit-sakit<br>7. Demam<br>8. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 2', '0.7940589789207', '79.41%'),
+(115, '27-02-2019<br>04:46:11 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>4. Kepala terasa sakit<br>5. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>6. Denyut jantung yang dirasakan agak cepat berdetak<br>7. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 2', '0.43223240914614', '43.22%'),
+(116, '27-02-2019<br>04:46:57 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>4. Kepala terasa sakit<br>5. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>6. Denyut jantung yang dirasakan agak cepat berdetak<br>7. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 2', '0.43223240914614', '43.22%'),
+(117, '27-02-2019<br>04:47:37 PM', '1. Batuk kering<br>2. Merasakan flu<br>3. Tenggorokan terasa sakit<br>4. Terasa gatal-gatal pada tenggorokan<br>5. Kepala terasa sakit<br>6. Dada terasa sesak<br>7. Denyut jantung yang dirasakan agak cepat berdetak<br>8. Pada siang hari badan terasa sakit-sakit<br>9. Demam yang dirasakan naik turun<br>10. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 3', '0.48655006529932', '48.66%'),
+(118, '11-03-2019<br>02:05:16 PM', '1. Tenggorokan terasa ada yang nyangkut<br>2. Dada terasa sesak<br>3. Susah menarik nafas panjang<br>', 'Stadium 3', '0.50310559006211', '50.31%'),
+(119, '29-03-2019<br>10:28:29 AM', '1. Susah menarik nafas panjang<br>2. Pada siang hari badan terasa sakit-sakit<br>3. Demam<br>4. Pada saat malam hari badan terasa panas dan siang terasa dingin<br>', 'Stadium 2', '0.92874109263658', '92.87%'),
+(120, '29-03-2019<br>10:28:47 AM', '1. Tenggorokan terasa ada yang nyangkut<br>2. Terasa gatal-gatal pada tenggorokan<br>3. Dada terasa sesak<br>4. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>', 'Stadium 3', '0.91517128874388', '91.52%'),
+(121, '29-03-2019<br>10:29:02 AM', '1. Tenggorokan terasa ada yang nyangkut<br>2. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>', 'Stadium 2', '0.675', '67.5%'),
+(122, '29-03-2019<br>10:29:22 AM', '1. Merasakan flu berat<br>2. Tenggorokan terasa ada yang nyangkut<br>', 'Stadium 3', '0.69230769230769', '69.23%'),
+(123, '01-04-2019<br>10:44:29 AM', '1. Merasakan flu berat<br>2. Susah menarik nafas panjang<br>3. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.92217898832685', '92.22%'),
+(124, '01-04-2019<br>10:46:56 AM', '1. Merasakan flu berat<br>2. Tenggorokan terasa sakit<br>3. Dada terasa sesak<br>', 'Stadium 3', '0.975', '97.5%'),
+(125, '01-04-2019<br>10:47:30 AM', '1. Tenggorokan terasa sakit<br>2. Dada terasa sesak<br>3. Demam<br>', 'Stadium 3', '0.78147612156295', '78.15%'),
+(126, '01-04-2019<br>10:54:17 AM', '1. Tenggorokan terasa sakit<br>2. Dada terasa sesak<br>3. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.995', '99.5%'),
+(127, '01-04-2019<br>10:54:39 AM', '1. Tenggorokan terasa sakit<br>2. Dada terasa sesak<br>3. Demam<br>', 'Stadium 3', '0.78147612156295', '78.15%'),
+(128, '01-04-2019<br>11:41:51 AM', '1. Batuk kering<br>2. Merasakan flu<br>', 'Stadium 1', '0.3', '30%'),
+(129, '02-04-2019<br>09:56:30 AM', '1. Batuk kering<br>2. Batuk berdahak<br>', 'Stadium 2', '0.525', '52.5%'),
+(130, '08-04-2019<br>04:59:25 PM', '1. Susah menarik nafas panjang<br>2. Pada siang hari badan terasa sakit-sakit<br>3. Demam yang dirasakan naik turun<br>', 'Stadium 2', '0.925', '92.5%'),
+(131, '09-04-2019<br>11:00:52 AM', '1. Merasakan flu<br>2. Merasakan flu berat<br>3. Terasa gatal-gatal pada tenggorokan<br>4. Susah menarik nafas panjang<br>', 'Stadium 2', '0.58066211245402', '58.07%'),
+(132, '09-04-2019<br>11:15:01 AM', '1. Batuk berdahak<br>2. Merasakan flu berat<br>3. Tenggorokan terasa ada yang nyangkut<br>', 'Stadium 3', '0.69230769230769', '69.23%'),
+(133, '09-04-2019<br>01:31:19 PM', '1. Kepala terasa sakit<br>2. Dada terasa sesak<br>', 'Stadium 3', '0.9', '90%'),
+(134, '23-04-2019<br>08:52:41 AM', '1. Batuk kering<br>2. Tenggorokan terasa ada yang nyangkut<br>', 'Stadium 1', '0.2', '20%'),
+(135, '29-04-2019<br>08:12:07 AM', '1. Merasakan flu<br>2. Tenggorokan terasa sakit<br>3. Tenggorokan terasa ada yang nyangkut<br>4. Kepala terasa sakit<br>', 'Stadium 2', '0.27627800114877', '27.63%'),
+(136, '11-05-2019<br>12:48:32 AM', '1. Batuk berdahak<br>2. Merasakan flu<br>', 'Stadium 2', '0.42', '42%'),
+(137, '11-05-2019<br>12:50:55 AM', '1. Tenggorokan terasa sakit<br>2. Kepala terasa sakit<br>3. Dada terasa sesak<br>4. Susah menarik nafas panjang<br>5. Denyut jantung yang dirasakan agak cepat berdetak<br>6. Pada siang hari badan terasa sakit-sakit<br>7. Demam<br>8. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.90731455757481', '90.73%'),
+(138, '13-05-2019<br>03:42:53 PM', '1. Merasakan flu berat<br>2. Tenggorokan terasa sakit<br>3. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>4. Susah menarik nafas panjang<br>', 'Stadium 2', '0.47939262472885', '47.94%'),
+(139, '14-05-2019<br>09:27:47 AM', '1. Batuk kering<br>2. Merasakan flu<br>3. Merasakan flu berat<br>4. Terasa gatal-gatal pada tenggorokan<br>5. Kepala terasa sakit<br>6. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>7. Pada siang hari badan terasa sakit-sakit<br>8. Demam yang dirasakan naik turun<br>9. Demam<br>10. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.74533362291486', '74.53%'),
+(140, '16-05-2019<br>08:52:42 AM', '1. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>2. Demam<br>', 'Stadium 2', '0.7', '70%'),
+(141, '18-05-2019<br>02:14:57 AM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Merasakan flu<br>4. Merasakan flu berat<br>', 'Stadium 3', '0.6978021978022', '69.78%'),
+(142, '23-05-2019<br>03:20:36 PM', '1. Batuk berdahak<br>2. Merasakan flu<br>3. Demam yang dirasakan naik turun<br>4. Demam<br>', 'Stadium 2', '0.8848', '88.48%'),
+(143, '29-05-2019<br>05:01:00 AM', '1. Batuk kering<br>2. Merasakan flu<br>', 'Stadium 1', '0.3', '30%'),
+(144, '05-07-2019<br>09:35:39 PM', '1. Batuk kering<br>2. Demam<br>', 'Stadium 2', '0.63636363636364', '63.64%'),
+(145, '15-07-2019<br>03:53:32 PM', '1. Batuk kering<br>2. Batuk berdahak<br>3. Tenggorokan terasa sakit<br>', 'Stadium 3', '0.35875', '35.88%'),
+(146, '27-07-2019<br>11:23:16 AM', '1. Kepala terasa sakit<br>2. Dada terasa sesak<br>3. Denyut jantung yang dirasakan agak cepat berdetak<br>4. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 3', '0.86915887850467', '86.92%'),
+(147, '27-07-2019<br>11:23:40 AM', '1. Dada terasa sesak<br>2. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>3. Susah menarik nafas panjang<br>4. Demam tinggi ( > 39º )<br>', 'Stadium 3', '0.967585089141', '96.76%'),
+(148, '27-07-2019<br>11:23:58 AM', '1. Tenggorokan terasa ada yang nyangkut<br>2. Dada terasa sesak<br>3. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>4. Susah menarik nafas panjang<br>', 'Stadium 3', '0.50310559006211', '50.31%'),
+(149, '27-07-2019<br>11:37:51 AM', '1. Batuk kering<br>2. Merasakan flu<br>', 'Stadium 1', '0.3', '30%'),
+(150, '30-07-2019<br>01:18:14 PM', '1. Batuk kering<br>2. Merasakan flu<br>', 'Stadium 1', '0.3', '30%'),
+(151, '03-08-2019<br>09:10:15 PM', '1. Pada siang hari badan terasa sakit-sakit<br>2. Demam yang dirasakan naik turun<br>3. Demam<br>', 'Stadium 2', '0.85', '85%');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ds_aturan`
+-- Struktur dari tabel `ds_aturan`
 --
 
 CREATE TABLE `ds_aturan` (
@@ -128,7 +192,7 @@ CREATE TABLE `ds_aturan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ds_aturan`
+-- Dumping data untuk tabel `ds_aturan`
 --
 
 INSERT INTO `ds_aturan` (`id`, `id_penyakit`, `id_gejala`, `ds`) VALUES
@@ -160,7 +224,7 @@ INSERT INTO `ds_aturan` (`id`, `id_penyakit`, `id_gejala`, `ds`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ds_gejala`
+-- Struktur dari tabel `ds_gejala`
 --
 
 CREATE TABLE `ds_gejala` (
@@ -170,7 +234,7 @@ CREATE TABLE `ds_gejala` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ds_gejala`
+-- Dumping data untuk tabel `ds_gejala`
 --
 
 INSERT INTO `ds_gejala` (`id`, `kode`, `nama`) VALUES
@@ -195,7 +259,7 @@ INSERT INTO `ds_gejala` (`id`, `kode`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ds_penyakit`
+-- Struktur dari tabel `ds_penyakit`
 --
 
 CREATE TABLE `ds_penyakit` (
@@ -206,7 +270,7 @@ CREATE TABLE `ds_penyakit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ds_penyakit`
+-- Dumping data untuk tabel `ds_penyakit`
 --
 
 INSERT INTO `ds_penyakit` (`id`, `kode`, `nama`, `kett`) VALUES
@@ -217,31 +281,29 @@ INSERT INTO `ds_penyakit` (`id`, `kode`, `nama`, `kett`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pasien`
+-- Struktur dari tabel `pasien`
 --
 
 CREATE TABLE `pasien` (
   `id_pasien` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  `tgl_lahir` varchar(50) NOT NULL
+  `tgl_lahir` varchar(50) NOT NULL,
+  `id_admin` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pasien`
+-- Dumping data untuk tabel `pasien`
 --
 
-INSERT INTO `pasien` (`id_pasien`, `nama`, `tgl_lahir`) VALUES
-(3, 'Nika Annisa', '2018-10-01'),
-(5, 'Fandy Hidayat', '2018-10-05'),
-(6, 'Rido', '1997-11-04'),
-(7, 'Alif', '1997-02-24'),
-(8, 'Ade Febriany', '1996-02-29'),
-(9, 'Srifour', '1958-02-20');
+INSERT INTO `pasien` (`id_pasien`, `nama`, `tgl_lahir`, `id_admin`) VALUES
+(12, 'qqq', '1995-08-12', 5),
+(16, 'Aliif', '2019-08-30', 2),
+(17, 'aaaaaammm', '2019-08-22', 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `riwayat`
+-- Struktur dari tabel `riwayat`
 --
 
 CREATE TABLE `riwayat` (
@@ -251,38 +313,36 @@ CREATE TABLE `riwayat` (
   `gejala` text NOT NULL,
   `penyakit` varchar(200) NOT NULL,
   `nilai` varchar(20) NOT NULL,
-  `persentase` varchar(20) NOT NULL
+  `persentase` varchar(20) NOT NULL,
+  `dokter` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `riwayat`
+-- Dumping data untuk tabel `riwayat`
 --
 
-INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `tanggal`, `gejala`, `penyakit`, `nilai`, `persentase`) VALUES
-(1, 5, '10-02-2019<br>10:23:35 AM', '1. Merasakan flu berat<br>2. Terasa gatal-gatal pada tenggorokan<br>3. Dada terasa sesak<br>4. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>5. Denyut jantung yang dirasakan agak cepat berdetak<br>', 'Stadium 3', '0.988625', '98.86%'),
-(2, 5, '10-02-2019<br>10:26:16 AM', '1. Batuk berdahak<br>2. Tenggorokan terasa sakit<br>3. Dada terasa sesak<br>4. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 3', '0.86807511737089', '86.81%'),
-(3, 5, '10-02-2019<br>10:27:46 AM', '1. Batuk berdahak<br>2. Tenggorokan terasa sakit<br>3. Dada terasa sesak<br>4. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 3', '0.86807511737089', '86.81%'),
-(4, 5, '10-02-2019<br>10:28:11 AM', '1. Batuk berdahak<br>2. Tenggorokan terasa sakit<br>3. Dada terasa sesak<br>4. Pada siang hari badan terasa sakit-sakit<br>', 'Stadium 3', '0.86807511737089', '86.81%'),
-(5, 5, '10-02-2019<br>10:29:20 AM', '1. Merasakan flu berat<br>2. Tenggorokan terasa ada yang nyangkut<br>3. Terasa gatal-gatal pada tenggorokan<br>4. Dada terasa sesak<br>', 'Stadium 3', '0.97845006216328', '97.85%');
+INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `tanggal`, `gejala`, `penyakit`, `nilai`, `persentase`, `dokter`) VALUES
+(9, 12, '03-08-2019<br>04:44:38 PM', '1. Merasakan flu berat<br>2. Terasa gatal-gatal pada tenggorokan<br>3. 2 minggu sebelum sakit pernah melaksanakan haji atau umroh ke timur tengah<br>', 'Stadium 3', '0.8375', '83.75%', ''),
+(11, 17, '03-08-2019<br>05:36:12 PM', '1. Merasakan flu<br>2. Merasakan flu berat<br>', 'Stadium 3', '0.64285714285714', '64.29%', '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indexes for table `diagnosa`
+-- Indeks untuk tabel `diagnosa`
 --
 ALTER TABLE `diagnosa`
   ADD PRIMARY KEY (`id_diagnosa`);
 
 --
--- Indexes for table `ds_aturan`
+-- Indeks untuk tabel `ds_aturan`
 --
 ALTER TABLE `ds_aturan`
   ADD PRIMARY KEY (`id`),
@@ -290,85 +350,100 @@ ALTER TABLE `ds_aturan`
   ADD KEY `id_gejala` (`id_gejala`);
 
 --
--- Indexes for table `ds_gejala`
+-- Indeks untuk tabel `ds_gejala`
 --
 ALTER TABLE `ds_gejala`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ds_penyakit`
+-- Indeks untuk tabel `ds_penyakit`
 --
 ALTER TABLE `ds_penyakit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pasien`
+-- Indeks untuk tabel `pasien`
 --
 ALTER TABLE `pasien`
-  ADD PRIMARY KEY (`id_pasien`);
+  ADD PRIMARY KEY (`id_pasien`),
+  ADD KEY `id_admin` (`id_admin`);
 
 --
--- Indexes for table `riwayat`
+-- Indeks untuk tabel `riwayat`
 --
 ALTER TABLE `riwayat`
   ADD PRIMARY KEY (`id_riwayat`),
   ADD KEY `id_pasien` (`id_pasien`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
--- AUTO_INCREMENT for table `diagnosa`
+-- AUTO_INCREMENT untuk tabel `diagnosa`
 --
 ALTER TABLE `diagnosa`
-  MODIFY `id_diagnosa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id_diagnosa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+
 --
--- AUTO_INCREMENT for table `ds_aturan`
+-- AUTO_INCREMENT untuk tabel `ds_aturan`
 --
 ALTER TABLE `ds_aturan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
--- AUTO_INCREMENT for table `ds_gejala`
+-- AUTO_INCREMENT untuk tabel `ds_gejala`
 --
 ALTER TABLE `ds_gejala`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
--- AUTO_INCREMENT for table `ds_penyakit`
+-- AUTO_INCREMENT untuk tabel `ds_penyakit`
 --
 ALTER TABLE `ds_penyakit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `pasien`
+-- AUTO_INCREMENT untuk tabel `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
--- AUTO_INCREMENT for table `riwayat`
+-- AUTO_INCREMENT untuk tabel `riwayat`
 --
 ALTER TABLE `riwayat`
-  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `ds_aturan`
+-- Ketidakleluasaan untuk tabel `ds_aturan`
 --
 ALTER TABLE `ds_aturan`
   ADD CONSTRAINT `ds_aturan_ibfk_1` FOREIGN KEY (`id_penyakit`) REFERENCES `ds_penyakit` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ds_aturan_ibfk_2` FOREIGN KEY (`id_gejala`) REFERENCES `ds_gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `riwayat`
+-- Ketidakleluasaan untuk tabel `pasien`
+--
+ALTER TABLE `pasien`
+  ADD CONSTRAINT `pasien_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `riwayat`
 --
 ALTER TABLE `riwayat`
   ADD CONSTRAINT `riwayat_ibfk_1` FOREIGN KEY (`id_pasien`) REFERENCES `pasien` (`id_pasien`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
