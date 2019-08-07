@@ -212,13 +212,21 @@ function googleTranslateElementInit() {
 										WHERE id IN('{$codes[0]}')";
 										$result=mysqli_query($con,$sql);
 										$row=$result->fetch_row();
-										echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
+										if (round($densitas_baru[$codes[0]]*100,2) < 90) {
+											echo "Tidak Terdeteksi Penyakit <br><br>";
+										} else {
+											echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
+										}
 
 										//--- menampilkan keterangan dari penyakit
 										$queries = "SELECT kett FROM ds_penyakit WHERE nama = '$row[0]'";
 										$result = mysqli_query($con,$queries);
 										$value = mysqli_fetch_object($result);
-										echo "Keterangan :<br>".$value->kett."<br><br>";
+										if (round($densitas_baru[$codes[0]]*100,2) < 90) {
+											# code...
+										} else {
+											echo "Keterangan :<br>".$value->kett."<br><br>";
+										}
 
 										$gejala = "";
 
