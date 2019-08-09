@@ -119,6 +119,7 @@ function googleTranslateElementInit() {
 								<span class="section-heading-lower">Hasil Diagnosa Penyakit</span>
 							</h2>
 							<p style="text-align: justify;">
+							<img src='assets/img/dokter.png' width='50%' style='float: right; margin-top: -30px;'>
 								<?php
 								include "koneksi/koneksi.php";
 
@@ -213,10 +214,11 @@ function googleTranslateElementInit() {
 										$result=mysqli_query($con,$sql);
 										$row=$result->fetch_row();
 										if (round($densitas_baru[$codes[0]]*100,2) < 90) {
-											echo "Tidak Terdeteksi Penyakit <br><br>";
+											echo "Selamat anda tidak Terdeteksi Penyakit <br><br>";
 										} else {
-											echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($densitas_baru[$codes[0]]*100,2)."% <br><br>";
+											echo "Terdeteksi penyakit <b style='color:red'>{$row[0]}</b> dengan derajat kepercayaan <b>".round($densitas_baru[$codes[0]]*100,2)."%</b> <br><br>";
 										}
+										
 
 										//--- menampilkan keterangan dari penyakit
 										$queries = "SELECT kett FROM ds_penyakit WHERE nama = '$row[0]'";
@@ -253,11 +255,15 @@ function googleTranslateElementInit() {
 
 										//--- memasukkan hasil diagnosa ke database
 										$input = mysqli_query($con,"INSERT INTO diagnosa (tanggal, gejala, penyakit, nilai, persentase) values('$tanggal', '$gejala', '$penyakit', '$nilai', '$persentase')");
+										if (count($_POST['gejala']) < 5) {
+											if (round($densitas_baru[$codes[0]]*100,2) < 90) {
+												echo "<br><br><br>";
+											}
+										}
+										
 									}
 								} ?>
 							</p>
-
-
 						</div>
 					</div>
 				</div>
