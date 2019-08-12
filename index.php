@@ -117,7 +117,7 @@ function googleTranslateElementInit() {
           <p class="mb-3" >MERS CoV adalah singkatan dari Middle East Respiratory Syndrome Corona Virus. Cek sekarang apakah kamu terkena Mers-CoV?
           </p>
           <div class="intro-button mx-auto">
-            <h2><a class="btn btn-primary btn-xl" href="diagnosa.php" target="_blank" rel="noopener">DIAGNOSA SEKARANG</a></h2>
+            <h2><a class="btn btn-primary btn-xl" href="diagnosa.php" rel="noopener">DIAGNOSA SEKARANG</a></h2>
           </div>
         </div>
       </div>
