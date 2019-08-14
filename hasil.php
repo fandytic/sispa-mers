@@ -213,8 +213,8 @@ function googleTranslateElementInit() {
 										WHERE id IN('{$codes[0]}')";
 										$result=mysqli_query($con,$sql);
 										$row=$result->fetch_row();
-										if (round($densitas_baru[$codes[0]]*100,2) < 90) {
-											echo "Selamat anda tidak Terdeteksi Penyakit <br><br>";
+										if (round($densitas_baru[$codes[0]]*100,2) < 80) {
+											echo "Selamat anda tidak terdeteksi penyakit <br><br>";
 											?> 
 											<img src='assets/img/dokter.png' width='50%' style='float: right; margin-top: -100px;'>
 											<?php 
@@ -230,7 +230,7 @@ function googleTranslateElementInit() {
 										$queries = "SELECT kett FROM ds_penyakit WHERE nama = '$row[0]'";
 										$result = mysqli_query($con,$queries);
 										$value = mysqli_fetch_object($result);
-										if (round($densitas_baru[$codes[0]]*100,2) < 90) {
+										if (round($densitas_baru[$codes[0]]*100,2) < 80) {
 											# code...
 										} else {
 											echo "Keterangan :<br>".$value->kett."<br><br>";
@@ -262,7 +262,7 @@ function googleTranslateElementInit() {
 										//--- memasukkan hasil diagnosa ke database
 										$input = mysqli_query($con,"INSERT INTO diagnosa (tanggal, gejala, penyakit, nilai, persentase) values('$tanggal', '$gejala', '$penyakit', '$nilai', '$persentase')");
 										if (count($_POST['gejala']) < 5) {
-											if (round($densitas_baru[$codes[0]]*100,2) < 90) {
+											if (round($densitas_baru[$codes[0]]*100,2) < 80) {
 												echo "<br><br><br>";
 											}
 										}
