@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `nama`, `username`, `password`, `email`, `nohp`, `tingkat`) VALUES
-(1, 'Admin', 'admin', 'root', 'admin@sp.com', '081277890522', 'admin'),
+(1, 'Admin', 'admin', 'root', 'admin@sp.com', '0812344423', 'admin'),
 (2, 'dr. Azizman Saad, Sp.P (K)', 'pakar', 'root', 'azisman@unri.ac.id', '123123', 'dokter'),
 (4, 'hachanooooo', 'nana', '123', 'fasda@gmail.com', 'nohp', 'dokter'),
 (5, 'alif', 'alifsatria00', '12345', 'arusmana76@gmail.com', '123', 'dokter'),
